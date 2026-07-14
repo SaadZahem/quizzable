@@ -1,0 +1,136 @@
+- q: "PUO (Pyrexia of Unknown Origin) is defined as fever >38.3ºC lasting:"
+  a: ">1 month"
+  b: ">6 weeks"
+  c: ">3 weeks"
+  d: ">1 week"
+  e: ">3 months"
+  k: c
+
+- q: "Exclusive breastfeeding is recommended for the first:"
+  a: "3 months"
+  b: "6 months"
+  c: "18 months"
+  d: "12 months"
+  e: "9 months"
+  k: b
+
+- q: "Hypophosphatemic rickets is characterized by:"
+  a: "Hypercalcemia"
+  b: "Renal failure"
+  c: "high phosphate"
+  d: "X-linked dominant inheritance"
+  e: "Elevated PTH"
+  k: d
+
+- q: "The WHO recommends starting weaning at:"
+  a: "4-6 months"
+  b: "3 months"
+  c: "12 months"
+  d: "18 months"
+  e: "7-9 months"
+  k: a
+
+- q: "In bacterial meningitis, which organism is most common in infants aged 2-12 months?"
+  a: "Streptococcus pneumoniae"
+  b: "Staph aureus"
+  c: "Neisseria meningitidis"
+  d: "Listeria monocytogenes"
+  e: "Haemophilus influenzae type b"
+  k: a
+
+- q: "What is the pathognomonic sign of measles?"
+  a: "Circumoral pallor"
+  b: "Skin rash"
+  c: "Postauricular lymphadenopathy"
+  d: "Koplik's spots"
+  e: "Slapped-cheek rash"
+  k: d
+
+- q: "Marasmus is defined by:"
+  a: "Hypocalcemia + tetany"
+  b: "Hepatomegaly + fatty liver"
+  c: "Weight loss >40% without edema"
+  d: "Neuropsychiatric changes"
+  e: "Edema + hypoalbuminemia"
+  k: c
+
+- q: "Elevated ESR (>100 mm/h) in PUO is most suggestive of:"
+  a: "Viral infection"
+  b: "Tuberculosis or malignancy"
+  c: "Drug fever"
+  d: "Autoimmune thyroiditis"
+  e: "Tonsilitis"
+  k: b
+
+- q: "A key sign of readiness for weaning is:"
+  a: "Start smiling"
+  b: "First tooth eruption"
+  c: "Loss of tongue-thrust reflex"
+  d: "Ability to crawl"
+  e: "Birth weight tripled"
+  k: c
+
+- q: "A 6-month-old infant requires how much protein daily?"
+  a: "5 g/kg"
+  b: "1.5 g/kg"
+  c: "4.5 g/kg"
+  d: "3.5 g/kg"
+  e: "2.0 g/kg"
+  k: d
+
+- q: "Which virus causes erythema infectiosum (Fifth Disease)?"
+  a: "Parovirus B19"
+  b: "Human Herpesvirus 6"
+  c: "Rubella Virus"
+  d: "Chicken pox"
+  e: "Varicella-Zoster Virus"
+  k: a
+
+- q: "Which CSF finding is typical of viral meningoencephalitis?"
+  a: "Elevated lactate + turbid appearance"
+  b: "Protein > 100 mg/dL + Gram-positive cocci"
+  c: "Gram positive stain"
+  d: "Neutrophilic pleocytosis + low glucose"
+  e: "Lymphocytic pleocytosis + normal glucos"
+  k: e
+
+- q: "Kwashiorkor's essential criteria include all EXCEPT:"
+  a: "Hair discoloration"
+  b: "Psychomotor changes"
+  c: "Edema"
+  d: "Skin rash"
+  e: "Growth retardation"
+  k: a
+
+- q: "Kernig's sign in meningitis is characterized by:"
+  a: "Subdural effusion on CT scan"
+  b: "Bulging fontanelle"
+  c: "Flexion of the neck causing hip/knee flexion"
+  d: "Headache"
+  e: "Pain on knee extension with hips flexed"
+  k: e
+
+- q: "Which infectious disease is characterized by a sandpaper-like rash and strawberry tongue?"
+  a: "Rubella"
+  b: "Measles"
+  c: "Erythema Infectiosum"
+  d: "Mumps"
+  e: "Scarlet Fever"
+  k: e
+
+- q: "Vitamin D supplementation for exclusively breastfed infants should begin at:"
+  a: "6 months"
+  b: "1 month"
+  c: "1 week"
+  d: "3 months"
+  e: "Birth"
+  k: e
+
+- q: "A child presents with high fever for 3 days followed by a rash once the fever subsides. What is the most likely diagnosis?"
+  a: "Scarlet Fever"
+  b: "Rubella"
+  c: "Measles"
+  d: "Roseola Infantum"
+  e: "Chickenpox"
+  k: d
+
