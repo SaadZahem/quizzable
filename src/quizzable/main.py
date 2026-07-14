@@ -3,13 +3,14 @@ import os
 import random
 import re
 
-from models import load_questionset
+from _models import load_questionset
 from nicegui import ElementFilter, html, ui
 
 for tag in (f"h{n}" for n in range(2, 7)):
     if not hasattr(html, tag):
         setattr(html, tag, html._create_html_element(tag))
 
+# register_tortoise( app, db_url="sqlite://db.sqlite3", modules={"models": ["models"]}, generate_schemas=True,)
 quizzes = []
 
 
