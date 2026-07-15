@@ -1142,7 +1142,7 @@ requires-dist = [
     { name = "ipython", specifier = ">=9.15.0" },
     { name = "nest-asyncio", specifier = ">=1.6.0" },
     { name = "nicegui", specifier = ">=3.14.0" },
-    { name = "tortoise-orm", extras = ["aerich"], specifier = ">=1.1.7" },
+    { name = "tortoise-orm", specifier = ">=1.1.7" },
 ]
 
 [[package]]
