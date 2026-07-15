@@ -6,6 +6,7 @@ TORTOISE_ORM = {
         "models": {
             "models": ["src.quizzable.models"],
             "default_connection": "default",
+            "migrations": "src.quizzable.migrations",
         }
     }
 }
