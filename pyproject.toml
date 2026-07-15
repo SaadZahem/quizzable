@@ -5,6 +5,11 @@ description = "Website for sharing quizzes"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "ipython>=9.15.0",
+    "nest-asyncio>=1.6.0",
     "nicegui>=3.14.0",
-    "tortoise-orm>=1.1.7",
+    "tortoise-orm[aerich]>=1.1.7",
 ]
+
+[tool.tortoise]
+tortoise_orm = "src.quizzable.settings.TORTOISE_ORM"

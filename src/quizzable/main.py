@@ -2,15 +2,22 @@ import operator as op
 import os
 import random
 import re
+from itertools import count
 
-from _models import load_questionset
-from nicegui import ElementFilter, html, ui
+from models import MCQuestion, MCQuiz
+from nicegui import ElementFilter, app, html, ui
+from tortoise.contrib.fastapi import register_tortoise
 
 for tag in (f"h{n}" for n in range(2, 7)):
     if not hasattr(html, tag):
         setattr(html, tag, html._create_html_element(tag))
 
-# register_tortoise( app, db_url="sqlite://db.sqlite3", modules={"models": ["models"]}, generate_schemas=True,)
+register_tortoise(
+    app,
+    db_url="sqlite://db.sqlite3",
+    modules={"models": ["models"]},
+    generate_schemas=True,
+)
 quizzes = []
 
 
@@ -21,18 +28,24 @@ def _navigate(location):
     return callback
 
 
-def question_card(number, question, value=None, *, review=False):
+def totitle(name: str):
+    return name.replace(*"- ").title()
+
+
+def question_card(number, question: MCQuestion, value: str = "-", *, review=False):
+    q = question
+    choices = [q.a, q.b, q.c, q.d]
+    if q.e:
+        choices.append(q.e)
+
     with ui.card().classes("self-stretch") as card:
         if not review:
             html.strong(f"{number}. " + question.text)
             ui.radio(
                 {
                     index: f"{prefix}) {choice}"
-                    for index, prefix, choice in zip(
-                        range(5), "abcde", question.choices
-                    )
+                    for index, prefix, choice in zip(range(5), "abcde", choices)
                 },
-                value=value,
             )
             return card
 
@@ -41,19 +54,19 @@ def question_card(number, question, value=None, *, review=False):
             with ui.column():
                 question_text = "{}. {}".format(number, question.text)
                 html.strong(question_text)
-                for index, prefix, choice in zip(range(5), "abcde", question.choices):
+                for prefix, choice in zip("abcde", choices):
                     choice_text = "{}) {}".format(prefix, choice)
                     label = ui.label(choice_text).classes("py-1 px-2 rounded-lg")
 
-                    if index == question.correct:
+                    if prefix == question.correct.value:
                         label.classes("bg-green-300 text-[blue]")
-                    elif index == value:
+                    elif prefix == value:
                         label.classes("bg-red-300 text-[blue]")
 
             ui.space().classes("grow")
             with ui.row().classes("self-stretch"):
                 ui.separator().props("vertical")
-                grade_text = "%i/1" % (value == question.correct)
+                grade_text = "%i/1" % (value == question.correct.value)
                 ui.label(grade_text).classes("my-auto text-end")
 
     return card
@@ -74,23 +87,24 @@ def update_page(*, redirect=True):
 
 
 @ui.page("/quiz/{file:str}")
-def quiz_page(file):
+async def quiz_page(file):
     assert file in quizzes
 
-    questions = load_questionset(f"data/{file}.yml")
+    quiz = await MCQuiz.filter(title=totitle(file)).first()
+    questions = await quiz.questions
 
     def submit():
         selection = ""
 
         for radio in ElementFilter(kind=ui.radio):
-            selection += str(radio.value if radio.value is not None else "=")
+            selection += "abcde"[radio.value] if radio.value is not None else "-"
 
         ui.navigate.to(f"/quiz/{file}/{selection}")
 
     ui.context.client.content.classes("bg-[wheat] min-h-[100vh]")
 
     with ui.column().classes("h-full container mx-auto"):
-        for number, question in questions.items():
+        for number, question in enumerate(questions, start=1):
             question_card(number, question)
 
         ui.separator()
@@ -99,24 +113,25 @@ def quiz_page(file):
 
 
 @ui.page("/quiz/{file:str}/{selection:str}")
-def result_page(file, selection):
+async def result_page(file, selection):
     assert file in quizzes
-    assert re.match("[=0-4]+", selection)
+    assert re.match("[-a-e]+", selection)
 
-    questions = load_questionset(f"data/{file}.yml")
+    quiz = await MCQuiz.filter(title=totitle(file)).first()
+    questions = await quiz.questions
     total = len(questions)
     score = sum(
-        question.correct == int(choice)
-        for question, choice in zip(questions.values(), selection)
+        question.correct.value == choice
+        for question, choice in zip(questions, selection)
         if choice != "="
     )
     result = "####**%i/%i**\n(%.2f%%)" % (score, total, score / total * 100)
 
     def review():
         with container:
-            for (number, question), char in zip(questions.items(), selection):
-                assert char in "=01234"
-                value = None if char == "=" else int(char)
+            for number, question, char in zip(count(1), questions, selection):
+                assert char in "-abcde"
+                value = None if char == "-" else char
                 question_card(number, question, value, review=True)
 
         separator.set_visibility(True)
