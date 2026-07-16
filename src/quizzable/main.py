@@ -182,18 +182,50 @@ def header_element():
 
 
 @ui.page("/home")
-def home_page():
+async def home_page():
+    await ui.context.client.connected()
+    selected: MCQuiz | None = None
+    stored: str = app.storage.tab.get("selected", "")
+    if stored:
+        selected = (
+            await MCQuiz.filter(title=totitle(stored))
+            .prefetch_related("questions")
+            .first()
+        )
+
+    async def select(file):
+        nonlocal selected
+        selected = (
+            await MCQuiz.filter(title=totitle(file))
+            .prefetch_related("questions")
+            .first()
+        )
+        app.storage.tab.update(selected=file)
+        quiz_details.refresh(file, selected)
 
     @ui.refreshable
     def quiz_list():
-        with ui.list().props("separator").classes("grow md:w-md"):
+        with ui.list().props("separator"):
             for file in quizzes:
                 for term in search.value:
-                    if term not in file:
+                    if term.lower() not in file.lower():
                         break
                 else:
-                    with ui.item():
-                        ui.link(file.replace(*"- ").title(), f"quiz/{file}")
+                    ui.item(totitle(file), on_click=lambda f=file: select(f))
+
+    @ui.refreshable
+    def quiz_details(file: str, quiz: MCQuiz | None = None):
+        if quiz:
+            title = quiz.title
+            count = "Number of questions: {}".format(
+                len(quiz.questions),
+            )
+
+            ui.label(title).classes("mx-auto text-3xl")
+            ui.label(count).classes("text-lg")
+            ui.button("Attempt", on_click=_navigate(f"/quiz/{file}"))
+        else:
+            ui.label("None is selected").classes("mx-auto")
 
     ui.context.client.content.classes("p-0 gap-0 h-[100vh]")
     header_element().classes("bg-[wheat]")
@@ -201,12 +233,17 @@ def home_page():
     with (
         ui.element().classes("size-full py-8 bg-[wheat]"),
         ui.row().classes("h-full container mx-auto"),
-        ui.card().classes("self-stretch grow justify-center items-center"),
+        ui.card().classes("grow self-stretch justify-center items-center"),
     ):
-        search = ui.input_chips("Search quizzes", on_change=quiz_list.refresh).classes(
-            "self-stretch"
+        search = (
+            ui.input_chips("Search quizzes", on_change=quiz_list.refresh)
+            .classes("self-stretch")
+            .bind_value(app.storage.tab, "search")
         )
-        quiz_list()
+        with ui.row().classes("grow self-stretch"):
+            quiz_list()
+            with ui.column().classes("self-stretch mx-auto"):
+                quiz_details(stored, selected)
 
 
 @ui.page("/")
@@ -227,9 +264,11 @@ def landing_page():
         ui.label("Welcome to").classes("text-4xl")
         html.strong("Quizzable").classes("text-6xl")
         ui.label(hook).classes("italic text-2xl")
-        ui.button("Get started", on_click=_navigate("/home")).props(
-            'icon-right="arrow_forward" no-caps rounded'
-        ).classes("text-lg text-bold")
+        (
+            ui.button("Get started", on_click=_navigate("/home"))
+            .props("icon-right=arrow_forward no-caps rounded")
+            .classes("text-lg text-bold")
+        )
 
     # I don't know what to make out of this yet
     with container, ui.card().classes("hidden md:w-64 h-1/2 self-end"):
