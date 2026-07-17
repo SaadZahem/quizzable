@@ -184,24 +184,11 @@ def header_element():
 @ui.page("/home")
 async def home_page():
     await ui.context.client.connected()
-    selected: MCQuiz | None = None
-    stored: str = app.storage.tab.get("selected", "")
-    if stored:
-        selected = (
-            await MCQuiz.filter(title=totitle(stored))
-            .prefetch_related("questions")
-            .first()
-        )
+    storage_file: str = app.storage.tab.get("file", "")
 
     async def select(file):
-        nonlocal selected
-        selected = (
-            await MCQuiz.filter(title=totitle(file))
-            .prefetch_related("questions")
-            .first()
-        )
-        app.storage.tab.update(selected=file)
-        quiz_details.refresh(file, selected)
+        app.storage.tab.update(file=file)
+        quiz_details.refresh(file)
 
     @ui.refreshable
     def quiz_list():
@@ -214,16 +201,24 @@ async def home_page():
                     ui.item(totitle(file), on_click=lambda f=file: select(f))
 
     @ui.refreshable
-    def quiz_details(file: str, quiz: MCQuiz | None = None):
+    async def quiz_details(file: str):
+        quiz = (
+            await MCQuiz.filter(title=totitle(file))
+            .prefetch_related("questions")
+            .first()
+        )
+
         if quiz:
             title = quiz.title
-            count = "Number of questions: {}".format(
-                len(quiz.questions),
-            )
+            count = len(quiz.questions)
 
-            ui.label(title).classes("mx-auto text-3xl")
-            ui.label(count).classes("text-lg")
-            ui.button("Attempt", on_click=_navigate(f"/quiz/{file}"))
+            ui.label(title).classes("text-3xl")
+            ui.label(f"Number of questions: {count}")
+            (
+                ui.button("Attempt", on_click=_navigate(f"/quiz/{file}"))
+                .props("flat")
+                .classes("self-end")
+            )
         else:
             ui.label("None is selected").classes("mx-auto")
 
@@ -243,7 +238,7 @@ async def home_page():
         with ui.row().classes("grow self-stretch"):
             quiz_list()
             with ui.column().classes("self-stretch mx-auto"):
-                quiz_details(stored, selected)
+                await quiz_details(storage_file)
 
 
 @ui.page("/")
