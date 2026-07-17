@@ -26,3 +26,7 @@ class MCQuestion(models.Model):
 class MCQuiz(models.Model):
     id = fields.IntField(primary_key=True)
     title = fields.CharField(max_length=255)
+
+    @property
+    def file(self):
+        return self.title.lower().replace(*" -")

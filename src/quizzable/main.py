@@ -1,5 +1,4 @@
 import operator as op
-import os
 import random
 import re
 from itertools import count
@@ -11,14 +10,6 @@ from tortoise.contrib.fastapi import register_tortoise
 for tag in (f"h{n}" for n in range(2, 7)):
     if not hasattr(html, tag):
         setattr(html, tag, html._create_html_element(tag))
-
-register_tortoise(
-    app,
-    db_url="sqlite://db.sqlite3",
-    modules={"models": ["models"]},
-    generate_schemas=True,
-)
-quizzes = []
 
 
 def _navigate(location):
@@ -72,25 +63,11 @@ def question_card(number, question: MCQuestion, value: str = "-", *, review=Fals
     return card
 
 
-@ui.page("/update")
-def update_page(*, redirect=True):
-    global quizzes
-
-    quizzes = [
-        file.removesuffix(".yml")
-        for file in os.listdir("data")
-        if file.endswith(".yml")
-    ]
-
-    if redirect:
-        ui.navigate.to(home_page)
-
-
 @ui.page("/quiz/{file:str}")
 async def quiz_page(file):
-    assert file in quizzes
-
     quiz = await MCQuiz.filter(title=totitle(file)).first()
+    assert quiz is not None
+
     questions = await quiz.questions
 
     def submit():
@@ -114,10 +91,11 @@ async def quiz_page(file):
 
 @ui.page("/quiz/{file:str}/{selection:str}")
 async def result_page(file, selection):
-    assert file in quizzes
     assert re.match("[-a-e]+", selection)
 
     quiz = await MCQuiz.filter(title=totitle(file)).first()
+    assert quiz is not None
+
     questions = await quiz.questions
     total = len(questions)
     score = sum(
@@ -176,7 +154,6 @@ def header_element():
             html.strong("Quizzable")
 
         ui.space()
-        ui.link("update", "/update")
 
     return header.classes("border-b-1 border-dashed border-slate")
 
@@ -185,6 +162,7 @@ def header_element():
 async def home_page():
     await ui.context.client.connected()
     storage_file: str = app.storage.tab.get("file", "")
+    all_quizzes = await MCQuiz.all()
 
     async def select(file):
         app.storage.tab.update(file=file)
@@ -193,12 +171,12 @@ async def home_page():
     @ui.refreshable
     def quiz_list():
         with ui.list().props("separator"):
-            for file in quizzes:
+            for quiz in all_quizzes:
                 for term in search.value:
-                    if term.lower() not in file.lower():
+                    if term.lower() not in quiz.title.lower():
                         break
                 else:
-                    ui.item(totitle(file), on_click=lambda f=file: select(f))
+                    ui.item(quiz.title, on_click=lambda q=quiz: select(q.file))
 
     @ui.refreshable
     async def quiz_details(file: str):
@@ -271,5 +249,11 @@ def landing_page():
         ui.card_section()
 
 
-update_page(redirect=False)
+register_tortoise(
+    app,
+    db_url="sqlite://db.sqlite3",
+    modules={"models": ["models"]},
+    generate_schemas=True,
+)
+
 ui.run()
