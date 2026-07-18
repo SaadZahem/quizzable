@@ -1,15 +1,25 @@
 import operator as op
+import os
 import random
 import re
 from itertools import count
 
-from models import MCQuestion, MCQuiz
+from dotenv import load_dotenv
 from nicegui import ElementFilter, app, html, ui
 from tortoise.contrib.fastapi import register_tortoise
+
+if not load_dotenv(".env"):
+    raise ValueError(".env file is missing")
+
+from . import auth
+from .models import MCQuestion, MCQuiz
 
 for tag in (f"h{n}" for n in range(2, 7)):
     if not hasattr(html, tag):
         setattr(html, tag, html._create_html_element(tag))
+
+
+STORAGE_SECRET = os.getenv("STORAGE_SECRET")
 
 
 def _navigate(location):
@@ -154,6 +164,7 @@ def header_element():
             html.strong("Quizzable")
 
         ui.space()
+        ui.link("login", "/auth/login")
 
     return header.classes("border-b-1 border-dashed border-slate")
 
@@ -249,11 +260,16 @@ def landing_page():
         ui.card_section()
 
 
-register_tortoise(
-    app,
-    db_url="sqlite://db.sqlite3",
-    modules={"models": ["models"]},
-    generate_schemas=True,
-)
+def main(**kwargs):
+    register_tortoise(
+        app,
+        db_url="sqlite://db.sqlite3",
+        modules={"models": ["src.quizzable.models"]},
+        generate_schemas=True,
+    )
+    app.include_router(auth.router)
+    ui.run(title="Quizzable", language="en-US", storage_secret=STORAGE_SECRET, **kwargs)
 
-ui.run()
+
+if __name__ in {"__main__", "__mp_main__"}:
+    main()

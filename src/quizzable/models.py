@@ -26,7 +26,25 @@ class MCQuestion(models.Model):
 class MCQuiz(models.Model):
     id = fields.IntField(primary_key=True)
     title = fields.CharField(max_length=255, unique=True)
+    last_edited = fields.DatetimeField(auto_now=True)
+    tags = fields.TextField(default="")
+    maintainer = fields.ForeignKeyField("models.User", related_name="quizzes")
 
     @property
     def file(self):
         return self.title.lower().replace(*" -")
+
+    def __str__(self):
+        return self.file
+
+
+class User(models.Model):
+    id = fields.IntField(pk=True)
+    username = fields.CharField(max_length=32, unique=True)
+    hashed_password = fields.TextField()
+
+    def __str__(self):
+        return f"@{self.username}"
+
+    def __repr__(self):
+        return f"User({self.username=}, {self.hashed_password=})"

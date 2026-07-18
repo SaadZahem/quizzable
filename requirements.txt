@@ -1,0 +1,6 @@
+nicegui
+tortoise-orm
+nest_asyncio
+ipython
+pyjwt[crypto]
+pwdlib[argon2]

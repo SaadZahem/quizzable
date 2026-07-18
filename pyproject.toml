@@ -8,6 +8,8 @@ dependencies = [
     "ipython>=9.15.0",
     "nest-asyncio>=1.6.0",
     "nicegui>=3.14.0",
+    "pwdlib[argon2]>=0.3.0",
+    "pyjwt[crypto]>=2.13.0",
     "tortoise-orm>=1.1.7",
 ]
 
