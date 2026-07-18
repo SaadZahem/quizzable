@@ -1,5 +1,7 @@
 from nicegui import html, ui
 
+from ..utils import navigator
+
 
 def header_element():
     with (
@@ -11,6 +13,6 @@ def header_element():
             html.strong("Quizzable")
 
         ui.space()
-        ui.link("login", "/auth/login")
+        ui.button("Log in", on_click=navigator("/login")).props("flat no-caps")
 
     return header.classes("border-b-1 border-dashed border-slate")
