@@ -1,159 +1,159 @@
-- q: Which of the following viruses is the most common cause of the common cold?
-  a: Rhinovirus
-  b: Adenovirus
-  c: Influenza virus
-  d: Coronavirus
-  e: Parainfluenza virus
+- q: "Which of the following viruses is the most common cause of the common cold?"
+  a: "Rhinovirus"
+  b: "Adenovirus"
+  c: "Influenza virus"
+  d: "Coronavirus"
+  e: "Parainfluenza virus"
   k: a
 
-- q: Tension pneumothorax requires immediate management with
-  a: Intravenous antibiotics
-  b: Bronchodilators
-  c: Pleurodesis
-  d: Observation and supplemental oxygen
-  e: Needle decompression or chest tube insertion
+- q: "Tension pneumothorax requires immediate management with"
+  a: "Intravenous antibiotics"
+  b: "Bronchodilators"
+  c: "Pleurodesis"
+  d: "Observation and supplemental oxygen"
+  e: "Needle decompression or chest tube insertion"
   k: e
 
-- q: Which is a risk factor for severe RSV bronchiolitis?
-  a: Congenital heart disease
-  b: Term birth
-  c: Age more than 5 years
-  d: Absence of wheezing
-  e: Normal immune function
+- q: "Which is a risk factor for severe RSV bronchiolitis?"
+  a: "Congenital heart disease"
+  b: "Term birth"
+  c: "Age more than 5 years"
+  d: "Absence of wheezing"
+  e: "Normal immune function"
   k: a
 
 - q: A 3-year-old with a "barking cough," stridor, and mild fever likely has
-  a: Viral croup
-  b: Epiglottitis
-  c: Retropharyngeal abscess
-  d: Bacterial tracheitis
-  e: Pertussis
+  a: "Viral croup"
+  b: "Epiglottitis"
+  c: "Retropharyngeal abscess"
+  d: "Bacterial tracheitis"
+  e: "Pertussis"
   k: a
 
-- q: In which step of asthma management can oral steroids and anti-IgE be added?
-  a: Step 5
-  b: Step 4
-  c: Step 1
-  d: Step 3
-  e: Step 2
+- q: "In which step of asthma management can oral steroids and anti-IgE be added?"
+  a: "Step 5"
+  b: "Step 4"
+  c: "Step 1"
+  d: "Step 3"
+  e: "Step 2"
   k: a
 
-- q: Which of the following is considered a controller medication for asthma?
-  a: β-agonist nebulization
-  b: Antibiotics
-  c: Montelukast
-  d: Aminophylline IV
-  e: Magnesium sulfate IV
+- q: "Which of the following is considered a controller medication for asthma?"
+  a: "β-agonist nebulization"
+  b: "Antibiotics"
+  c: "Montelukast"
+  d: "Aminophylline IV"
+  e: "Magnesium sulfate IV"
   k: c
 
-- q: Which of the following is NOT a typical symptom of asthma?
-  a: Wheezing
-  b: Chest tightness
-  c: Productive cough
-  d: Nocturnal cough
-  e: Shortness of breath
+- q: "Which of the following is NOT a typical symptom of asthma?"
+  a: "Wheezing"
+  b: "Chest tightness"
+  c: "Productive cough"
+  d: "Nocturnal cough"
+  e: "Shortness of breath"
   k: c
 
-- q: Which clinical feature is most suggestive of bacterial pneumonia in a child?
-  a: Low-grade fever and cough
-  b: Gradual onset with rhinorrhea
-  c: Elevated lymphocytes on CBC
-  d: Diffuse bilateral wheezing
-  e: Toxic appearance and focal chest findings
+- q: "Which clinical feature is most suggestive of bacterial pneumonia in a child?"
+  a: "Low-grade fever and cough"
+  b: "Gradual onset with rhinorrhea"
+  c: "Elevated lymphocytes on CBC"
+  d: "Diffuse bilateral wheezing"
+  e: "Toxic appearance and focal chest findings"
   k: e
 
-- q: The first-line treatment for group A streptococcal pharyngitis is
-  a: Azithromycin
-  b: Vancomycin
-  c: Amoxicillin-clavulanate
-  d: Oral penicillin V for 10 days
-  e: Ceftriaxone
+- q: "The first-line treatment for group A streptococcal pharyngitis is"
+  a: "Azithromycin"
+  b: "Vancomycin"
+  c: "Amoxicillin-clavulanate"
+  d: "Oral penicillin V for 10 days"
+  e: "Ceftriaxone"
   k: d
 
-- q: What is the most common age group for foreign body aspiration (FBA)?
-  a: 4-6 years
-  b: 7-10 years
-  c: Less than1 year
-  d: 1-3 years
-  e: More than10 years
+- q: "What is the most common age group for foreign body aspiration (FBA)?"
+  a: "4-6 years"
+  b: "7-10 years"
+  c: "Less than1 year"
+  d: "1-3 years"
+  e: "More than10 years"
   k: d
 
-- q: A 6-month-old infant with respiratory distress and wheezing has a history of prematurity. Which prophylaxis is indicated to prevent severe RSV infection?
-  a: Palivizumab
-  b: Oseltamivir
-  c: Ribavirin
-  d: Dexamethasone
-  e: Amoxicillin
+- q: "A 6-month-old infant with respiratory distress and wheezing has a history of prematurity. Which prophylaxis is indicated to prevent severe RSV infection?"
+  a: "Palivizumab"
+  b: "Oseltamivir"
+  c: "Ribavirin"
+  d: "Dexamethasone"
+  e: "Amoxicillin"
   k: a
 
-- q: Which finding on chest X-ray is typical of viral pneumonia?
-  a: Mediastinal shift
-  b: Cavitary lesions
-  c: Pleural effusion
-  d: Lobar consolidation
-  e: Hyperinflation with interstitial infiltrates
+- q: "Which finding on chest X-ray is typical of viral pneumonia?"
+  a: "Mediastinal shift"
+  b: "Cavitary lesions"
+  c: "Pleural effusion"
+  d: "Lobar consolidation"
+  e: "Hyperinflation with interstitial infiltrates"
   k: e
 
-- q: A pleural effusion with pH less than7.1 and glucose less than40 mg/dL is characteristic of
-  a: Complicated parapneumonic effusion
-  b: Hemothorax
-  c: Tuberculous effusion
-  d: Transudative effusion
-  e: Chylothorax
+- q: "A pleural effusion with pH less than7.1 and glucose less than40 mg/dL is characteristic of"
+  a: "Complicated parapneumonic effusion"
+  b: "Hemothorax"
+  c: "Tuberculous effusion"
+  d: "Transudative effusion"
+  e: "Chylothorax"
   k: a
 
-- q: Which is a complication of untreated GAS pharyngitis?
-  a: Pneumonia
-  b: Otitis media
-  c: Asthma
-  d: Sinusitis
-  e: Acute rheumatic fever
+- q: "Which is a complication of untreated GAS pharyngitis?"
+  a: "Pneumonia"
+  b: "Otitis media"
+  c: "Asthma"
+  d: "Sinusitis"
+  e: "Acute rheumatic fever"
   k: e
 
-- q: The organizing phase of empyema is characterized by
-  a: Normal glucose levels
-  b: Thin, free-flowing fluid
-  c: Fibrinopurulent exudate
-  d: Elevated pH
-  e: Fibrous peel formation
+- q: "The organizing phase of empyema is characterized by"
+  a: "Normal glucose levels"
+  b: "Thin, free-flowing fluid"
+  c: "Fibrinopurulent exudate"
+  d: "Elevated pH"
+  e: "Fibrous peel formation"
   k: e
 
-- q: Which pathogen is the most common cause of epiglottitis in unvaccinated children?
-  a: Haemophilus influenzae type B
-  b: Streptococcus pneumoniae
-  c: Staphylococcus aureus
-  d: Respiratory syncytial virus
-  e: Mycoplasma pneumoniae
+- q: "Which pathogen is the most common cause of epiglottitis in unvaccinated children?"
+  a: "Haemophilus influenzae type B"
+  b: "Streptococcus pneumoniae"
+  c: "Staphylococcus aureus"
+  d: "Respiratory syncytial virus"
+  e: "Mycoplasma pneumoniae"
   k: a
 
-- q: Which of the following imaging findings is suggestive of foreign body aspiration?
-  a: Consolidation
-  b: Atelectasis
-  c: None of the above
-  d: All of the above
-  e: Hyperinflation on expiratory films
+- q: "Which of the following imaging findings is suggestive of foreign body aspiration?"
+  a: "Consolidation"
+  b: "Atelectasis"
+  c: "None of the above"
+  d: "All of the above"
+  e: "Hyperinflation on expiratory films"
   k: d
 
-- q: Which of the following criteria differentiates an exudative pleural effusion from a transudative effusion?
-  a: Pleural fluid protein less than 3 g/dL
-  b: Pleural fluid cholesterol less than 55 mg/dL
-  c: Pleural fluid/serum LDH ratio more than 0.6
-  d: Pleural fluid LDH less than 200 IU/L
-  e: Pleural fluid glucose more than 60 mg/dL
+- q: "Which of the following criteria differentiates an exudative pleural effusion from a transudative effusion?"
+  a: "Pleural fluid protein less than 3 g/dL"
+  b: "Pleural fluid cholesterol less than 55 mg/dL"
+  c: "Pleural fluid/serum LDH ratio more than 0.6"
+  d: "Pleural fluid LDH less than 200 IU/L"
+  e: "Pleural fluid glucose more than 60 mg/dL"
   k: c
 
-- q: What is the first-line treatment for mild persistent asthma in children?
-  a: Leukotriene receptor antagonists (LTRA)
-  b: Oral corticosteroids
-  c: Long-acting β2-agonists (LABA)
-  d: Low-dose inhaled corticosteroids (ICS)
-  e: Short-acting β2-agonists (SABA)
+- q: "What is the first-line treatment for mild persistent asthma in children?"
+  a: "Leukotriene receptor antagonists (LTRA)"
+  b: "Oral corticosteroids"
+  c: "Long-acting β2-agonists (LABA)"
+  d: "Low-dose inhaled corticosteroids (ICS)"
+  e: "Short-acting β2-agonists (SABA)"
   k: d
 
-- q: What is the primary mechanism of action of inhaled corticosteroids (ICS) in asthma management?
-  a: Stimulation of β2-receptors
-  b: Bronchodilation
-  c: Inhibition of mast cell degranulation
-  d: Reduction of airway hyperresponsiveness
-  e: Increase in mucus production
+- q: "What is the primary mechanism of action of inhaled corticosteroids (ICS) in asthma management?"
+  a: "Stimulation of β2-receptors"
+  b: "Bronchodilation"
+  c: "Inhibition of mast cell degranulation"
+  d: "Reduction of airway hyperresponsiveness"
+  e: "Increase in mucus production"
   k: d

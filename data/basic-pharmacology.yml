@@ -1,20 +1,20 @@
-- q: What is the primary mechanism of action of beta blockers in the treatment of hypertension?
-  a: Increasing cardiac contractility
-  b: Enhancing vascular smooth muscle relaxation
-  c: Blocking beta-adrenergic receptors
-  d: Inhibiting the renin-angiotensin-aldosterone system
+- q: "What is the primary mechanism of action of beta blockers in the treatment of hypertension?"
+  a: "Increasing cardiac contractility"
+  b: "Enhancing vascular smooth muscle relaxation"
+  c: "Blocking beta-adrenergic receptors"
+  d: "Inhibiting the renin-angiotensin-aldosterone system"
   k: c
 
-- q: Which of the following medications is a selective serotonin reuptake inhibitor (SSRI) used in the treatment of depression?
-  a: Diazepam
-  b: Alprazolam
-  c: Fluoxetine
-  d: Lorazepam
+- q: "Which of the following medications is a selective serotonin reuptake inhibitor (SSRI) used in the treatment of depression?"
+  a: "Diazepam"
+  b: "Alprazolam"
+  c: "Fluoxetine"
+  d: "Lorazepam"
   k: c
 
-- q: What is the therapeutic effect of warfarin in the prevention of thromboembolic events?
-  a: Inhibiting platelet aggregation
-  b: Enhancing fibrinolysis
-  c: Inhibiting vitamin K-dependent clotting factors
-  d: Increasing blood viscosity
+- q: "What is the therapeutic effect of warfarin in the prevention of thromboembolic events?"
+  a: "Inhibiting platelet aggregation"
+  b: "Enhancing fibrinolysis"
+  c: "Inhibiting vitamin K-dependent clotting factors"
+  d: "Increasing blood viscosity"
   k: c

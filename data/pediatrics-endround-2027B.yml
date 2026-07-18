@@ -1,240 +1,240 @@
-- q: Which of the following is live attenuated vaccine
-  a: Hepatitis A Virus
-  b: Rabies Virus
-  c: Pertussis
-  d: Rotavirus
-  e: Cholera
+- q: "Which of the following is live attenuated vaccine"
+  a: "Hepatitis A Virus"
+  b: "Rabies Virus"
+  c: "Pertussis"
+  d: "Rotavirus"
+  e: "Cholera"
   k: d
 
-- q: Which of the following Cause of viral croup
-  a: Parainfluenza Virus
-  b: Influenza Virus
-  c: Rhinovirus
-  d: Adenovirus
-  e: Respiratory Syncytial Virus
+- q: "Which of the following Cause of viral croup"
+  a: "Parainfluenza Virus"
+  b: "Influenza Virus"
+  c: "Rhinovirus"
+  d: "Adenovirus"
+  e: "Respiratory Syncytial Virus"
   k: a
 
-- q: Which of the following is considered a cause of normocomplementemic mediated acute glomerulonephritis?
-  a: Acute Poststreptococcal Glomerulonephritis
-  b: Lupus Nephritis
-  c: Shunt Nephritis
-  d: Membranoproliferative Glomerulonephritis
-  e: Anaphylactoid Purpura Nephritis
+- q: "Which of the following is considered a cause of normocomplementemic mediated acute glomerulonephritis?"
+  a: "Acute Poststreptococcal Glomerulonephritis"
+  b: "Lupus Nephritis"
+  c: "Shunt Nephritis"
+  d: "Membranoproliferative Glomerulonephritis"
+  e: "Anaphylactoid Purpura Nephritis"
   k: e
 
-- q: A poorly controlled diabetic mother gave birth to a child with vertebral anomalies, renal anomalies, anal atresia, and esophagealtracheal fistula. What is the most accurate term to describe this case?
-  a: Congenital Rubella Syndrome
-  b: Congenital Cytomegalovirus
-  c: Congenital Alcoholic Fetal Syndrome
-  d: VATER Association
-  e: Fetal Hydantoin Syndrome
+- q: "A poorly controlled diabetic mother gave birth to a child with vertebral anomalies, renal anomalies, anal atresia, and esophagealtracheal fistula. What is the most accurate term to describe this case?"
+  a: "Congenital Rubella Syndrome"
+  b: "Congenital Cytomegalovirus"
+  c: "Congenital Alcoholic Fetal Syndrome"
+  d: "VATER Association"
+  e: "Fetal Hydantoin Syndrome"
   k: d
 
-- q: A 2-year-old patient presents with recurrent chest infections, interrupted feeding, bounding peripheral pulses, and a blood pressure of 100/40. The patient is not cyanosed and has delayed milestones. What is the most likely auscultatory finding?
-  a: Pan-systolic harsh murmur 3rd–4th left parasternal
-  b: Ejection systolic murmur + wide fixed S2 splitting
-  c: Continuous machinery murmur left infraclavicular
-  d: Ejection systolic murmur 2nd left intercostal
-  e: Short systolic murmur interscapular back
+- q: "A 2-year-old patient presents with recurrent chest infections, interrupted feeding, bounding peripheral pulses, and a blood pressure of 100/40. The patient is not cyanosed and has delayed milestones. What is the most likely auscultatory finding?"
+  a: "Pan-systolic harsh murmur 3rd–4th left parasternal"
+  b: "Ejection systolic murmur + wide fixed S2 splitting"
+  c: "Continuous machinery murmur left infraclavicular"
+  d: "Ejection systolic murmur 2nd left intercostal"
+  e: "Short systolic murmur interscapular back"
   k: c
 
-- q: Which of the following is considered a finding consistent with slapped cheek syndrome?
-  a: Circumoral pallor
-  b: Post-occipital lymphadenopathy
-  c: Rash with warmth
-  d: Rash appears after fever drops
-  e: Koplik spots
+- q: "Which of the following is considered a finding consistent with slapped cheek syndrome?"
+  a: "Circumoral pallor"
+  b: "Post-occipital lymphadenopathy"
+  c: "Rash with warmth"
+  d: "Rash appears after fever drops"
+  e: "Koplik spots"
   k: c
 
-- q: A patient presents with peritonitis. Which of the following signs on physical examination suggests peritonism?
-  a: Rebound tenderness,rigidity & guarding
-  b: Right Upper Quadrant pain with liver enlargement
-  c: Right Lower Quadrant prain reffered to periumbilical region
-  d: Abdominal mass
-  e: Decreased urine output
+- q: "A patient presents with peritonitis. Which of the following signs on physical examination suggests peritonism?"
+  a: "Rebound tenderness,rigidity & guarding"
+  b: "Right Upper Quadrant pain with liver enlargement"
+  c: "Right Lower Quadrant prain reffered to periumbilical region"
+  d: "Abdominal mass"
+  e: "Decreased urine output"
   k: a
 
-- q: A mother brings her infant to the pediatric clinic asking how to reduce the risk of sudden infant death syndrome. What advice should the pediatrician provide?
-  a: Encourage the infant to sleep on a firm mattress, away from toys, on his back
-  b: Encourage infant to sleep on his side to prevent aspiration of regurgitant material
-  c: Advise her to sleep in a separate room from the infant
-  d: Encourage the infant to sleep on soft material with puffy toys to prevent agitation
-  e: Cover his head with a light blanket to keep him warm
+- q: "A mother brings her infant to the pediatric clinic asking how to reduce the risk of sudden infant death syndrome. What advice should the pediatrician provide?"
+  a: "Encourage the infant to sleep on a firm mattress, away from toys, on his back"
+  b: "Encourage infant to sleep on his side to prevent aspiration of regurgitant material"
+  c: "Advise her to sleep in a separate room from the infant"
+  d: "Encourage the infant to sleep on soft material with puffy toys to prevent agitation"
+  e: "Cover his head with a light blanket to keep him warm"
   k: a
 
-- q: Which of the following is considered the anti-inflammatory drug of choice in acute asthma exacerbation?
-  a: Corticosteroid
-  b: Short-acting beta agonist
-  c: Montelukast
-  d: Omalizumab
-  e: Magnesium sulfate
-  k: a
+- q: "Which of the following is considered the anti-inflammatory drug of choice in acute asthma exacerbation?"
+  a: "Corticosteroid"
+  b: "Short-acting beta agonist"
+  c: "Montelukast"
+  d: "Omalizumab"
+  e: "Magnesium sulfate"
+  k: "a"
 
-- q:  Which of the following choices most accurately describes a sexlimited trait?
-  a: Gene expression is inherited from generation to generation
-  b: The gene expresses itself in only one sex
-  c: There is no male-to-male transmission
-  d: Gene expresses itself in both sexes but in different characters
-  e: Consanguinity in parents supports its expression
+- q: "Which of the following choices most accurately describes a sexlimited trait?"
+  a: "Gene expression is inherited from generation to generation"
+  b: "The gene expresses itself in only one sex"
+  c: "There is no male-to-male transmission"
+  d: "Gene expresses itself in both sexes but in different characters"
+  e: "Consanguinity in parents supports its expression"
   k: b
 
-- q:  A patient presents with tachypnea, tachycardia, and working ala nasi, with subcostal retraction. What is the grading of his respiratory distress?
-  a: Grade 0
-  b: Grade I
-  c: Grade II
-  d: Grade III
-  e: Grade IV
+- q: "A patient presents with tachypnea, tachycardia, and working ala nasi, with subcostal retraction. What is the grading of his respiratory distress?"
+  a: "Grade 0"
+  b: "Grade I"
+  c: "Grade II"
+  d: "Grade III"
+  e: "Grade IV"
   k: c
 
-- q:  A male infant was born at 35 weeks of gestation. He developed jaundice shortly after birth and required phototherapy. Where in the patient’s history should these details be documented?
-  a: Prenatal history
-  b: Gestational history
-  c: Past medical history
-  d: Neonatal history
-  e: Family history
+- q: "A male infant was born at 35 weeks of gestation. He developed jaundice shortly after birth and required phototherapy. Where in the patient’s history should these details be documented?"
+  a: "Prenatal history"
+  b: "Gestational history"
+  c: "Past medical history"
+  d: "Neonatal history"
+  e: "Family history"
   k: d
 
-- q:  What is the main factor in breast milk production?
-  a: Suckling reflex
-  b: Galactagogues use
-  c: Thyroxine & oxytocin intact
-  d: Psychological & emotional state
-  e: Maternal hydration & nutrition
+- q: "What is the main factor in breast milk production?"
+  a: "Suckling reflex"
+  b: "Galactagogues use"
+  c: "Thyroxine & oxytocin intact"
+  d: "Psychological & emotional state"
+  e: "Maternal hydration & nutrition"
   k: a
 
-- q:  A patient has hepatitis A virus infection. What is the initial step in management?
-  a: Ursodeoxycholic Acid to improve cholestaisis
-  b: Ribavirin
-  c: Phototherapy
-  d: Supportive measures with proper hydration and rest
-  e: Sophosbuvir
+- q: "A patient has hepatitis A virus infection. What is the initial step in management?"
+  a: "Ursodeoxycholic Acid to improve cholestaisis"
+  b: "Ribavirin"
+  c: "Phototherapy"
+  d: "Supportive measures with proper hydration and rest"
+  e: "Sophosbuvir"
   k: d
 
-- q:  Which of the following causes prolonged jaundice for more than one month?
-  a: Thalassemia
-  b: Cephalohematoma
-  c: Breast milk failure jaundice
-  d: Crigler–Najjar syndrome
-  e: Congenital CMV
+- q: "Which of the following causes prolonged jaundice for more than one month?"
+  a: "Thalassemia"
+  b: "Cephalohematoma"
+  c: "Breast milk failure jaundice"
+  d: "Crigler–Najjar syndrome"
+  e: "Congenital CMV"
   k: d
 
-- q:  What is the time period during which neonatal screening is performed in Egypt?
-  a: Immediately after birth
-  b: Should be delayed after one month
-  c: From the third day of birth to the seventh day
-  d: Within 48 hours of birth
-  e: Aligned with the first vaccination session
+- q: "What is the time period during which neonatal screening is performed in Egypt?"
+  a: "Immediately after birth"
+  b: "Should be delayed after one month"
+  c: "From the third day of birth to the seventh day"
+  d: "Within 48 hours of birth"
+  e: "Aligned with the first vaccination session"
   k: c
 
-- q: What is the classic triad of neonatal hypopituitarism?
-  a: Jaundice, petechiae, hepatosplenomegaly
-  b: Micropenis, hypoglycemia, neonatal cholestasis
-  c: Intermittent pain, vomiting, bloody stool
-  d: Arthritis, rash, uveitis
-  e: Purpura, joint pain, abdominal pain
+- q: "What is the classic triad of neonatal hypopituitarism?"
+  a: "Jaundice, petechiae, hepatosplenomegaly"
+  b: "Micropenis, hypoglycemia, neonatal cholestasis"
+  c: "Intermittent pain, vomiting, bloody stool"
+  d: "Arthritis, rash, uveitis"
+  e: "Purpura, joint pain, abdominal pain"
   k: b
 
-- q: A patient presents to the emergency department with diabetic ketoacidosis. After 24 hours of management, the patient develops a seizure. Which of the following is the best next step in management?
-  a: Serum potassium measurement
-  b: Serum glucose measurement
-  c: Urinary dipstick for ketones
-  d: CBC
-  e: Serum sodium measurement
+- q: "A patient presents to the emergency department with diabetic ketoacidosis. After 24 hours of management, the patient develops a seizure. Which of the following is the best next step in management?"
+  a: "Serum potassium measurement"
+  b: "Serum glucose measurement"
+  c: "Urinary dipstick for ketones"
+  d: "CBC"
+  e: "Serum sodium measurement"
   k: b
 
-- q: A patient with congenital heart disease underwent an anteroposterior chest X-ray. What is the appropriate interpretation or comment on this X-ray?
-  a: Egg-shaped heart
-  b: Decreased bronchovascular markings reveals lung oligemia
-  c: Elevated cardiac apex revealing left ventricular hypertrophy
-  d: Cardiac silhouette less than 50% of thoracic diameter, excluding cardiomegaly
-  e: Decreasing pulmonary trunk diameter and decreasing aortic arch diameter
+- q: "A patient with congenital heart disease underwent an anteroposterior chest X-ray. What is the appropriate interpretation or comment on this X-ray?"
+  a: "Egg-shaped heart"
+  b: "Decreased bronchovascular markings reveals lung oligemia"
+  c: "Elevated cardiac apex revealing left ventricular hypertrophy"
+  d: "Cardiac silhouette less than 50% of thoracic diameter, excluding cardiomegaly"
+  e: "Decreasing pulmonary trunk diameter and decreasing aortic arch diameter"
   k: a
 
-- q: What is the main immediate pathophysiological mechanism behind hypoxic cyanotic spells?
-  a: Spasm of right ventricular outflow tract
-  b: Increase pulmonary vascular resistance
-  c: Increase cardiac output
-  d: Increase aortic (systemic) vascular resistance
-  e: Decreased respiratory rate
+- q: "What is the main immediate pathophysiological mechanism behind hypoxic cyanotic spells?"
+  a: "Spasm of right ventricular outflow tract"
+  b: "Increase pulmonary vascular resistance"
+  c: "Increase cardiac output"
+  d: "Increase aortic (systemic) vascular resistance"
+  e: "Decreased respiratory rate"
   k: a
 
-- q: Two healthy parents come for genetic counseling. Their child is affected by an autosomal recessive disease. What is the recurrence risk in future pregnancies?
-  a: 0%
-  b: 25%
-  c: 50%
-  d: 75%
-  e: 100%
+- q: "Two healthy parents come for genetic counseling. Their child is affected by an autosomal recessive disease. What is the recurrence risk in future pregnancies?"
+  a: "0%"
+  b: "25%"
+  c: "50%"
+  d: "75%"
+  e: "100%"
   k: b
 
-- q: What is the effect of neuroprotective cooling in ischemic hypoxic encephalopathy?
-  a: Decrease seizure
-  b: Ameliorate secondary brain injury
-  c: Decrease intracranial pressure
-  d: Improve cerebral blood flow
-  e: Increase metabolic demand
+- q: "What is the effect of neuroprotective cooling in ischemic hypoxic encephalopathy?"
+  a: "Decrease seizure"
+  b: "Ameliorate secondary brain injury"
+  c: "Decrease intracranial pressure"
+  d: "Improve cerebral blood flow"
+  e: "Increase metabolic demand"
   k: b
 
-- q: A boy is diagnosed with ADHD with both inattentive and hyperactive-impulsive symptoms. Which of the following is considered a hyperactive-impulsive symptom?
-  a: Displays poor listening skills
-  b: Forgets daily activities
-  c: Diminished attention span
-  d: Blurts out answers before questions completed
-  e: Sidetracked by external or unimportant stimuli
+- q: "A boy is diagnosed with ADHD with both inattentive and hyperactive-impulsive symptoms. Which of the following is considered a hyperactive-impulsive symptom?"
+  a: "Displays poor listening skills"
+  b: "Forgets daily activities"
+  c: "Diminished attention span"
+  d: "Blurts out answers before questions completed"
+  e: "Sidetracked by external or unimportant stimuli"
   k: d
 
-- q: Which of the following reflexes is carried by the myotome C5–C6?
-  a: Triceps reflex
-  b: Biceps reflex
-  c: Femoral reflex
-  d: Ankle reflex
-  e: Jaw reflex
+- q: "Which of the following reflexes is carried by the myotome C5–C6?"
+  a: "Triceps reflex"
+  b: "Biceps reflex"
+  c: "Femoral reflex"
+  d: "Ankle reflex"
+  e: "Jaw reflex"
   k: b
 
-- q: What is the main pathophysiology in Guillain-Barré syndrome?
-  a: Inherited defect in axonal myelination
-  b: Direct part of infectious cause
-  c: Autoimmunity via molecular mimicry
-  d: From environmental stress
-  e: Immune neuromuscular blocking
+- q: "What is the main pathophysiology in Guillain-Barré syndrome?"
+  a: "Inherited defect in axonal myelination"
+  b: "Direct part of infectious cause"
+  c: "Autoimmunity via molecular mimicry"
+  d: "From environmental stress"
+  e: "Immune neuromuscular blocking"
   k: c
 
-- q: A child presents with fatigue and occasional dizziness.  On physical examination There is a blood pressure difference between the upper and lower limbs, and diminished femoral pulses are noted.What is the most likely diagnosis?
-  a: Ventricular septal defect (VSD)
-  b: Atrial septal defect (ASD)
-  c: Coarctation of aorta
-  d: Pulmonary stenosis
-  e: Aortic stenosis
+- q: "A child presents with fatigue and occasional dizziness.  On physical examination There is a blood pressure difference between the upper and lower limbs, and diminished femoral pulses are noted.What is the most likely diagnosis?"
+  a: "Ventricular septal defect (VSD)"
+  b: "Atrial septal defect (ASD)"
+  c: "Coarctation of aorta"
+  d: "Pulmonary stenosis"
+  e: "Aortic stenosis"
   k: c
 
-- q: Which of the following is considered a cause of prerenal acute kidney injury?
-  a: Acute tubular necrosis
-  b: Vasculitis
-  c: Post-streptococcal glomerulonephritis
-  d: Hemolytic uremic syndrome
-  e: Dehydration
+- q: "Which of the following is considered a cause of prerenal acute kidney injury?"
+  a: "Acute tubular necrosis"
+  b: "Vasculitis"
+  c: "Post-streptococcal glomerulonephritis"
+  d: "Hemolytic uremic syndrome"
+  e: "Dehydration"
   k: e
 
-- q: A newborn develops signs of sepsis 48 hours after birth. Which of the following conditions best describes this scenario?
-  a: Early onset sepsis
-  b: Late onset sepsis
-  c: Congenital infection
-  d: Community-acquired infection
-  e: Nosocomial-acquired sepsis
+- q: "A newborn develops signs of sepsis 48 hours after birth. Which of the following conditions best describes this scenario?"
+  a: "Early onset sepsis"
+  b: "Late onset sepsis"
+  c: "Congenital infection"
+  d: "Community-acquired infection"
+  e: "Nosocomial-acquired sepsis"
   k: a
 
-- q: Which of the following clinical signs is considered the earliest sign of infantile rickets?
-  a: Craniotabes
-  b: Delayed closure of anterior fontanel
-  c: Caput quadratum
-  d: Harrison’s sulcus
-  e: Pigeon-shaped chest
+- q: "Which of the following clinical signs is considered the earliest sign of infantile rickets?"
+  a: "Craniotabes"
+  b: "Delayed closure of anterior fontanel"
+  c: "Caput quadratum"
+  d: "Harrison’s sulcus"
+  e: "Pigeon-shaped chest"
   k: a
 
-- q: What is the protective drug in high-risk individuals against acute bronchiolitis?
-  a: Bevacizumab
-  b: Palivizumab
-  c: Ribavirin
-  d: Acyclovir
-  e: Omalizumab
+- q: "What is the protective drug in high-risk individuals against acute bronchiolitis?"
+  a: "Bevacizumab"
+  b: "Palivizumab"
+  c: "Ribavirin"
+  d: "Acyclovir"
+  e: "Omalizumab"
   k: b
 
