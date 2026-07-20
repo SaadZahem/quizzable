@@ -47,4 +47,6 @@ class User(models.Model):
         return f"@{self.username}"
 
     def __repr__(self):
-        return f"User({self.username=}, {self.hashed_password=})"
+        username = self.username
+        hashed_password = self.hashed_password
+        return f"User({username=}, {hashed_password=})"

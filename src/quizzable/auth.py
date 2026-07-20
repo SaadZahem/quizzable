@@ -3,12 +3,13 @@ from datetime import datetime, timedelta, timezone
 from typing import Annotated
 
 import jwt
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends, HTTPException, Request, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jwt.exceptions import InvalidTokenError
-from nicegui import APIRouter, ui
+from nicegui import APIRouter, app, ui
 from pwdlib import PasswordHash
 from pydantic import BaseModel
+from starlette.middleware.base import BaseHTTPMiddleware
 
 from .models import User
 
@@ -25,6 +26,12 @@ get_password_hash = password_hash.hash
 
 form_dependency = Annotated[OAuth2PasswordRequestForm, Depends()]
 token_dependency = Annotated[str, Depends(oauth2_scheme)]
+
+
+@app.add_middleware
+class AuthMiddleWare(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        return await call_next(request)
 
 
 class Token(BaseModel):
