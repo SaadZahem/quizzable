@@ -9,8 +9,7 @@ from ..utils import navigator, totitle
 from ..widgets import question_card
 
 
-@ui.page("/quiz/{file:str}/{selection:str}")
-async def result_page(file, selection):
+async def result_page(file: str, selection: str):
     assert re.match("[-a-e]+", selection)
 
     quiz = await MCQuiz.filter(title=totitle(file)).first()
@@ -34,31 +33,29 @@ async def result_page(file, selection):
 
         separator.set_visibility(True)
 
-    ui.context.client.content.classes("bg-[wheat] min-h-[100vh]")
-    with ui.column().classes("container mx-auto"):
-        container = ui.column().classes("self-stretch items-center gap-2")
-        separator = ui.separator().set_visibility(False)
+    container = ui.column().classes("self-stretch items-center gap-2")
+    separator = ui.separator().set_visibility(False)
 
-        with (
-            ui.card().classes("w-full md:w-md self-center"),
-            ui.row().classes("w-full"),
-        ):
-            ui.markdown(result).classes("grow text-center my-auto text-lg")
-            with ui.column().classes("items-stretch"):
-                ui.button(
-                    "Return",
-                    icon="home",
-                    on_click=navigator("/home"),
-                )
-                ui.button(
-                    "Review",
-                    color="positive",
-                    icon="check",
-                    on_click=review,
-                ).bind_visibility_from(separator, "visible", op.not_)
-                ui.button(
-                    "Retry",
-                    color="negative",
-                    icon="repeat",
-                    on_click=navigator(f"/quiz/{file}"),
-                ).bind_visibility_from(separator, "visible")
+    with (
+        ui.card().classes("w-full md:w-md self-center"),
+        ui.row().classes("w-full"),
+    ):
+        ui.markdown(result).classes("grow text-center my-auto text-lg")
+        with ui.column().classes("items-stretch"):
+            ui.button(
+                "Return",
+                icon="home",
+                on_click=navigator("/home"),
+            )
+            ui.button(
+                "Review",
+                color="secondary",
+                icon="check",
+                on_click=review,
+            ).bind_visibility_from(separator, "visible", op.not_)
+            ui.button(
+                "Retry",
+                color="accent",
+                icon="repeat",
+                on_click=navigator(f"/quiz/{file}"),
+            ).bind_visibility_from(separator, "visible")

@@ -6,7 +6,6 @@ from fastapi import HTTPException
 from nicegui import app, ui
 
 from .. import auth
-from ..widgets import header_element
 
 
 def card_template(
@@ -55,7 +54,6 @@ def card_template(
     return card
 
 
-@ui.page("/login")
 def login_page(animate: bool = False, redirect_url: str = "/home"):
     # simple flip card animation using tailwind classes
     if animate:
@@ -79,7 +77,7 @@ def login_page(animate: bool = False, redirect_url: str = "/home"):
         except HTTPException:
             raise ValueError("Invalid credentials")
         else:
-            app.storage.user["token"] = token
+            app.storage.user.update(auth=True, token=token.access_token)
             ui.navigate.to(redirect_url)
 
     async def signup(data: dict):
@@ -89,29 +87,22 @@ def login_page(animate: bool = False, redirect_url: str = "/home"):
         else:
             raise ValueError("Username already exists")
 
-    ui.query(".nicegui-content").classes("p-0 gap-0 h-[100vh]")
-    header_element().classes("bg-[wheat]")
+    login_card = card_template(
+        "auth/token",
+        "Log in",
+        "Sign up",
+        redirect_url=redirect_url,
+        on_click=login,
+        toggle=flip,
+    )
+    signup_card = card_template(
+        "auth",
+        "Sign up",
+        "Log in",
+        redirect_url=redirect_url,
+        on_click=signup,
+        toggle=flip,
+    )
 
-    with (
-        ui.element().classes("size-full py-8 bg-[wheat]"),
-        ui.element().classes("h-full container mx-auto relative"),
-    ):
-        login_card = card_template(
-            "auth/token",
-            "Log in",
-            "Sign up",
-            redirect_url=redirect_url,
-            on_click=login,
-            toggle=flip,
-        )
-        signup_card = card_template(
-            "auth",
-            "Sign up",
-            "Log in",
-            redirect_url=redirect_url,
-            on_click=signup,
-            toggle=flip,
-        )
-
-        login_card.classes(f"{one} {both}")
-        signup_card.classes(f"{two} {both}")
+    login_card.classes(f"{one} {both}")
+    signup_card.classes(f"{two} {both}")

@@ -13,6 +13,7 @@ for tag in (f"h{n}" for n in range(2, 7)):
 
 def navigator(location, *, redirect=False):
     def callback():
+        nonlocal location
         if redirect and isinstance(location, str):
             location += "&" if "?" in location else "?"
             location += "redirect_url"

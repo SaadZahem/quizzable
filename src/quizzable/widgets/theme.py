@@ -8,8 +8,10 @@ from ..utils import navigator
 
 @contextmanager
 def frame(user: User = None):
-    ui.query("#app").classes("h-screen bg-brand")
-    ui.query(".nicegui-content").classes("p-0 gap-0")
+    ui.query("body").classes("bg-brand")
+    ui.query("#app").classes("h-screen")
+    ui.query("main").classes("flex flex-row items-stretch")
+    ui.query(".nicegui-content").classes("p-0 gap-0 grow")
 
     with (
         ui.header().classes("bg-brand border-b-1 border-dashed border-black"),
@@ -32,8 +34,5 @@ def frame(user: User = None):
             ui.label(str(user)).classes("text-xl")
             ui.button(icon="logout").props("flat rounded")
 
-    with (
-        ui.element().classes("size-full py-8 text-primary"),
-        ui.row().classes("container mx-auto h-max"),
-    ):
+    with ui.element().classes("size-full py-8 text-primary"):
         yield

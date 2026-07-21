@@ -2,10 +2,8 @@ from nicegui import app, ui
 
 from ..models import MCQuiz
 from ..utils import navigator, totitle
-from ..widgets import header_element
 
 
-@ui.page("/home")
 async def home_page():
     await ui.context.client.connected()
     storage_file: str = app.storage.tab.get("file", "")
@@ -47,14 +45,7 @@ async def home_page():
         else:
             ui.label("None is selected").classes("mx-auto")
 
-    ui.context.client.content.classes("p-0 gap-0 h-[100vh]")
-    header_element().classes("bg-[wheat]")
-
-    with (
-        ui.element().classes("size-full py-8 bg-[wheat]"),
-        ui.row().classes("h-full container mx-auto"),
-        ui.card().classes("grow self-stretch justify-center items-center"),
-    ):
+    with ui.card().classes("grow self-stretch justify-center items-center"):
         search = (
             ui.input_chips("Search quizzes", on_change=quiz_list.refresh)
             .classes("self-stretch")
