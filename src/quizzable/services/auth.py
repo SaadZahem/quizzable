@@ -34,10 +34,26 @@ async def get_user(username: str) -> User:
     return await User.filter(username=username).first()
 
 
-async def authenticate_user(username: str, password: str) -> User | None:
+async def authenticate_user(username: str, password: str) -> User:
     user = await get_user(username)
     if user and verify_password(password, user.hashed_password):
         return user
+
+    raise HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Incorrect username or password",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+
+
+async def login(username: str, password: str) -> tuple[User, str]:
+    user = await authenticate_user(username.strip(), password)
+    access_token_expires = timedelta(minutes=15)
+    access_token = create_access_token(
+        data=dict(sub=user.username, id=user.id),
+        expires=access_token_expires,
+    )
+    return user, access_token
 
 
 async def get_current_user(token: token_dependency) -> User:

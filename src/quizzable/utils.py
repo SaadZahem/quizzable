@@ -2,8 +2,10 @@ from pathlib import Path
 from string import Template
 from typing import Annotated
 
-from fastapi import Depends
+from fastapi import Depends, HTTPException
 from nicegui import app, html, ui
+
+from .models import User
 
 # nicegui.html is provides h1 but misses h2..6
 for tag in (f"h{n}" for n in range(2, 7)):
@@ -45,3 +47,18 @@ def dependency(kind, func=None):
         return Annotated[kind, Depends(func)]
     else:
         return Annotated[kind, Depends()]
+
+
+async def current_user() -> User | None:
+    from .services.auth import get_current_user
+
+    if not app.storage.user.get("auth"):
+        return
+
+    token = app.storage.user.get("token")
+    try:
+        user = await get_current_user(token)
+    except HTTPException:
+        return
+
+    return user

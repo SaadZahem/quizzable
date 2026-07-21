@@ -12,6 +12,9 @@ class User(models.Model):
     username = fields.CharField(max_length=32, unique=True)
     hashed_password = fields.TextField()
 
+    def todict(self) -> dict:
+        return dict(username=self.username)
+
     def __str__(self):
         return f"@{self.username}"
 

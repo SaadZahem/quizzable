@@ -1,11 +1,10 @@
-from collections import namedtuple
 from typing import Callable
 
 import httpx
 from fastapi import HTTPException
 from nicegui import app, ui
 
-from .. import auth
+from ..services import auth
 
 
 def card_template(
@@ -16,8 +15,9 @@ def card_template(
     toggle: Callable,
     redirect_url: str = "/home",
 ) -> ui.card:
+
     async def click():
-        await on_click(dict(username=username.value, password=password.value))
+        await on_click(username.value, password.value)
 
     with (
         ui.card()
@@ -41,10 +41,9 @@ def card_template(
 
         with ui.card_actions().classes("text-xl"):
             btn = (
-                ui.button(primary)
+                ui.button(primary, on_click=click)
                 .props("no-caps rounded")
                 .classes("text-lg text-bold px-4 md:px-8")
-                .on("click", click)
             )
             ui.space()
             ui.button(secondary, on_click=toggle).props("flat no-caps")
@@ -69,15 +68,13 @@ def login_page(animate: bool = False, redirect_url: str = "/home"):
         for card in (login_card, signup_card):
             card.classes(toggle=f"{one} {two}")
 
-    async def login(data: dict):
-        Form = namedtuple("Form", ["username", "password"])
-        form = Form(**data)
+    async def login(username: str, password: str):
         try:
-            token = await auth.login_for_access_token(form)
+            user, token = await auth.login(username, password)
         except HTTPException:
-            raise ValueError("Invalid credentials")
+            ui.notify("Invalid credentials", color="negative")
         else:
-            app.storage.user.update(auth=True, token=token.access_token)
+            app.storage.user.update(auth=True, token=token, user=user.todict())
             ui.navigate.to(redirect_url)
 
     async def signup(data: dict):
