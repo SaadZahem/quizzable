@@ -7,7 +7,7 @@ from . import pages as pages  # tells my linter to shut up
 from .config import COLORS, STORAGE_SECRET
 from .services.auth import get_current_user
 from .utils import substitute
-from .widgets.theme import frame
+from .widgets import theme
 
 parent = Path(__file__).parent
 
@@ -22,9 +22,10 @@ async def test():
     else:
         user = None
 
-    with frame(user), ui.card().classes("size-64"):
+    with theme.frame(user), ui.card().tight().classes("size-64"):
         ui.element().classes("size-64 bg-myblack")
-        ui.label("Lorem ipsum dolor sit amit")
+        with ui.card_section():
+            ui.label("Lorem ipsum dolor sit amit")
 
 
 def main(**kwargs):

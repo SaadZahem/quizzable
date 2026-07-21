@@ -23,9 +23,7 @@ def frame(user: User = None):
             (
                 ui.button(
                     "Log in",
-                    on_click=navigator(
-                        f"/login?redirect_url={ui.context.client.page.path}"
-                    ),
+                    on_click=navigator("/login", redirect=True),
                 )
                 .props("flat no-caps")
                 .classes("hover:scale-110")

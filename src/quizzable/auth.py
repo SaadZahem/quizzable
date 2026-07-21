@@ -32,7 +32,7 @@ async def login_for_access_token(form: form_dependency) -> Token:
             headers={"WWW-Authenticate": "Bearer"},
         )
 
-    access_token_expires = timedelta(minutes=15)
+    access_token_expires = timedelta(minutes=1)
     access_token = create_access_token(
         data={"sub": user.username, "id": user.id},
         expires=access_token_expires,
