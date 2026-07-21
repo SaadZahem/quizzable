@@ -25,13 +25,15 @@ TOKEN_URL = "auth/token"
 
 
 # Theme configuration
-app.colors(
+COLORS = dict(
     primary="#6B705C",
     secondary="#DDBEA9",
     accent="#CB997E",
-    black="#1A1A18",
-    white="#FAF8F5",
+    myblack="#1A1A18",
+    mywhite="#FAF8F5",
+    brand="hsl(39, 77%, 90%)",
 )
+app.colors(**COLORS)
 
 # Database configuration
 register_tortoise(

@@ -1,3 +1,6 @@
+from pathlib import Path
+from string import Template
+
 from nicegui import html, ui
 
 # nicegui.html is provides h1 but misses h2..6
@@ -15,3 +18,12 @@ def navigator(location):
 
 def totitle(name: str):
     return name.replace(*"- ").title()
+
+
+def substitute(file: Path, context: dict):
+    with file.open("rt") as f:
+        content = f.read()
+
+    template = Template(content)
+    styles = template.safe_substitute(context)
+    return styles
