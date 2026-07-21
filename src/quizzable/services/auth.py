@@ -19,6 +19,13 @@ token_dependency = dependency(str, oauth2_scheme)
 form_dependency = dependency(OAuth2PasswordRequestForm)
 
 
+async def create_new_user(username: str, password: str) -> User:
+    return await User.create(
+        username=username,
+        hashed_password=get_password_hash(password),
+    )
+
+
 def create_access_token(data: dict, expires: timedelta | None = None):
     if expires is None:
         expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
@@ -53,6 +60,12 @@ async def login(username: str, password: str) -> tuple[User, str]:
         data=dict(sub=user.username, id=user.id),
         expires=access_token_expires,
     )
+    return user, access_token
+
+
+async def signup(username: str, password: str) -> tuple[User, str]:
+    user = await create_new_user(username.strip(), password)
+    access_token = create_access_token(data=dict(sub=user.username, id=user.id))
     return user, access_token
 
 

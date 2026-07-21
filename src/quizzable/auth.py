@@ -2,8 +2,8 @@ from fastapi import Request
 from nicegui import APIRouter, app
 from starlette.middleware.base import BaseHTTPMiddleware
 
-from .models import Token, User
-from .services.auth import form_dependency, get_password_hash, login, user_dependency
+from .models import Token
+from .services import auth
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -15,19 +15,16 @@ class AuthMiddleWare(BaseHTTPMiddleware):
 
 
 @router.post("/token")
-async def login_for_access_token(form: form_dependency) -> Token:
-    _, access_token = await login(form.username, form.password)
+async def login_for_access_token(form: auth.form_dependency) -> Token:
+    _, access_token = await auth.login(form.username, form.password)
     return Token(access_token=access_token, token_type="bearer")
 
 
 @router.post("/")
-async def create_new_user(form: form_dependency):
-    await User.create(
-        username=form.username,
-        hashed_password=get_password_hash(form.password),
-    )
+async def create_new_user(form: auth.form_dependency):
+    await auth.create_new_user(form.username, form.password)
 
 
 @router.get("/whoami")
-def whoami(user: user_dependency):
+def whoami(user: auth.user_dependency):
     return repr(user)

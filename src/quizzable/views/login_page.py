@@ -1,8 +1,8 @@
 from typing import Callable
 
-import httpx
 from fastapi import HTTPException
 from nicegui import app, ui
+from tortoise.exceptions import IntegrityError
 
 from ..services import auth
 
@@ -72,17 +72,19 @@ def login_page(animate: bool = False, redirect_url: str = "/home"):
         try:
             user, token = await auth.login(username, password)
         except HTTPException:
-            ui.notify("Invalid credentials", color="negative")
+            ui.notify("Wrong username or password", color="negative")
         else:
             app.storage.user.update(auth=True, token=token, user=user.todict())
             ui.navigate.to(redirect_url)
 
-    async def signup(data: dict):
-        response = httpx.post("auth", data=data)
-        if response.status_code == 200:
-            await login(data)
+    async def signup(username: str, password: str):
+        try:
+            user, token = await auth.signup(username, password)
+        except IntegrityError:
+            ui.notify("Username already exists", color="negative")
         else:
-            raise ValueError("Username already exists")
+            app.storage.user.update(auth=True, token=token, user=user.todict())
+            ui.navigate.to(redirect_url)
 
     login_card = card_template(
         "auth/token",
