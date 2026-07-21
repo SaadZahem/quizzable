@@ -11,6 +11,10 @@ class User(models.Model):
     id = fields.IntField(pk=True)
     username = fields.CharField(max_length=32, unique=True)
     hashed_password = fields.TextField()
+    created = fields.DatetimeField(auto_now_add=True)
+
+    class Meta:
+        table = "users"
 
     def todict(self) -> dict:
         return dict(username=self.username)

@@ -39,6 +39,6 @@ app.colors(**COLORS)
 register_tortoise(
     app,
     db_url="sqlite://db.sqlite3",
-    modules={"models": ["src.quizzable.models"]},
+    modules={"quizzable": ["quizzable.models"]},
     generate_schemas=True,
 )

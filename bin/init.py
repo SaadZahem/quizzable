@@ -3,12 +3,15 @@
 import os
 
 import yaml
-from models import ChoiceEnum, MCQuestion, MCQuiz
 from tortoise import Tortoise, exceptions, run_async
+
+from quizzable.models import ChoiceEnum, MCQuestion, MCQuiz, User
 
 
 async def main():
-    await Tortoise.init(db_url="sqlite://db.sqlite3", modules={"models": ["models"]})
+    await Tortoise.init(
+        db_url="sqlite://db.sqlite3", modules={"quizzable": ["quizzable.models"]}
+    )
     await Tortoise.generate_schemas()
 
     quizzes = [
@@ -17,11 +20,16 @@ async def main():
         if file.endswith(".yml")
     ]
 
+    me = await User.first()
+
     for quizfile in quizzes:
         with open(f"data/{quizfile}.yml", "rb") as fp:
             data = yaml.safe_load(fp)
 
-        quizmodel = await MCQuiz.create(title=quizfile.replace(*"- ").title())
+        quizmodel = await MCQuiz.create(
+            title=quizfile.replace(*"- ").title(),
+            maintainer=me,
+        )
 
         for questiondict in data:
             try:

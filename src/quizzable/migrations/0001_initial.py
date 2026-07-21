@@ -1,6 +1,6 @@
 from tortoise import migrations
 from tortoise.migrations import operations as ops
-from src.quizzable.models import ChoiceEnum
+from quizzable.models.quiz import ChoiceEnum
 from tortoise.fields.base import OnDelete
 from tortoise import fields
 
@@ -9,12 +9,27 @@ class Migration(migrations.Migration):
 
     operations = [
         ops.CreateModel(
+            name='User',
+            fields=[
+                ('id', fields.IntField(generated=True, primary_key=True, unique=True, db_index=True)),
+                ('username', fields.CharField(unique=True, max_length=32)),
+                ('hashed_password', fields.TextField(unique=False)),
+                ('created', fields.DatetimeField(auto_now=False, auto_now_add=True)),
+            ],
+            options={'table': 'users', 'app': 'quizzable', 'pk_attr': 'id'},
+            bases=['Model'],
+        ),
+        ops.CreateModel(
             name='MCQuiz',
             fields=[
                 ('id', fields.IntField(generated=True, primary_key=True, unique=True, db_index=True)),
-                ('title', fields.CharField(max_length=255)),
+                ('title', fields.CharField(unique=True, max_length=255)),
+                ('maintainer', fields.ForeignKeyField('quizzable.User', source_field='maintainer_id', db_constraint=True, to_field='id', related_name='quizzes', on_delete=OnDelete.CASCADE)),
+                ('tags', fields.TextField(default='', unique=False)),
+                ('created', fields.DatetimeField(auto_now=False, auto_now_add=True)),
+                ('last_edited', fields.DatetimeField(auto_now=True, auto_now_add=False)),
             ],
-            options={'table': 'mcquiz', 'app': 'models', 'pk_attr': 'id'},
+            options={'table': 'quizzes', 'app': 'quizzable', 'pk_attr': 'id'},
             bases=['Model'],
         ),
         ops.CreateModel(
@@ -28,9 +43,9 @@ class Migration(migrations.Migration):
                 ('d', fields.TextField(unique=False)),
                 ('e', fields.TextField(null=True, unique=False)),
                 ('correct', fields.CharEnumField(description='a: a\nb: b\nc: c\nd: d\ne: e', enum_type=ChoiceEnum, max_length=1)),
-                ('quiz', fields.ForeignKeyField('models.MCQuiz', source_field='quiz_id', db_constraint=True, to_field='id', related_name='questions', on_delete=OnDelete.CASCADE)),
+                ('quiz', fields.ForeignKeyField('quizzable.MCQuiz', source_field='quiz_id', db_constraint=True, to_field='id', related_name='questions', on_delete=OnDelete.CASCADE)),
             ],
-            options={'table': 'mcquestion', 'app': 'models', 'pk_attr': 'id'},
+            options={'table': 'questions', 'app': 'quizzable', 'pk_attr': 'id'},
             bases=['Model'],
         ),
     ]

@@ -3,10 +3,10 @@ TORTOISE_ORM = {
         "default": "sqlite://db.sqlite3",
     },
     "apps": {
-        "models": {
-            "models": ["src.quizzable.models"],
+        "quizzable": {
+            "models": ["quizzable.models"],
             "default_connection": "default",
-            "migrations": "src.quizzable.migrations",
+            "migrations": "quizzable.migrations",
         }
-    }
+    },
 }
