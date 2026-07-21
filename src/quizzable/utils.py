@@ -3,7 +3,7 @@ from string import Template
 from typing import Annotated
 
 from fastapi import Depends
-from nicegui import html, ui
+from nicegui import app, html, ui
 
 # nicegui.html is provides h1 but misses h2..6
 for tag in (f"h{n}" for n in range(2, 7)):
@@ -11,13 +11,17 @@ for tag in (f"h{n}" for n in range(2, 7)):
         setattr(html, tag, html._create_html_element(tag))
 
 
-def navigator(location, *, redirect=False):
+def navigator(location, *, redirect: bool = False):
     def callback():
         nonlocal location
+
         if redirect and isinstance(location, str):
-            location += "&" if "?" in location else "?"
-            location += "redirect_url"
-            location += ui.context.client.page.path
+            url = app.storage.client.get("path").partition("?")[0]
+            if location.partition("?")[0] != url:
+                location += "&" if "?" in location else "?"
+                location += "redirect_url="
+                location += url
+
         ui.navigate.to(location)
 
     return callback

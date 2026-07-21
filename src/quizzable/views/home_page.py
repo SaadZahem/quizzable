@@ -5,7 +5,6 @@ from ..utils import navigator, totitle
 
 
 async def home_page():
-    await ui.context.client.connected()
     storage_file: str = app.storage.tab.get("file", "")
     all_quizzes = await MCQuiz.all()
 

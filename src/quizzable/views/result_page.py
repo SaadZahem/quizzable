@@ -42,20 +42,14 @@ async def result_page(file: str, selection: str):
     ):
         ui.markdown(result).classes("grow text-center my-auto text-lg")
         with ui.column().classes("items-stretch"):
-            ui.button(
-                "Return",
-                icon="home",
-                on_click=navigator("/home"),
+            ui.button("Return", icon="home", on_click=navigator("/home"))
+            (
+                ui.button("Review", icon="check", on_click=review)
+                .props("outline")
+                .bind_visibility_from(separator, "visible", op.not_)
             )
-            ui.button(
-                "Review",
-                color="secondary",
-                icon="check",
-                on_click=review,
-            ).bind_visibility_from(separator, "visible", op.not_)
-            ui.button(
-                "Retry",
-                color="accent",
-                icon="repeat",
-                on_click=navigator(f"/quiz/{file}"),
-            ).bind_visibility_from(separator, "visible")
+            (
+                ui.button("Retry", icon="repeat", on_click=navigator(f"/quiz/{file}"))
+                .props("outline")
+                .bind_visibility_from(separator, "visible")
+            )

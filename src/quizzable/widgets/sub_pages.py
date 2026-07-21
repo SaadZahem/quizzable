@@ -3,21 +3,6 @@ from collections.abc import Callable
 from nicegui import app, ui
 from nicegui.page_arguments import RouteMatch
 
-from .home_page import home_page
-from .index_page import index_page
-from .login_page import login_page
-from .quiz_page import quiz_page
-from .result_page import result_page
-
-__all__ = [
-    "custom_sub_pages",
-    "quiz_page",
-    "index_page",
-    "home_page",
-    "result_page",
-    "login_page",
-]
-
 
 def protected(func: Callable) -> Callable:
     """Decorator to mark a route handler as requiring authentication for the custom_sub_pages."""
@@ -29,15 +14,20 @@ class CustomSubPages(ui.sub_pages):
     """Custom ui.sub_pages with built-in authentication and custom 404 handling."""
 
     def _render_page(self, match: RouteMatch) -> bool:
-        if self._is_route_protected(match.builder) and not self._is_authenticated():
-            self._show_login_form(match.full_url)
+        protected = self._is_route_protected(match.builder)
+        app.storage.client.update(
+            path=self._router.current_path,
+            protected=protected,
+        )
+        if protected and not self._is_authenticated():
+            ui.navigate.to(f"/login?redirect_url={match.full_url}")
             return True
         return super()._render_page(match)
 
     def _render_404(self) -> None:
-        with ui.column().classes("absolute-center items-center"):
-            ui.icon("error_outline", size="4rem").classes("text-red")
-            ui.label("404 - Page Not Found").classes("text-2xl text-red")
+        with ui.card().classes("absolute-center items-center"):
+            ui.icon("error_outline", size="4rem").classes("text-negative")
+            ui.label("404 - Page Not Found").classes("text-2xl text-negative")
             ui.label(f'The page "{self._router.current_path}" does not exist.').classes(
                 "text-gray-600"
             )
@@ -50,7 +40,7 @@ class CustomSubPages(ui.sub_pages):
                 ).props("outline")
 
     def _render_error(self, error: Exception) -> None:
-        with ui.column().classes("absolute-center items-center"):
+        with ui.card().classes("absolute-center items-center"):
             ui.icon("error_outline", size="4rem").classes("text-red")
             ui.label("500 - Internal Server Error").classes("text-2xl text-red")
             ui.label(
@@ -70,28 +60,7 @@ class CustomSubPages(ui.sub_pages):
         return getattr(handler, "_is_protected", False)
 
     def _is_authenticated(self) -> bool:
-        return app.storage.user.get("authenticated", False)
-
-    def _show_login_form(self, intended_path: str) -> None:
-        with ui.card().classes("absolute-center items-stretch"):
-            ui.label("Protected Area").classes("text-2xl")
-            ui.label("Enter passphrase to continue.")
-            passphrase = (
-                ui.input("Passphrase", password=True, password_toggle_button=True)
-                .classes("w-64")
-                .props("autofocus")
-            )
-
-            def try_login():
-                if passphrase.value == "spa":
-                    app.storage.user["authenticated"] = True
-                    self._reset_match()  # reset the current match to allow the page to be rendered again
-                    ui.navigate.to(intended_path)
-                else:
-                    ui.notify("Incorrect passphrase", color="negative")
-
-            passphrase.on("keydown.enter", try_login)
-            ui.button("Login", on_click=try_login)
+        return app.storage.user.get("auth", False)
 
 
 # Function-like access following NiceGUI convention where classes are callable to feel like functions

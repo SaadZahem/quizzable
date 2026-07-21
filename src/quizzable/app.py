@@ -3,26 +3,22 @@ from pathlib import Path
 from nicegui import app, ui
 
 from . import auth
-from . import pages as pages  # tells my linter to shut up
 from .config import COLORS, STORAGE_SECRET
-from .pages import (
-    custom_sub_pages,
-    home_page,
-    index_page,
-    login_page,
-    quiz_page,
-    result_page,
-)
 from .utils import substitute
-from .widgets import theme
+from .views import home_page, index_page, login_page, quiz_page, result_page
+from .widgets import custom_sub_pages, protected, theme
 
 parent = Path(__file__).parent
 
 
+@protected
+def secure():
+    raise ValueError("errrrr")
+
+
 @ui.page("/")
 @ui.page("/{_:path}")
-async def main_page():
-    await ui.context.client.connected()
+def main_page():
     with theme.frame(None):
         custom_sub_pages(
             {
@@ -31,6 +27,7 @@ async def main_page():
                 "/login": login_page,
                 "/quiz/{file}": quiz_page,
                 "/quiz/{file}/{selection}": result_page,
+                "/secret": secure,
             }
         ).classes("container mx-auto h-full relative")
 

@@ -1,6 +1,7 @@
+import operator as op
 from contextlib import contextmanager
 
-from nicegui import html, ui
+from nicegui import app, html, ui
 
 from ..models import User
 from ..utils import navigator
@@ -13,6 +14,11 @@ def frame(user: User = None):
     ui.query("main").classes("flex flex-row items-stretch")
     ui.query(".nicegui-content").classes("p-0 gap-0 grow")
 
+    def logout():
+        app.storage.user["auth"] = False
+        if app.storage.client.get("protected"):
+            ui.navigate.to("/")
+
     with (
         ui.header().classes("bg-brand border-b-1 border-dashed border-black"),
         ui.row().classes("container mx-auto items-center text-primary"),
@@ -21,18 +27,21 @@ def frame(user: User = None):
             ui.label("Quizzable").classes("text-bold text-2xl")
 
         ui.space()
-        if user is None:
-            (
-                ui.button(
-                    "Log in",
-                    on_click=navigator("/login", redirect=True),
-                )
-                .props("flat no-caps")
-                .classes("hover:scale-110")
+        (
+            ui.button(
+                "Log in",
+                on_click=navigator("/login", redirect=True),
             )
-        else:
-            ui.label(str(user)).classes("text-xl")
-            ui.button(icon="logout").props("flat rounded")
+            .props("flat no-caps")
+            .classes("hover:scale-110")
+            .bind_visibility_from(app.storage.user, "auth", op.not_)
+        )
+        ui.label(str(user)).classes("text-xl").bind_visibility_from(
+            app.storage.user, "auth"
+        )
+        ui.button(icon="logout", on_click=logout).props(
+            "flat rounded"
+        ).bind_visibility_from(app.storage.user, "auth")
 
     with ui.element().classes("size-full py-8 text-primary"):
         yield
