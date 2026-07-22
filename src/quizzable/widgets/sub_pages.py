@@ -1,20 +1,14 @@
-from collections.abc import Callable
-
 from nicegui import app, ui
 from nicegui.page_arguments import RouteMatch
 
-
-def protected(func: Callable) -> Callable:
-    """Decorator to mark a route handler as requiring authentication for the custom_sub_pages."""
-    func._is_protected = True  # pylint: disable=protected-access
-    return func
+from ..utils import is_protected
 
 
 class CustomSubPages(ui.sub_pages):
     """Custom ui.sub_pages with built-in authentication and custom 404 handling."""
 
     def _render_page(self, match: RouteMatch) -> bool:
-        protected = self._is_route_protected(match.builder)
+        protected = is_protected(match.builder)
         app.storage.client.update(
             path=self._router.current_path,
             protected=protected,
@@ -55,9 +49,6 @@ class CustomSubPages(ui.sub_pages):
                 ui.button(
                     "Go Back", icon="arrow_back", on_click=ui.navigate.back
                 ).props("outline")
-
-    def _is_route_protected(self, handler: Callable) -> bool:
-        return getattr(handler, "_is_protected", False)
 
     def _is_authenticated(self) -> bool:
         return app.storage.user.get("auth", False)

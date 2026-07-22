@@ -6,15 +6,17 @@ from nicegui import app, ui
 from .config import COLORS, STORAGE_SECRET
 from .services.auth import get_current_user
 from .utils import substitute
-from .views import home_page, index_page, login_page, quiz_page, result_page
-from .widgets import custom_sub_pages, protected, theme
+from .views import (
+    home_page,
+    index_page,
+    load_quiz_page,
+    login_page,
+    new_quiz_page,
+    review_quiz_page,
+)
+from .widgets import custom_sub_pages, scaffold
 
 parent = Path(__file__).parent
-
-
-@protected
-def secure():
-    raise ValueError("errrrr")
 
 
 @ui.page("/")
@@ -34,15 +36,15 @@ async def main_page():
     except HTTPException:
         app.storage.user.update(auth=False, token="", user={"username": ""})
 
-    with theme.frame():
+    with scaffold():
         custom_sub_pages(
             {
                 "/": index_page,
                 "/home": home_page,
                 "/login": login_page,
-                "/quiz/{file}": quiz_page,
-                "/quiz/{file}/{selection}": result_page,
-                "/secret": secure,
+                "/quiz/": new_quiz_page,
+                "/quiz/{file}": load_quiz_page,
+                "/quiz/{file}/{selection}": review_quiz_page,
             },
             data=dict(
                 user=user,

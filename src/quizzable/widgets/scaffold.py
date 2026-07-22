@@ -7,7 +7,7 @@ from ..utils import navigator
 
 
 @contextmanager
-def frame():
+def scaffold():
     ui.query("body").classes("bg-brand")
     ui.query("#app").classes("h-screen")
     ui.query("main").classes("flex flex-row items-stretch")

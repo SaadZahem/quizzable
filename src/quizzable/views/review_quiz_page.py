@@ -9,7 +9,7 @@ from ..utils import navigator, totitle
 from ..widgets import question_card
 
 
-async def result_page(file: str, selection: str):
+async def review_quiz_page(file: str, selection: str):
     assert re.match("[-a-e]+", selection)
 
     quiz = await MCQuiz.filter(title=totitle(file)).first()

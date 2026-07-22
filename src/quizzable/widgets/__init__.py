@@ -1,6 +1,6 @@
 from .header import header_element
 from .question_card import question_card
-from .sub_pages import custom_sub_pages, protected
-from .theme import frame
+from .scaffold import scaffold
+from .sub_pages import custom_sub_pages
 
-__all__ = ["question_card", "header_element", "protected", "frame", "custom_sub_pages"]
+__all__ = ["question_card", "header_element", "scaffold", "custom_sub_pages"]

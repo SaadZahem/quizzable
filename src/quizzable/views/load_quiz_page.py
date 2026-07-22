@@ -5,7 +5,7 @@ from ..utils import totitle
 from ..widgets import question_card
 
 
-async def quiz_page(file: str):
+async def load_quiz_page(file: str):
     quiz = await MCQuiz.filter(title=totitle(file)).first()
     assert quiz is not None
 

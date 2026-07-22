@@ -1,3 +1,4 @@
+from collections.abc import Callable
 from pathlib import Path
 from string import Template
 from typing import Annotated
@@ -62,3 +63,13 @@ async def current_user() -> User | None:
         return
 
     return user
+
+
+def protected(func: Callable) -> Callable:
+    """Decorator to mark a route handler as requiring authentication for the custom_sub_pages."""
+    func._is_protected = True  # pylint: disable=protected-access
+    return func
+
+
+def is_protected(handler: Callable) -> bool:
+    return getattr(handler, "_is_protected", False)

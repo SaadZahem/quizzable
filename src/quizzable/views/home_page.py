@@ -43,6 +43,8 @@ async def home_page():
             .bind_value(app.storage.tab, "search") as search
         ):
             with search.add_slot("after"):
-                ui.button(icon="add", color="accent").props("flat")
+                ui.button(icon="add", color="accent").props("flat").on(
+                    "click", navigator("quiz")
+                ).tooltip("add a quiz")
 
         await quiz_list()
