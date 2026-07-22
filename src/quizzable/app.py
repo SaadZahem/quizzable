@@ -20,15 +20,19 @@ def secure():
 @ui.page("/")
 @ui.page("/{_:path}")
 async def main_page():
-    auth = app.storage.user.get("auth", False)
-    token = app.storage.user.get("token")
+    # ui.run_javascript(
+    # "var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;"
+    # "var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;"
+    # )
+    auth = app.storage.user.setdefault("auth", False)
+    token = app.storage.user.setdefault("token")
     user = None
     try:
         if auth:
             user = await get_current_user(token)
+            app.storage.user.setdefault("user", user.todict())
     except HTTPException:
-        app.storage.user.update(auth=False)
-        del app.storage.user["token"]
+        app.storage.user.update(auth=False, token="", user={"username": ""})
 
     with theme.frame():
         custom_sub_pages(

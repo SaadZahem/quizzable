@@ -29,7 +29,7 @@ def frame():
                     "Log in",
                     on_click=navigator("/login", redirect=True),
                 )
-                .props("flat no-caps")
+                .props("no-caps outline")
                 .classes("hover:scale-110")
                 .bind_visibility_from(app.storage.user, "auth", op.not_)
             )

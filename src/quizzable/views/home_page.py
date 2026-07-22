@@ -1,57 +1,48 @@
 from nicegui import app, ui
 
 from ..models import MCQuiz
-from ..utils import navigator, totitle
+from ..utils import navigator
 
 
 async def home_page():
     await ui.context.client.connected()
-    storage_file: str = app.storage.tab.get("file", "")
     all_quizzes = await MCQuiz.all()
 
-    async def select(file):
-        app.storage.tab.update(file=file)
-        quiz_details.refresh(file)
-
     @ui.refreshable
-    def quiz_list():
-        with ui.list().props("separator"):
+    async def quiz_list():
+        with ui.list().props("separator").classes("w-full"):
             for quiz in all_quizzes:
                 for term in search.value:
                     if term.lower() not in quiz.title.lower():
                         break
                 else:
-                    ui.item(quiz.title, on_click=lambda q=quiz: select(q.file))
+                    with ui.expansion(quiz.title, group="quiz").classes("w-full"):
+                        await quiz_details(quiz)
 
-    @ui.refreshable
-    async def quiz_details(file: str):
-        quiz = (
-            await MCQuiz.filter(title=totitle(file))
-            .prefetch_related("questions")
-            .first()
-        )
-
+    async def quiz_details(quiz: MCQuiz):
         if quiz:
             title = quiz.title
-            count = len(quiz.questions)
+            count = len(await quiz.questions)
+            maintainer = (await quiz.maintainer).username
 
             ui.label(title).classes("text-3xl")
             ui.label(f"Number of questions: {count}")
+            ui.label(f"Maintainer: {maintainer}")
             (
-                ui.button("Attempt", on_click=navigator(f"/quiz/{file}"))
+                ui.button("Attempt", on_click=navigator(f"/quiz/{quiz.file}"))
                 .props("flat")
                 .classes("self-end")
             )
         else:
             ui.label("None is selected").classes("mx-auto")
 
-    with ui.card().classes("grow self-stretch justify-center items-center"):
-        search = (
+    with ui.card().classes("grow self-stretch items-center"):
+        with (
             ui.input_chips("Search quizzes", on_change=quiz_list.refresh)
             .classes("self-stretch")
-            .bind_value(app.storage.tab, "search")
-        )
-        with ui.row().classes("grow self-stretch"):
-            quiz_list()
-            with ui.column().classes("self-stretch mx-auto"):
-                await quiz_details(storage_file)
+            .bind_value(app.storage.tab, "search") as search
+        ):
+            with search.add_slot("after"):
+                ui.button(icon="add", color="accent").props("flat")
+
+        await quiz_list()
