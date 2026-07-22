@@ -2,6 +2,7 @@ from nicegui import app, ui
 from nicegui.page_arguments import RouteMatch
 
 from ..utils import is_protected
+from .error_card import error_card
 
 
 class CustomSubPages(ui.sub_pages):
@@ -16,39 +17,30 @@ class CustomSubPages(ui.sub_pages):
         if protected and not self._is_authenticated():
             ui.navigate.to(f"/login?redirect_url={match.full_url}")
             return True
-        return super()._render_page(match)
+
+        try:
+            return super()._render_page(match)
+        except AssertionError as error:
+            self._render_error(error)
+            return True
 
     def _render_404(self) -> None:
-        with ui.card().classes("absolute-center items-center"):
-            ui.icon("error_outline", size="4rem").classes("text-negative")
-            ui.label("404 - Page Not Found").classes("text-2xl text-negative")
-            ui.label(f'The page "{self._router.current_path}" does not exist.').classes(
-                "text-gray-600"
-            )
-            with ui.row().classes("mt-4"):
-                ui.button(
-                    "Go Home", icon="home", on_click=lambda: ui.navigate.to("/")
-                ).props("outline")
-                ui.button(
-                    "Go Back", icon="arrow_back", on_click=ui.navigate.back
-                ).props("outline")
+        error_card(
+            [
+                "404 - Page Not Found",
+                f'The page "{self._router.current_path}" does not exist.',
+            ]
+        )
 
     def _render_error(self, error: Exception) -> None:
-        with ui.card().classes("absolute-center items-center"):
-            ui.icon("error_outline", size="4rem").classes("text-red")
-            ui.label("500 - Internal Server Error").classes("text-2xl text-red")
-            ui.label(
-                f'The page "{self._router.current_path}" produced an error.'
-            ).classes("text-gray-600")
-            # we do not recommend to show exception messages in production (security risk)
-            ui.label(str(error)).classes("text-gray-600")
-            with ui.row().classes("mt-4"):
-                ui.button(
-                    "Go Home", icon="home", on_click=lambda: ui.navigate.to("/")
-                ).props("outline")
-                ui.button(
-                    "Go Back", icon="arrow_back", on_click=ui.navigate.back
-                ).props("outline")
+        error_card(
+            [
+                "500 - Internal Server Error",
+                f'The page "{self._router.current_path}" produced an error.',
+                # we do not recommend to show exception messages in production (security risk)
+                str(error),
+            ]
+        )
 
     def _is_authenticated(self) -> bool:
         return app.storage.user.get("auth", False)

@@ -6,14 +6,22 @@ from nicegui import ui
 
 from ..models import MCQuiz
 from ..utils import navigator, totitle
-from ..widgets import question_card
+from ..widgets import error_card, question_card
 
 
 async def review_quiz_page(file: str, selection: str):
     assert re.match("[-a-e]+", selection)
 
     quiz = await MCQuiz.filter(title=totitle(file)).first()
-    assert quiz is not None
+    if quiz is None:
+        error_card(
+            [
+                "Quiz not found",
+                f'We couldn\'t find the quiz "{totitle(file)}"',
+                "Recheck the url and retry again",
+            ]
+        )
+        return
 
     questions = await quiz.questions
     total = len(questions)

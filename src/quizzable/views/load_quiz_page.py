@@ -2,12 +2,20 @@ from nicegui import ElementFilter, ui
 
 from ..models import MCQuiz
 from ..utils import totitle
-from ..widgets import question_card
+from ..widgets import error_card, question_card
 
 
 async def load_quiz_page(file: str):
     quiz = await MCQuiz.filter(title=totitle(file)).first()
-    assert quiz is not None
+    if quiz is None:
+        error_card(
+            [
+                "Quiz not found",
+                f'We couldn\'t find the quiz "{totitle(file)}"',
+                "Recheck the url and retry again",
+            ]
+        )
+        return
 
     questions = await quiz.questions
 
