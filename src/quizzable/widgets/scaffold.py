@@ -3,7 +3,7 @@ from contextlib import contextmanager
 
 from nicegui import app, html, ui
 
-from ..utils import navigator
+from ..utils import logout, navigator
 
 
 @contextmanager
@@ -12,11 +12,6 @@ def scaffold():
     ui.query("#app").classes("h-screen")
     ui.query("main").classes("flex flex-row items-stretch")
     ui.query(".nicegui-content").classes("p-0 gap-0 grow")
-
-    def logout():
-        app.storage.user["auth"] = False
-        if app.storage.client.get("protected"):
-            ui.navigate.to("/")
 
     with ui.header().classes("bg-brand border-b-1 border-dashed border-myblack"):
         with ui.row().classes("container mx-auto items-center text-primary"):

@@ -11,7 +11,9 @@ class CustomSubPages(ui.sub_pages):
     def _render_page(self, match: RouteMatch) -> bool:
         protected = is_protected(match.builder)
         app.storage.client.update(
+            # utils.navigator
             path=self._router.current_path,
+            # scaffold.logout
             protected=protected,
         )
         if protected and not is_authenticated():

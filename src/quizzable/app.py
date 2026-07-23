@@ -25,11 +25,17 @@ async def main_page():
     # "var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;"
     # )
 
-    # setting default values that elements in the header can bind to
-    app.storage.user.setdefault("auth", False)
-    app.storage.client.setdefault("username", "")
+    # Setting default values that elements in the header can bind to
+    auth = app.storage.user.setdefault("auth", False)
+    app.storage.user.setdefault("username", "")
 
-    user = await current_user()
+    # Obtaining and storing the user object to achieve the following:
+    # - allow protected pages to access the current user even
+    # - the access is not interrupted by a page reload if the token not expired
+    # - allow other pages to update this value
+    # - only verify the access token on page reloads even if it was expired
+    if auth:
+        app.storage.client["user"] = await current_user()
 
     with scaffold():
         custom_sub_pages(
@@ -41,7 +47,6 @@ async def main_page():
                 "/quiz/{file}": load_quiz_page,
                 "/quiz/{file}/{selection}": review_quiz_page,
             },
-            data=dict(user=user),
         ).classes("container mx-auto h-full relative")
 
 

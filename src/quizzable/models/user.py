@@ -21,5 +21,4 @@ class User(models.Model):
 
     def __repr__(self):
         username = self.username
-        hashed_password = self.hashed_password
-        return f"User({username=}, {hashed_password=})"
+        return f"User(id={self.id}, {username=}, password=...)"

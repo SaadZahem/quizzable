@@ -1,15 +1,17 @@
-from nicegui import ui
+from nicegui import app, ui
 
-from ..models import User
 from ..utils import navigator, protected
 from ..widgets.question_card import QuestionCardContainer
 
 
 @protected
-async def new_quiz_page(user: User):
+async def new_quiz_page():
     with ui.column().classes(
         "grow self-stretch items-stretch 2xl:w-2xl 2xl:self-center"
     ):
+        user = app.storage.client["user"]
+        ui.notify(repr(user))
+
         with ui.card().classes("items-center w-full max-w-md self-center") as main_card:
             ui.label("Create a new quiz").classes("text-2xl text-bold")
             title_input = ui.input(prefix="Title:").props(

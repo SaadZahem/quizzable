@@ -43,6 +43,13 @@ def substitute(file: Path, context: dict):
     return styles
 
 
+def logout():
+    app.storage.user.update(auth=False, token="", username="")
+    del app.storage.client["user"]
+    if app.storage.client.get("protected"):
+        ui.navigate.to("/")
+
+
 def _auth() -> tuple[bool, dict[str, Any]]:
     if not app.storage.user.setdefault("auth", False):
         return False, {}
@@ -52,6 +59,7 @@ def _auth() -> tuple[bool, dict[str, Any]]:
 
     if not verified:
         app.storage.user.update(auth=False, username="")
+        del app.storage.client["user"]
         ui.notify("Session expired")
 
     return verified, data

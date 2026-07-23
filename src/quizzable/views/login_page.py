@@ -15,13 +15,14 @@ def card_template(
     toggle: Callable,
     redirect_url: str = "/home",
 ) -> ui.card:
-    async def on_click():
+    async def signup_or_login():
         try:
             user, token = await handler(username.value, password.value)
         except ValueError as error:
             ui.notify(error.args[0], color="negative")
         else:
             app.storage.user.update(auth=True, token=token, username=user.username)
+            app.storage.client["user"] = user
             ui.navigate.to(redirect_url)
 
     with (
@@ -46,7 +47,7 @@ def card_template(
 
         with ui.card_actions().classes("text-xl"):
             btn = (
-                ui.button(primary, on_click=on_click)
+                ui.button(primary, on_click=signup_or_login)
                 .props("no-caps rounded")
                 .classes("text-lg text-bold px-4 md:px-8")
             )
