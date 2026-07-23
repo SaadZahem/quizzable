@@ -44,7 +44,7 @@ async def home_page():
         ):
             with search.add_slot("after"):
                 ui.button(icon="add", color="accent").props("flat").on(
-                    "click", navigator("quiz")
+                    "click", navigator("/quiz")
                 ).tooltip("add a quiz")
 
         await quiz_list()

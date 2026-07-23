@@ -20,9 +20,6 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 "the time after which a relogin is needed"
 
-TOKEN_URL = "auth/token"
-"the url from which the JWT token is obtained"
-
 
 # Theme configuration
 COLORS = dict(

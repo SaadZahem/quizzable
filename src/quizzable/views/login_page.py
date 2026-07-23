@@ -1,23 +1,28 @@
 from typing import Callable
 
-from fastapi import HTTPException
 from nicegui import app, ui
-from tortoise.exceptions import IntegrityError
 
+from ..models import User
 from ..services import auth
+from ..utils import is_authenticated
 
 
 def card_template(
     action: str,
     primary: str,
     secondary: str,
-    on_click: Callable,
+    handler: Callable[[str, str], tuple[User, str]],
     toggle: Callable,
     redirect_url: str = "/home",
 ) -> ui.card:
-
-    async def click():
-        await on_click(username.value, password.value)
+    async def on_click():
+        try:
+            user, token = await handler(username.value, password.value)
+        except ValueError as error:
+            ui.notify(error.args[0], color="negative")
+        else:
+            app.storage.user.update(auth=True, token=token, username=user.username)
+            ui.navigate.to(redirect_url)
 
     with (
         ui.card()
@@ -41,7 +46,7 @@ def card_template(
 
         with ui.card_actions().classes("text-xl"):
             btn = (
-                ui.button(primary, on_click=click)
+                ui.button(primary, on_click=on_click)
                 .props("no-caps rounded")
                 .classes("text-lg text-bold px-4 md:px-8")
             )
@@ -54,6 +59,9 @@ def card_template(
 
 
 def login_page(animate: bool = False, redirect_url: str = "/home"):
+    if is_authenticated():
+        return ui.navigate.to(redirect_url)
+
     # simple flip card animation using tailwind classes
     if animate:
         one = "z-1 rotate-y-0"
@@ -68,30 +76,12 @@ def login_page(animate: bool = False, redirect_url: str = "/home"):
         for card in (login_card, signup_card):
             card.classes(toggle=f"{one} {two}")
 
-    async def login(username: str, password: str):
-        try:
-            user, token = await auth.login(username, password)
-        except HTTPException:
-            ui.notify("Wrong username or password", color="negative")
-        else:
-            app.storage.user.update(auth=True, token=token, user=user.todict())
-            ui.navigate.to(redirect_url)
-
-    async def signup(username: str, password: str):
-        try:
-            user, token = await auth.signup(username, password)
-        except IntegrityError:
-            ui.notify("Username already exists", color="negative")
-        else:
-            app.storage.user.update(auth=True, token=token, user=user.todict())
-            ui.navigate.to(redirect_url)
-
     login_card = card_template(
         "auth/token",
         "Log in",
         "Sign up",
         redirect_url=redirect_url,
-        on_click=login,
+        handler=auth.login,
         toggle=flip,
     )
     signup_card = card_template(
@@ -99,7 +89,7 @@ def login_page(animate: bool = False, redirect_url: str = "/home"):
         "Sign up",
         "Log in",
         redirect_url=redirect_url,
-        on_click=signup,
+        handler=auth.signup,
         toggle=flip,
     )
 

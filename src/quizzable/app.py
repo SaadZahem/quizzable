@@ -1,11 +1,9 @@
 from pathlib import Path
 
-from fastapi import HTTPException
 from nicegui import app, ui
 
 from .config import COLORS, STORAGE_SECRET
-from .services.auth import get_current_user
-from .utils import substitute
+from .utils import current_user, substitute
 from .views import (
     home_page,
     index_page,
@@ -26,15 +24,12 @@ async def main_page():
     # "var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;"
     # "var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;"
     # )
-    auth = app.storage.user.setdefault("auth", False)
-    token = app.storage.user.setdefault("token")
-    user = None
-    try:
-        if auth:
-            user = await get_current_user(token)
-            app.storage.user.setdefault("user", user.todict())
-    except HTTPException:
-        app.storage.user.update(auth=False, token="", user={"username": ""})
+
+    # setting default values that elements in the header can bind to
+    app.storage.user.setdefault("auth", False)
+    app.storage.client.setdefault("username", "")
+
+    user = await current_user()
 
     with scaffold():
         custom_sub_pages(
@@ -42,13 +37,11 @@ async def main_page():
                 "/": index_page,
                 "/home": home_page,
                 "/login": login_page,
-                "/quiz/": new_quiz_page,
+                "/quiz": new_quiz_page,
                 "/quiz/{file}": load_quiz_page,
                 "/quiz/{file}/{selection}": review_quiz_page,
             },
-            data=dict(
-                user=user,
-            ),
+            data=dict(user=user),
         ).classes("container mx-auto h-full relative")
 
 

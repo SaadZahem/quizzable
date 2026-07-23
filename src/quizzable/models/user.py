@@ -16,9 +16,6 @@ class User(models.Model):
     class Meta:
         table = "users"
 
-    def todict(self) -> dict:
-        return dict(username=self.username)
-
     def __str__(self):
         return f"@{self.username}"
 

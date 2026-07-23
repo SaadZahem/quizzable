@@ -36,7 +36,7 @@ def scaffold():
             (
                 ui.label()
                 .classes("text-xl")
-                .bind_text_from(app.storage.user, ("user", "username"))
+                .bind_text_from(app.storage.user, "username")
                 .bind_visibility_from(app.storage.user, "auth")
             )
             (

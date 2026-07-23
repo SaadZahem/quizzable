@@ -1,12 +1,12 @@
 from collections.abc import Callable
 from pathlib import Path
 from string import Template
-from typing import Annotated
+from typing import Any
 
-from fastapi import Depends, HTTPException
 from nicegui import app, html, ui
 
 from .models import User
+from .services import auth
 
 # nicegui.html is provides h1 but misses h2..6
 for tag in (f"h{n}" for n in range(2, 7)):
@@ -43,26 +43,30 @@ def substitute(file: Path, context: dict):
     return styles
 
 
-def dependency(kind, func=None):
-    if func is not None:
-        return Annotated[kind, Depends(func)]
-    else:
-        return Annotated[kind, Depends()]
+def _auth() -> tuple[bool, dict[str, Any]]:
+    if not app.storage.user.setdefault("auth", False):
+        return False, {}
+
+    token = app.storage.user["token"]
+    verified, data = auth.verify_access_token(token)
+
+    if not verified:
+        app.storage.user.update(auth=False, username="")
+        ui.notify("Session expired")
+
+    return verified, data
+
+
+def is_authenticated() -> bool:
+    return _auth()[0]
 
 
 async def current_user() -> User | None:
-    from .services.auth import get_current_user
-
-    if not app.storage.user.get("auth"):
-        return
-
-    token = app.storage.user.get("token")
-    try:
-        user = await get_current_user(token)
-    except HTTPException:
-        return
-
-    return user
+    verified, data = _auth()
+    if verified:
+        username = data.get("sub")
+        app.storage.user.update(username=username)
+        return await auth.get_user(username)
 
 
 def protected(func: Callable) -> Callable:

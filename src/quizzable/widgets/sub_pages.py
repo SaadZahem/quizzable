@@ -1,7 +1,7 @@
 from nicegui import app, ui
 from nicegui.page_arguments import RouteMatch
 
-from ..utils import is_protected
+from ..utils import is_authenticated, is_protected
 from .error_card import error_card
 
 
@@ -14,15 +14,11 @@ class CustomSubPages(ui.sub_pages):
             path=self._router.current_path,
             protected=protected,
         )
-        if protected and not self._is_authenticated():
+        if protected and not is_authenticated():
             ui.navigate.to(f"/login?redirect_url={match.full_url}")
             return True
 
-        try:
-            return super()._render_page(match)
-        except AssertionError as error:
-            self._render_error(error)
-            return True
+        return super()._render_page(match)
 
     def _render_404(self) -> None:
         error_card(
@@ -41,9 +37,6 @@ class CustomSubPages(ui.sub_pages):
                 str(error),
             ]
         )
-
-    def _is_authenticated(self) -> bool:
-        return app.storage.user.get("auth", False)
 
 
 # Function-like access following NiceGUI convention where classes are callable to feel like functions
