@@ -2,16 +2,11 @@ from nicegui import ui
 
 from ..models import User
 from ..utils import navigator, protected
-from ..widgets import EditableQuestionCard
+from ..widgets.question_card import EditableQuestionCard, QuestionCardContainer
 
 
 @protected
 async def new_quiz_page(user: User):
-
-    def add_question_card():
-        with container:
-            EditableQuestionCard()
-
     with ui.column().classes(
         "grow self-stretch items-stretch 2xl:w-2xl 2xl:self-center"
     ):
@@ -21,8 +16,7 @@ async def new_quiz_page(user: User):
                 "autofocus dense outlined counter maxlength=255 autogrow"
             )
 
-        container = ui.column().classes("items-stretch")
-
+        container = QuestionCardContainer[EditableQuestionCard]()
         ui.separator()
         with ui.row().classes("items-center justify-center md:justify-evenly"):
             (
@@ -30,16 +24,19 @@ async def new_quiz_page(user: User):
                 .on("click", navigator(main_card))
                 .props("outline")
                 .classes("px-2")
+                .tooltip("back to top")
             )
             (
-                ui.button("Add a question", color="primary", icon="add")
-                .on("click", add_question_card)
+                ui.button(color="primary", icon="add")
+                .on("click", container.add_editable_question_card)
                 .props("outline no-caps")
-                .classes("px-2")
+                .classes("px-2 grow")
+                .tooltip("add a question card")
             )
             (
-                ui.button("Finish", color="accent", icon="done")
-                .on("click", add_question_card)
+                ui.button(color="accent", icon="done")
+                .on("click", container.add_editable_question_card)
                 .props("outline no-caps")
                 .classes("px-2")
+                .tooltip("finish")
             )

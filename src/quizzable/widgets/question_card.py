@@ -4,6 +4,20 @@ from nicegui.elements.choice_element import ChoiceElement
 from ..models import MCQuestion
 
 
+class QuestionCardContainer[T: ui.element](ui.column):
+    def __init__(self):
+        super().__init__(align_items="stretch")
+        sortable = self.make_sortable(handle=".handle", group=self.__class__.__name__)
+        sortable.disable()  # bugs
+
+        self.cards: list[T] = []
+
+    def add_editable_question_card(self):
+        with self:
+            card = EditableQuestionCard()
+            self.cards.append(card)
+
+
 class EditableQuestionCard(ChoiceElement):
     def __init__(self, value: str | None = None):
         options = {prefix: "" for prefix in "abcde"}
@@ -17,29 +31,33 @@ class EditableQuestionCard(ChoiceElement):
                 .props("outlined dense autogrow")
                 .classes("self-stretch") as inp,
                 inp.add_slot("after"),
-                ui.button(icon="delete", color="accent", on_click=self.delete).props(
-                    "flat"
-                ),
+                ui.element(),
             ):
-                pass
+                (
+                    ui.button(
+                        icon="delete", color="accent", on_click=self.delete
+                    ).props("flat"),
+                )
+                # ui.icon("drag_indicator").props("flat").classes(
+                #     "handle cursor-grab active:cursor-grabbing"
+                # )
 
             for index, prefix in enumerate("abcde", start=1):
                 with (
-                    ui.input(prefix=f"{prefix})").props(
-                        "outlined dense autogrow"
-                    ) as inp,
-                    inp.add_slot("before"),
+                    ui.input(prefix=f"{prefix})")
+                    .props("outlined dense autogrow")
+                    .add_slot("before"),
                     ui.button().props("flat round") as button,
                     ui.icon(
                         "radio_button_checked"
                         if self.value == prefix
                         else "radio_button_unchecked"
-                    ) as icon,
+                    ).mark("radio") as icon,
                 ):
                     button.on(
                         "click",
                         lambda ico=icon, btn=button: (
-                            ElementFilter(kind=ui.icon)
+                            ElementFilter(kind=ui.icon, marker="radio")
                             .within(instance=self)
                             .props("name=radio_button_unchecked")
                             and ico.props("name=radio_button_checked")
