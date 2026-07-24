@@ -10,7 +10,6 @@ async def new_quiz_page():
         "grow self-stretch items-stretch 2xl:w-2xl 2xl:self-center"
     ):
         user = app.storage.client["user"]
-        ui.notify(repr(user))
 
         with ui.card().classes("items-center w-full max-w-md self-center") as main_card:
             ui.label("Create a new quiz").classes("text-2xl text-bold")

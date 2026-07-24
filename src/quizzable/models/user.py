@@ -21,4 +21,4 @@ class User(models.Model):
 
     def __repr__(self):
         username = self.username
-        return f"User(id={self.id}, {username=}, password=...)"
+        return f"User#{self.id}({username=}, password=...)"

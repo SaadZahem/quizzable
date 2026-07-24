@@ -59,8 +59,9 @@ def _auth() -> tuple[bool, dict[str, Any]]:
 
     if not verified:
         app.storage.user.update(auth=False, username="")
-        del app.storage.client["user"]
         ui.notify("Session expired")
+        if "user" in app.storage.client:
+            del app.storage.client["user"]
 
     return verified, data
 

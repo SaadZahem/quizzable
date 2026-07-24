@@ -2,6 +2,7 @@ from nicegui import ElementFilter, background_tasks, html, ui
 from nicegui.elements.choice_element import ChoiceElement
 
 from ..models import ChoiceEnum, MCQuestion, MCQuiz, User
+from ..utils import totitle
 
 
 class QuestionCardContainer(ui.column):
@@ -12,16 +13,14 @@ class QuestionCardContainer(ui.column):
 
         self.user = user
         self.title_input = title_input
-        self.cards: list[EditableQuestionCard] = []
 
     def add_editable_question_card(self):
         with self:
-            card = EditableQuestionCard()
-            self.cards.append(card)
+            EditableQuestionCard()
 
-    async def _create_quiz(self, values: list[dict[str, str]]):
+    async def _create_quiz(self, title: str, values: list[dict[str, str]]):
         new_quiz = await MCQuiz.create(
-            title=self.title_input.value.strip().title(),
+            title=title,
             maintainer=self.user,
             tags="\n".join([]),
         )
@@ -39,22 +38,29 @@ class QuestionCardContainer(ui.column):
             )
 
     def create_quiz(self):
+        title = totitle(self.title_input.value.strip())
+        cards = ElementFilter(kind=EditableQuestionCard)
         values = []
         try:
-            if not self.cards:
-                raise ValueError
+            if not title:
+                raise ValueError("A quiz title is missing")
 
-            for card in self.cards:
+            for card in cards:
                 values.append(card.validate_values())
 
-        except ValueError:
-            ui.notify("The quiz cannot be empty", color="negative")
-        except AssertionError:
-            ui.notify("There must be a correct choice", color="negative")
+            if not values:
+                raise ValueError("Questions are missing")
+
+        except ValueError as error:
+            ui.notify(error.args[0], color="negative")
+
+        except AssertionError as error:
+            ui.notify(error.args[0], color="negative")
             ui.navigate.to(card)
+
         else:
-            background_tasks.create(self._create_quiz(values))
-            ui.navigate.back()
+            background_tasks.create(self._create_quiz(title, values))
+            ui.navigate.to("/home")
 
 
 class EditableQuestionCard(ChoiceElement):
@@ -112,12 +118,12 @@ class EditableQuestionCard(ChoiceElement):
             k=self.value,
         )
 
-        assert questiondict["q"]
-        assert questiondict["a"]
-        assert questiondict["b"]
-        assert questiondict["c"]
-        assert questiondict["d"]
-        assert questiondict["k"]
+        assert questiondict["q"], "A question is missing"
+        assert questiondict["a"], "Option A is missing"
+        assert questiondict["b"], "Option B is missing"
+        assert questiondict["c"], "Option C is missing"
+        assert questiondict["d"], "Option D is missing"
+        assert questiondict["k"], "There must be a correct choice"
 
         if not questiondict["e"]:
             del questiondict["e"]

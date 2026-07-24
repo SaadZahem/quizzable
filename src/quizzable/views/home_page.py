@@ -11,7 +11,7 @@ async def home_page():
     @ui.refreshable
     async def quiz_list():
         with ui.list().props("separator").classes("w-full"):
-            for quiz in all_quizzes:
+            for quiz in reversed(all_quizzes):
                 for term in search.value:
                     if term.lower() not in quiz.title.lower():
                         break
@@ -21,11 +21,9 @@ async def home_page():
 
     async def quiz_details(quiz: MCQuiz):
         if quiz:
-            title = quiz.title
             count = len(await quiz.questions)
             maintainer = (await quiz.maintainer).username
 
-            ui.label(title).classes("text-3xl")
             ui.label(f"Number of questions: {count}")
             ui.label(f"Maintainer: {maintainer}")
             (
@@ -40,11 +38,11 @@ async def home_page():
         with (
             ui.input_chips("Search quizzes", on_change=quiz_list.refresh)
             .classes("self-stretch")
-            .bind_value(app.storage.tab, "search") as search
+            .bind_value(app.storage.tab, "search") as search,
+            search.add_slot("after"),
         ):
-            with search.add_slot("after"):
-                ui.button(icon="add", color="accent").props("flat").on(
-                    "click", navigator("/quiz")
-                ).tooltip("add a quiz")
+            ui.button(icon="add", color="accent").props("flat").on(
+                "click", navigator("/quiz")
+            ).tooltip("add a quiz")
 
         await quiz_list()

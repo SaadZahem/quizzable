@@ -1,4 +1,7 @@
+from __future__ import annotations
+
 from enum import Enum
+from typing import Self
 
 from tortoise import fields, models
 
@@ -22,6 +25,39 @@ class MCQuestion(models.Model):
     correct = fields.CharEnumField(ChoiceEnum)
     quiz = fields.ForeignKeyField("quizzable.MCQuiz", related_name="questions")
 
+    @classmethod
+    async def from_dict(cls, questiondict: dict, quiz: MCQuiz, **kwargs) -> Self:
+        questiondict.update(**kwargs)
+        return await cls.create(
+            text=questiondict["q"],
+            a=questiondict["a"],
+            b=questiondict["b"],
+            c=questiondict["c"],
+            d=questiondict["d"],
+            e=questiondict.get("e"),
+            correct=ChoiceEnum(questiondict["k"]),
+            quiz=quiz,
+        )
+
+    def as_dict(self) -> dict:
+        questiondict = dict(
+            q=self.text,
+            a=self.a,
+            b=self.b,
+            c=self.c,
+            d=self.d,
+            k=self.correct.value,
+        )
+        if self.e:
+            questiondict.update(e=self.e)
+
+        return questiondict
+
+    def __repr__(self) -> str:
+        return (
+            f"MCQuestion#{self.id}.from_dict({self.as_dict()!r}, quiz=#{self.quiz_id})"
+        )
+
     class Meta:
         table = "questions"
 
@@ -41,5 +77,5 @@ class MCQuiz(models.Model):
     def file(self):
         return self.title.lower().replace(*" -")
 
-    def __str__(self):
-        return self.file
+    def __repr__(self) -> str:
+        return f"MCQuiz#{self.id}(title={self.title!r}, maintainer=#{self.maintainer_id}, created={self.created.strftime('%Y%m%d_%a')})"
