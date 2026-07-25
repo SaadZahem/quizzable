@@ -8,11 +8,14 @@ The app handles simple authentication with JWT tokens and password hashing.
 ## Running the project
 
 The project is structured as a package and is managed by `uv`.
+Note that a [`.env`](#.env) file is required by this project.
+The following command will set it up for you.
+
+    bin/init_env.sh
+
 There are 2 options for starting the project.
 
 ### Running for development
-
-This option
 
     uv add -r requirements.txt
     uv pip install -e .
@@ -30,6 +33,18 @@ This option
 
 The `bin/` directory houses additional scripts that aids in development.
 
-The only script in there currently is `init.py`.
+One script in there is `init_db.py`.
 This reads quizzes data from `data/` directory and adds them to the database.
 This requires the project to be first installed as a package.
+
+Another script is `init_env.py`.
+This creates a `.env` file in the current directory which is required for this project to run.
+
+## .env
+
+`SECRET_KEY`.
+Used to hash users passwords.
+
+`STORAGE_SECRET`.
+Used to encrypt user data.
+Required by `nicegui` to enable use of `app.storage.user`.
