@@ -84,11 +84,7 @@ async def authenticate_user(username: str, password: str) -> User:
 
 async def login(username: str, password: str) -> tuple[User, str]:
     user = await authenticate_user(username.strip(), password)
-    access_token_expires = timedelta(minutes=15)
-    access_token = create_access_token(
-        data=dict(sub=user.username),
-        expire_timedelta=access_token_expires,
-    )
+    access_token = create_access_token(data=dict(sub=user.username))
     return user, access_token
 
 
