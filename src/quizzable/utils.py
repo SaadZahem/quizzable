@@ -48,6 +48,8 @@ def logout():
     del app.storage.client["user"]
     if app.storage.client.get("protected"):
         ui.navigate.to("/")
+    else:
+        ui.navigate.reload()
 
 
 def _auth() -> tuple[bool, dict[str, Any]]:
