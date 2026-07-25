@@ -25,7 +25,7 @@ async def load_quiz_page(file: str):
         for radio in ElementFilter(kind=ui.radio):
             selection += "abcde"[radio.value] if radio.value is not None else "-"
 
-        ui.navigate.to(f"/quiz/{file}/{selection}")
+        ui.navigate.to(f"/quiz/{file}/review/{selection}")
 
     for number, question in enumerate(questions, start=1):
         question_card(number, question)

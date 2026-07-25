@@ -45,7 +45,7 @@ async def main_page():
                 "/login": login_page,
                 "/quiz": new_quiz_page,
                 "/quiz/{file}": load_quiz_page,
-                "/quiz/{file}/{selection}": review_quiz_page,
+                "/quiz/{file}/review/{selection}": review_quiz_page,
             },
         ).classes("container mx-auto h-full relative")
 
