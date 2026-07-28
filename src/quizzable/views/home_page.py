@@ -48,7 +48,24 @@ async def home_page():
         ):
             with ui.row(wrap=False).classes("w-full justify-between items-center"):
                 ui.label(quiz.title).classes("text-2xl mx-auto")
-                menu_button(quiz, owner)
+                with (
+                    ui.button(icon="more_vert")
+                    .classes("px-1")
+                    .props("flat round")
+                    .tooltip("more options"),
+                    ui.menu().classes("text-primary"),
+                ):
+                    if owner:
+                        ui.menu_item(
+                            "Edit",
+                            on_click=navigator(f"/quiz/{quiz.id}/edit"),
+                        )
+                        ui.menu_item(
+                            "Delete",
+                            on_click=lambda: background_tasks.create(delete(quiz)),
+                        ).classes("text-negative")
+                    ui.separator()
+                    ui.menu_item("Share")
 
             ui.button("Attempt", on_click=navigator(f"/quiz/{quiz.id}")).props(
                 "flat"
@@ -58,19 +75,6 @@ async def home_page():
         ui.label(f"Number of questions: {count}")
         ui.label(maintainer_label)
         ui.button("Open", on_click=dialog.open).props("flat").classes("self-end")
-
-    def menu_button(quiz: MCQuiz, owner: bool):
-        with (
-            ui.button(icon="more_vert").classes("px-1").props("flat round"),
-            ui.menu().classes("text-primary"),
-        ):
-            if owner:
-                ui.menu_item("Edit")
-                ui.menu_item(
-                    "Delete", on_click=lambda: background_tasks.create(delete(quiz))
-                ).classes("text-negative")
-            ui.separator()
-            ui.menu_item("Share")
 
     await ui.context.client.connected()
 

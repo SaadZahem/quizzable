@@ -5,6 +5,7 @@ from nicegui import app, ui
 from .config import COLORS, STORAGE_SECRET
 from .utils import current_user, substitute
 from .views import (
+    edit_quiz_page,
     home_page,
     index_page,
     load_quiz_page,
@@ -45,6 +46,7 @@ async def main_page():
                 "/login": login_page,
                 "/quiz": new_quiz_page,
                 "/quiz/{quiz_id}": load_quiz_page,
+                "/quiz/{quiz_id}/edit": edit_quiz_page,
                 "/quiz/{quiz_id}/review/{selection}": review_quiz_page,
             },
         ).classes("container mx-auto h-full relative")

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from nicegui import ElementFilter, background_tasks, html, ui
 from nicegui.elements.choice_element import ChoiceElement
 
@@ -6,17 +8,21 @@ from ..utils import totitle
 
 
 class QuestionCardContainer(ui.column):
-    def __init__(self, user: User, title_input: ui.input):
+    def __init__(self, user: User, title_input: ui.input, quiz: MCQuiz | None = None):
         super().__init__(align_items="stretch")
         sortable = self.make_sortable(handle=".handle", group=self.__class__.__name__)
         sortable.disable()  # bugs
 
         self.user = user
         self.title_input = title_input
+        self.quiz = quiz
 
-    def add_editable_question_card(self):
+    def add_editable_question_card(self, question: MCQuestion | None = None):
         with self:
-            EditableQuestionCard()
+            if self.quiz and not question:
+                EditableQuestionCard(MCQuestion(quiz=self.quiz))
+            else:
+                EditableQuestionCard(question)
 
     async def _create_quiz(self, title: str, values: list[dict[str, str]]):
         new_quiz = await MCQuiz.create(
@@ -36,6 +42,11 @@ class QuestionCardContainer(ui.column):
                 correct=ChoiceEnum(questiondict["k"]),
                 quiz=new_quiz,
             )
+
+    async def _save_quiz(self, cards: list[EditableQuestionCard]):
+        for card in cards:
+            await card.question.save()
+        await self.quiz.save()
 
     def create_quiz(self):
         title = totitle(self.title_input.value.strip())
@@ -62,19 +73,47 @@ class QuestionCardContainer(ui.column):
             background_tasks.create(self._create_quiz(title, values))
             ui.navigate.to("/home")
 
+    def save_quiz(self):
+        cards = ElementFilter(kind=EditableQuestionCard)
+        values = []
+        try:
+            if not self.quiz.title:
+                raise ValueError("A quiz title is missing")
+
+            for card in cards:
+                values.append(card.validate_values())
+
+            if not values:
+                raise ValueError("Questions are missing")
+
+        except ValueError as error:
+            ui.notify(error.args[0], color="negative")
+
+        except AssertionError as error:
+            ui.notify(error.args[0], color="negative")
+            ui.navigate.to(card)
+
+        else:
+            background_tasks.create(self._save_quiz(cards))
+            ui.navigate.to("/home")
+
 
 class EditableQuestionCard(ChoiceElement):
-    def __init__(self, value: str | None = None):
+    def __init__(self, question: MCQuestion | None = None):
         options = {prefix: "" for prefix in "abcde"}
+        value = question.correct.value if question and question.correct else None
         super().__init__(options=options, value=value or None)
-        self._choices = {}
-        self._build()
 
-    def _build(self):
+        self.question = question
+        self._choices = {}
+        self._build(question or MCQuestion())
+
+    def _build(self, question: MCQuestion):
         with self, ui.card():
             with (
                 ui.input()
                 .props("outlined dense autogrow")
+                .bind_value(question, "text")
                 .classes("self-stretch") as self._text_input,
                 self._text_input.add_slot("after"),
                 ui.element(),
@@ -89,7 +128,9 @@ class EditableQuestionCard(ChoiceElement):
                 # )
 
             for prefix in "abcde":
-                self._choices[prefix] = _inp = ui.input(prefix=f"{prefix})")
+                self._choices[prefix] = _inp = ui.input(prefix=f"{prefix})").bind_value(
+                    question, prefix
+                )
                 with (
                     _inp.props("outlined dense autogrow").add_slot("before"),
                     ui.button().props("flat round") as button,
