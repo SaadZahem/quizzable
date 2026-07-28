@@ -41,23 +41,34 @@ async def home_page():
         if owner:
             maintainer_label += " (You)"
 
+        # Dialog
+        with (
+            ui.dialog() as dialog,
+            ui.card().classes("container max-w-lg text-primary"),
+        ):
+            with ui.row(wrap=False).classes("w-full justify-between items-center"):
+                ui.label(quiz.title).classes("text-2xl mx-auto")
+                menu_button(quiz, owner)
+
+            ui.button("Attempt", on_click=navigator(f"/quiz/{quiz.id}")).props(
+                "flat"
+            ).classes("mx-auto")
+
+        # Details
         ui.label(f"Number of questions: {count}")
         ui.label(maintainer_label)
-        with ui.row(align_items="center").classes("w-full gap-1"):
-            ui.space()
-            menu_button(quiz, owner)
-            ui.button("Attempt", on_click=navigator(f"/quiz/{quiz.id}")).props("flat")
+        ui.button("Open", on_click=dialog.open).props("flat").classes("self-end")
 
     def menu_button(quiz: MCQuiz, owner: bool):
         with (
             ui.button(icon="more_vert").classes("px-1").props("flat round"),
-            ui.menu(),
+            ui.menu().classes("text-primary"),
         ):
             if owner:
                 ui.menu_item("Edit")
                 ui.menu_item(
                     "Delete", on_click=lambda: background_tasks.create(delete(quiz))
-                )
+                ).classes("text-negative")
             ui.separator()
             ui.menu_item("Share")
 
