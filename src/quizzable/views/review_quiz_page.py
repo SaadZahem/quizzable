@@ -5,19 +5,19 @@ from itertools import count
 from nicegui import ui
 
 from ..models import MCQuiz
-from ..utils import navigator, totitle
+from ..utils import navigator
 from ..widgets import error_card, question_card
 
 
-async def review_quiz_page(file: str, selection: str):
+async def review_quiz_page(quiz_id: int, selection: str):
     assert re.match("[-a-e]+", selection)
 
-    quiz = await MCQuiz.filter(title=totitle(file)).first()
+    quiz = await MCQuiz.filter(id=quiz_id).first()
     if quiz is None:
         error_card(
             [
                 "Quiz not found",
-                f'We couldn\'t find the quiz "{totitle(file)}"',
+                f"We couldn't find the quiz with the id {quiz_id!r}",
                 "Recheck the url and retry again",
             ]
         )
@@ -57,7 +57,9 @@ async def review_quiz_page(file: str, selection: str):
                 .bind_visibility_from(separator, "visible", op.not_)
             )
             (
-                ui.button("Retry", icon="repeat", on_click=navigator(f"/quiz/{file}"))
+                ui.button(
+                    "Retry", icon="repeat", on_click=navigator(f"/quiz/{quiz_id}")
+                )
                 .props("outline")
                 .bind_visibility_from(separator, "visible")
             )

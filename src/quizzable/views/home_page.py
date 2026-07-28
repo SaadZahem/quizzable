@@ -46,7 +46,7 @@ async def home_page():
         with ui.row(align_items="center").classes("w-full gap-1"):
             ui.space()
             menu_button(quiz, owner)
-            ui.button("Attempt", on_click=navigator(f"/quiz/{quiz.file}")).props("flat")
+            ui.button("Attempt", on_click=navigator(f"/quiz/{quiz.id}")).props("flat")
 
     def menu_button(quiz: MCQuiz, owner: bool):
         with (
