@@ -60,8 +60,8 @@ def _auth() -> tuple[bool, dict[str, Any]]:
     verified, data = auth.verify_access_token(token)
 
     if not verified:
+        ui.notify("Session expired!")
         app.storage.user.update(auth=False, username="")
-        ui.notify("Session expired")
         if "user" in app.storage.client:
             del app.storage.client["user"]
 

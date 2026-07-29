@@ -1,7 +1,7 @@
 from nicegui import app, ui
 
 from ..utils import navigator, protected
-from ..widgets.question_card import QuestionCardContainer
+from ..widgets import question_card_container
 
 
 @protected
@@ -17,7 +17,7 @@ async def new_quiz_page():
                 "autofocus dense outlined counter maxlength=255 autogrow"
             )
 
-        container = QuestionCardContainer(user, title_input)
+        container = question_card_container(user, title_input)
         ui.separator()
         with ui.row().classes("items-center justify-center md:justify-evenly"):
             (

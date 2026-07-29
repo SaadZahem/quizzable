@@ -2,7 +2,7 @@ from nicegui import app, ui
 
 from ..models import MCQuiz
 from ..utils import navigator, protected
-from ..widgets.question_card import QuestionCardContainer
+from ..widgets import question_card_container
 
 
 @protected
@@ -22,7 +22,7 @@ async def edit_quiz_page(quiz_id: int):
                 .bind_value(quiz, "title")
             )
 
-        container = QuestionCardContainer(user, title_input, quiz)
+        container = question_card_container(user, title_input, quiz)
         ui.separator()
         with ui.row().classes("items-center justify-center md:justify-evenly"):
             (

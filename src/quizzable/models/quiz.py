@@ -75,7 +75,7 @@ class MCQuiz(models.Model):
 
     @property
     def file(self):
-        return self.title.lower().replace(*" -")
+        return self.title.lower().replace(*" -") + ".yml"
 
     def __repr__(self) -> str:
         return f"MCQuiz#{self.id}(title={self.title!r}, maintainer=#{self.maintainer_id}, created={self.created.strftime('%Y%m%d_%a')})"

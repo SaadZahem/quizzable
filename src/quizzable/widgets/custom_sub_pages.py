@@ -39,7 +39,3 @@ class CustomSubPages(ui.sub_pages):
                 str(error),
             ]
         )
-
-
-# Function-like access following NiceGUI convention where classes are callable to feel like functions
-custom_sub_pages = CustomSubPages
