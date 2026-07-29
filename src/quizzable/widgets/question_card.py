@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from nicegui import html, ui
 
 from ..models import MCQuestion

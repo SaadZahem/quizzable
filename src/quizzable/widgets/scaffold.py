@@ -20,10 +20,7 @@ def scaffold():
 
             ui.space()
             (
-                ui.button(
-                    "Log in",
-                    on_click=navigator("/login", redirect=True),
-                )
+                ui.button("Log in", on_click=navigator("/login", redirect=True))
                 .props("no-caps outline")
                 .classes("hover:scale-110")
                 .bind_visibility_from(app.storage.user, "auth", op.not_)

@@ -90,7 +90,7 @@ async def home_page():
                 .classes("mx-auto")
             )
 
-        # Details to be shown when the item is expanded
+        # Details to be shown when the list item is expanded
         ui.label(f"Number of questions: {count}")
         ui.label(maintainer_label)
         ui.button("Open", on_click=dialog.open).props("flat").classes("self-end")
