@@ -1,14 +1,20 @@
-from nicegui import app, background_tasks, ui
+from nicegui import app, ui
 
 from ..models import MCQuiz
-from ..utils import navigator
+from ..utils import copy_relative_url, navigator
 
 
 async def home_page():
+    """View the home page."""
+
+    # Accessing all quizzes
     all_quizzes = await MCQuiz.all()
+
+    # Accessing the current user
     user = app.storage.client.get("user")
 
-    async def delete(quiz: MCQuiz):
+    async def remove(quiz: MCQuiz):
+        """Remove a quiz from the list and from the database."""
         all_quizzes.remove(quiz)
         await quiz.delete()
         quiz_list.refresh()
@@ -33,6 +39,9 @@ async def home_page():
                             await quiz_details(quiz)
 
     async def quiz_details(quiz: MCQuiz):
+        """Show more details about the selected quiz."""
+
+        # Info about the quiz
         count = len(await quiz.questions)
         maintainer = (await quiz.maintainer).username
         owner = user and user.username == maintainer
@@ -41,43 +50,55 @@ async def home_page():
         if owner:
             maintainer_label += " (You)"
 
-        # Dialog
+        # Dialog to appear when the button "Open" is clicked
         with (
             ui.dialog() as dialog,
             ui.card().classes("container max-w-lg text-primary"),
         ):
+            # Upper part of the dialog
             with ui.row(wrap=False).classes("w-full justify-between items-center"):
-                ui.label(quiz.title).classes("text-2xl mx-auto")
+                ui.label(quiz.title).classes("text-2xl mx-auto text-center")
+
+                # Menu button
                 with (
-                    ui.button(icon="more_vert")
-                    .classes("px-1")
-                    .props("flat round")
-                    .tooltip("more options"),
+                    ui.button(icon="more_vert").classes("px-1").props("flat round"),
                     ui.menu().classes("text-primary"),
                 ):
-                    if owner:
-                        ui.menu_item(
-                            "Edit",
-                            on_click=navigator(f"/quiz/{quiz.id}/edit"),
-                        )
-                        ui.menu_item(
-                            "Delete",
-                            on_click=lambda: background_tasks.create(delete(quiz)),
-                        ).classes("text-negative")
+                    (
+                        ui.menu_item("Edit")
+                        .set_enabled(owner)
+                        .on("click", navigator(url := f"/quiz/{quiz.id}/edit"))
+                    )
+                    (
+                        ui.menu_item("Delete")
+                        .set_enabled(owner)
+                        .classes("text-negative")
+                        .on("click", lambda: remove(quiz))
+                    )
                     ui.separator()
-                    ui.menu_item("Share")
+                    ui.menu_item("Copy link", lambda: copy_relative_url(url))
+                    ui.menu_item(
+                        "Download yaml",
+                        lambda: ui.download.from_url(f"/yaml/{quiz.file}"),
+                    )
 
-            ui.button("Attempt", on_click=navigator(f"/quiz/{quiz.id}")).props(
-                "flat"
-            ).classes("mx-auto")
+            # Lower part of the dialog
+            (
+                ui.button("Attempt")
+                .on("click", navigator(f"/quiz/{quiz.id}"))
+                .props("outline icon-right=arrow_right")
+                .classes("mx-auto")
+            )
 
-        # Details
+        # Details to be shown when the item is expanded
         ui.label(f"Number of questions: {count}")
         ui.label(maintainer_label)
         ui.button("Open", on_click=dialog.open).props("flat").classes("self-end")
 
+    # Enables app.storage.tab
     await ui.context.client.connected()
 
+    # Main card element with search bar, a button, and a refreshable list
     with ui.card().classes("grow self-stretch items-center"):
         with (
             ui.input_chips("Search quizzes", on_change=quiz_list.refresh)
@@ -85,8 +106,11 @@ async def home_page():
             .bind_value(app.storage.tab, "search") as search,
             search.add_slot("after"),
         ):
-            ui.button(icon="add", color="accent").props("flat").on(
-                "click", navigator("/quiz")
-            ).tooltip("add a quiz")
+            (
+                ui.button(icon="add", color="accent")
+                .props("flat")
+                .on("click", navigator("/quiz"))
+                .tooltip("add a quiz")
+            )
 
         await quiz_list()

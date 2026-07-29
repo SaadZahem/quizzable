@@ -19,6 +19,9 @@ from .views import (
 
 package_dir = Path(__file__).parent
 
+# Making static files accessible
+app.add_static_files("/yaml", "static/yaml")
+
 
 @ui.page("/")
 @ui.page("/{_:path}")

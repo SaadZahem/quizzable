@@ -30,6 +30,16 @@ def navigator(location, *, redirect: bool = False):
     return callback
 
 
+async def copy_relative_url(relative_path: str):
+    origin = await ui.run_javascript("window.location.origin")
+    full_url = "{}/{}".format(
+        origin.rstrip("/"),
+        relative_path.lstrip("/"),
+    )
+    ui.clipboard.write(full_url)
+    ui.notify(f"Copied: {full_url}")
+
+
 def totitle(name: str):
     return name.replace(*"- ").title()
 
