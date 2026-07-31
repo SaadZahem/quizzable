@@ -15,6 +15,7 @@ from .views import (
     login_page,
     new_quiz_page,
     review_quiz_page,
+    upload_quiz_page,
 )
 
 package_dir = Path(__file__).parent
@@ -45,6 +46,7 @@ async def main_page():
                 "/home": home_page,
                 "/login": login_page,
                 "/quiz": new_quiz_page,
+                "/quiz/upload": upload_quiz_page,
                 "/quiz/{quiz_id}": load_quiz_page,
                 "/quiz/{quiz_id}/edit": edit_quiz_page,
                 "/quiz/{quiz_id}/review/{selection}": review_quiz_page,
