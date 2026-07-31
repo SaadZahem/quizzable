@@ -18,22 +18,28 @@ async def home_page():
         """Remove a quiz from the list and from the database."""
         all_quizzes.remove(quiz)
         await quiz.delete()
-        quiz_list.refresh()
+        handle_change()
 
-    @ui.refreshable
-    async def quiz_list():
-        with ui.list().props("separator").classes("w-full"):
+    async def open_dialog(quiz):
+        dialog = await quiz_dialog.create(user, quiz, remove=remove)
+        dialog.open()
+
+    def refresh():
+        with li:
             for quiz in reversed(all_quizzes):
                 for term in search.value:
                     if term.lower() not in quiz.title.lower():
                         break
                 else:
-                    dialog = await quiz_dialog.create(user, quiz, remove=remove)
-                    with ui.item(on_click=dialog.open):
+                    with ui.item(on_click=lambda: open_dialog(quiz)):
                         with ui.item_section().classes("grow-0 me-4"):
                             ui.icon("quiz").on("click")
                         with ui.item_section():
                             ui.label(quiz.title)
+
+    def handle_change():
+        li.clear()
+        refresh()
 
     # Enables app.storage.tab
     await ui.context.client.connected()
@@ -41,7 +47,7 @@ async def home_page():
     # Main card element with search bar, a button, and a refreshable list
     with ui.card().classes("grow self-stretch items-center"):
         with (
-            ui.input_chips("Search quizzes", on_change=quiz_list.refresh)
+            ui.input_chips("Search quizzes", on_change=handle_change)
             .classes("self-stretch")
             .bind_value(app.storage.tab, "search") as search,
             search.add_slot("after"),
@@ -53,4 +59,6 @@ async def home_page():
                 .tooltip("add a quiz")
             )
 
-        await quiz_list()
+        # List - filtered with search bar
+        li = ui.list().props("separator").classes("w-full")
+        refresh()
