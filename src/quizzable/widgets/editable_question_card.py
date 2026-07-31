@@ -2,6 +2,7 @@ from nicegui import ElementFilter, ui
 from nicegui.elements.choice_element import ChoiceElement
 
 from ..models import ChoiceEnum, MCQuestion
+from ..services import qy
 
 
 class EditableQuestionCard(ChoiceElement):
@@ -78,13 +79,4 @@ class EditableQuestionCard(ChoiceElement):
 
     def validate_values(self) -> dict[str, str]:
         questiondict = self.question.as_dict()
-
-        assert questiondict["q"], "A question is missing"
-        assert questiondict["a"], "Option A is missing"
-        assert questiondict["b"], "Option B is missing"
-        assert questiondict["c"], "Option C is missing"
-        assert questiondict["d"], "Option D is missing"
-        # Option 'e' is optional
-
-        assert questiondict["k"], "There must be a correct choice"
-        return questiondict
+        return qy.validate(questiondict)

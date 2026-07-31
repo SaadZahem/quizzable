@@ -1,6 +1,7 @@
-from nicegui import ui
+from nicegui import app, ui
 from nicegui.events import UploadEventArguments
 
+from ..services import qy
 from ..utils import protected
 
 INSTRUCTIONS = """
@@ -29,13 +30,27 @@ INSTRUCTIONS = """
 
 @protected
 def upload_quiz_page():
-    def on_upload(e: UploadEventArguments): ...
+    user = app.storage.client["user"]
 
-    with ui.card():
-        ui.markdown(INSTRUCTIONS).classes("text-lg")
+    async def on_upload(e: UploadEventArguments):
+        try:
+            await qy.create_quiz_from_yaml(user, e.file)
+        except AssertionError as error:
+            message = "Object no. {1}: {0}".format(*error.args)
+            ui.notify(message, color="negative")
+        except qy.InvalidFileName:
+            ui.notify("Invalid filename", color="negative")
+        except qy.DuplicateFileName:
+            ui.notify(
+                "A quiz with this name already exists. Try changing the file name",
+                color="negative",
+            )
 
     (
-        ui.upload(on_upload=on_upload)
+        ui.upload(label="Upload yaml files", on_upload=on_upload)
         .classes("self-center")
         .props("accept='application/yaml, application/yml'")
     )
+
+    with ui.card():
+        ui.markdown(INSTRUCTIONS).classes("text-lg")
