@@ -27,24 +27,25 @@ async def home_page():
                     if term.lower() not in quiz.title.lower():
                         break
                 else:
-                    with ui.expansion(quiz.title, group="quiz").classes(
-                        "w-full"
-                    ) as expansion:
-                        with expansion.add_slot("header"):
-                            with ui.item_section().classes("grow-0 me-4"):
-                                ui.icon("quiz").on("click")
-                            with ui.item_section():
-                                ui.label(quiz.title)
-                        with expansion.add_slot("default"):
-                            await quiz_details(quiz)
+                    dialog = await quiz_dialog(quiz)
+                    with ui.item(on_click=dialog.open):
+                        with ui.item_section().classes("grow-0 me-4"):
+                            ui.icon("quiz").on("click")
+                        with ui.item_section():
+                            ui.label(quiz.title)
 
-    async def quiz_details(quiz: MCQuiz):
-        """Show more details about the selected quiz."""
+    async def quiz_dialog(quiz: MCQuiz) -> ui.dialog:
+        """
+        Create a dialog holding the quiz details.
+        """
 
         # Info about the quiz
         count = len(await quiz.questions)
         maintainer = (await quiz.maintainer).username
         owner = user and user.username == maintainer
+        datetime_format = "%Y-%m-%d %I:%M %p UTC"
+        creation_date = quiz.created.strftime(datetime_format)
+        editing_date = quiz.last_edited.strftime(datetime_format)
 
         maintainer_label = f"Maintainer: {maintainer}"
         if owner:
@@ -53,15 +54,19 @@ async def home_page():
         # Dialog to appear when the button "Open" is clicked
         with (
             ui.dialog() as dialog,
-            ui.card().classes("container max-w-lg text-primary"),
+            ui.card().tight().classes("container max-w-lg text-primary"),
         ):
             # Upper part of the dialog
-            with ui.row(wrap=False).classes("w-full justify-between items-center"):
-                ui.label(quiz.title).classes("text-2xl mx-auto text-center")
+            with ui.row(wrap=False).classes(
+                "w-full justify-between items-center bg-primary"
+            ):
+                ui.label(quiz.title).classes("text-xl mx-4 text-mywhite")
 
                 # Menu button
                 with (
-                    ui.button(icon="more_vert").classes("px-1").props("flat round"),
+                    ui.button(icon="more_vert", color="mywhite")
+                    .classes("px-1")
+                    .props("flat round"),
                     ui.menu().classes("text-primary"),
                 ):
                     (
@@ -82,18 +87,28 @@ async def home_page():
                         lambda: ui.download.from_url(f"/yaml/{quiz.file}"),
                     )
 
+            # Middle part of the dialog
+            with ui.element().classes("px-4 py-2"):
+                ui.markdown(
+                    "<br>".join(
+                        (
+                            f"Number of questions: {count}",
+                            maintainer_label,
+                            f"Created on {creation_date}",
+                            f"Last edited: {editing_date}",
+                        )
+                    )
+                )
+
             # Lower part of the dialog
+            ui.separator()
             (
                 ui.button("Attempt")
                 .on("click", navigator(f"/quiz/{quiz.id}"))
-                .props("outline icon-right=arrow_right")
-                .classes("mx-auto")
+                .props("flat icon-right=arrow_forward")
+                .classes("ms-auto")
             )
-
-        # Details to be shown when the list item is expanded
-        ui.label(f"Number of questions: {count}")
-        ui.label(maintainer_label)
-        ui.button("Open", on_click=dialog.open).props("flat").classes("self-end")
+            return dialog
 
     # Enables app.storage.tab
     await ui.context.client.connected()
