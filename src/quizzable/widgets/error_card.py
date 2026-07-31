@@ -3,12 +3,12 @@ from nicegui import ui
 from ..utils import navigator
 
 
-def error_card(messages: list[str]):
+def error_card(code: int, messages: list[str]) -> ui.card:
     with ui.card().classes("container max-w-md absolute-center items-center") as card:
         ui.icon("error_outline", size="4rem").classes("text-negative")
         for not_first, message in enumerate(messages):
             if not not_first:
-                ui.label(message).classes("text-2xl text-negative")
+                ui.label(f"{code} - {message}").classes("text-2xl text-negative")
             else:
                 ui.label(message).classes("text-gray-600")
 
@@ -18,4 +18,5 @@ def error_card(messages: list[str]):
                 "outline"
             )
 
+    ui.status_code(code)
     return card

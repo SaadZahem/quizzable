@@ -24,18 +24,20 @@ class CustomSubPages(ui.sub_pages):
 
     def _render_404(self) -> None:
         error_card(
+            404,
             [
-                "404 - Page Not Found",
+                "Page Not Found",
                 f'The page "{self._router.current_path}" does not exist.',
-            ]
+            ],
         )
 
     def _render_error(self, error: Exception) -> None:
         error_card(
+            500,
             [
-                "500 - Internal Server Error",
+                "Internal Server Error",
                 f'The page "{self._router.current_path}" produced an error.',
                 # we do not recommend to show exception messages in production (security risk)
                 str(error),
-            ]
+            ],
         )
