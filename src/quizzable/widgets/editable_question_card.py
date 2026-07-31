@@ -7,37 +7,34 @@ from ..models import ChoiceEnum, MCQuestion
 class EditableQuestionCard(ChoiceElement):
     def __init__(self, question: MCQuestion):
         super().__init__(
-            options={prefix: "" for prefix in "abcde"},
+            options=list("abcde"),
             value=question.correct.value if question.correct else None,
         )
 
         self.question = question
         self.bind_value_to(question, "correct", forward=ChoiceEnum.forward)
-        self._build()
+        self._make()
 
-    def _build(self):
+    def _make(self):
         with self, ui.card():
-            with (
-                ui.input()
-                .bind_value(self.question, "text")
-                .props("outlined dense autogrow")
-                .classes("self-stretch")
-                .add_slot("after"),
-                ui.element(),
-            ):
-                (
+            # question text input
+            with self._make_input(bind="text") as _inp:
+                with _inp.add_slot("after"):
                     ui.button(
-                        icon="delete", color="accent", on_click=self.delete
-                    ).props("flat"),
-                )
-                # ui.icon("drag_indicator").props("flat").classes(
-                #     "handle cursor-grab active:cursor-grabbing"
-                # )
+                        icon="delete",
+                        color="accent",
+                        on_click=self.delete,
+                    ).props("flat")
 
+            # 5 choices
             for prefix in "abcde":
-                _inp = ui.input(prefix=f"{prefix})").bind_value(self.question, prefix)
-                with _inp.props("outlined dense autogrow").add_slot("before"):
-                    with ui.button().props("flat round") as button:
+                # choice text input
+                with self._make_input(bind=prefix, prefix=prefix) as _next_inp:
+                    # home-made radio button
+                    with (
+                        _next_inp.add_slot("before"),
+                        ui.button().props("flat round") as button,
+                    ):
                         icon = ui.icon(
                             "radio_button_checked"
                             if self.value == prefix
@@ -49,6 +46,26 @@ class EditableQuestionCard(ChoiceElement):
                                 ico, value
                             ),
                         )
+
+                # pressing enter on last input moves focus to this input
+                _inp.on(
+                    "keydown.enter",
+                    lambda w=_next_inp: w.run_method("focus"),
+                    # preventing default means pressing enter doesn't add a newline
+                    js_handler="e => { emit(); e.preventDefault(); }",
+                )
+                _inp = _next_inp
+
+            # last input, prevent default
+            _inp.on("keydown.enter", js_handler="e => e.preventDefault()")
+
+    def _make_input(self, bind: str, prefix: str = "") -> ui.input:
+        if not prefix:
+            w = ui.input().classes("self-stretch")
+        else:
+            w = ui.input(prefix="%c)" % prefix).classes("min-w-3/4")
+
+        return w.props("outlined dense autogrow").bind_value(self.question, bind)
 
     def _handle_change(self, ico: ui.icon, value: str):
         (
