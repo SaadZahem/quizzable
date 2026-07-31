@@ -50,15 +50,13 @@ class EditableQuestionCard(ChoiceElement):
 
                 # pressing enter on last input moves focus to this input
                 _inp.on(
-                    "keydown.enter",
+                    "keydown.enter.prevent",
                     lambda w=_next_inp: w.run_method("focus"),
-                    # preventing default means pressing enter doesn't add a newline
-                    js_handler="e => { emit(); e.preventDefault(); }",
                 )
                 _inp = _next_inp
 
             # last input, prevent default
-            _inp.on("keydown.enter", js_handler="e => e.preventDefault()")
+            _inp.on("keydown.enter.prevent")
 
     def _make_input(self, bind: str, prefix: str = "") -> ui.input:
         if not prefix:
