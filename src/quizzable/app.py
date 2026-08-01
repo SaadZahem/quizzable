@@ -1,12 +1,11 @@
 import sys
-from pathlib import Path
 
 from nicegui import app, ui
 
 from . import widgets as my
 from .argument_parser import CustomArgumentParser
-from .config import COLORS, STORAGE_SECRET
-from .utils import current_user, substitute
+from .config import STORAGE_SECRET
+from .utils import current_user
 from .views import (
     edit_quiz_page,
     home_page,
@@ -17,11 +16,6 @@ from .views import (
     review_quiz_page,
     upload_quiz_page,
 )
-
-package_dir = Path(__file__).parent
-
-# Making static files accessible
-app.add_static_files("/yaml", "static/yaml")
 
 
 @ui.page("/")
@@ -35,7 +29,7 @@ async def main_page():
     # - allow protected pages to access the current user even
     # - the access is not interrupted by a page reload if the token not expired
     # - allow other pages to update this value
-    # - only verify the access token on page reloads even if it was expired
+    # - only verify the access token on page reloads or navigation even if it was expired
     if auth:
         app.storage.client["user"] = await current_user()
 
@@ -57,12 +51,6 @@ async def main_page():
 def main(**kwargs):
     # Parsing arguments
     args = CustomArgumentParser().parse_args(sys.argv[1:])
-
-    # Adding head html
-    context = COLORS.copy()
-    for file in (package_dir / "templates").glob("*.html"):
-        content = substitute(file, context)
-        ui.add_head_html(content, shared=True)
 
     # Starting/Reloading the server
     ui.run(

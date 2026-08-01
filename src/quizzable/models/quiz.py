@@ -13,6 +13,10 @@ class MCQuiz(models.Model):
         table = "quizzes"
 
     @property
+    def url(self):
+        return f"/quiz/{self.id}"
+
+    @property
     def file(self):
         return self.title.lower().replace(*" -") + ".yml"
 

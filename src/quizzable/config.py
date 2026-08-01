@@ -1,11 +1,23 @@
 import os
+from pathlib import Path
+from string import Template
+from typing import Any
 
 from dotenv import load_dotenv
-from nicegui import app
+from nicegui import app, ui
 from tortoise.contrib.fastapi import register_tortoise
 
 if not load_dotenv(".env"):
     raise ValueError(".env file is missing")
+
+
+def substitute(file: Path, context: dict[str, Any]) -> str:
+    with file.open("rt") as f:
+        content = f.read()
+
+    template = Template(content)
+    styles = template.safe_substitute(context)
+    return styles
 
 
 STORAGE_SECRET = os.getenv("STORAGE_SECRET")
@@ -20,7 +32,6 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 "the time after which a relogin is needed"
 
-
 # Theme configuration
 COLORS = dict(
     primary="#6B705C",
@@ -31,6 +42,21 @@ COLORS = dict(
     brand="hsl(39, 77%, 90%)",
 )
 app.colors(**COLORS)
+
+# Static files
+templates_dir = Path(__file__).parent / "templates"
+
+app.add_static_files("/yaml", "static/yaml")
+# app.add_static_file(
+# url_path="/static/fuse.js@7.0.0",
+# local_file=templates_dir / "fuse.js",
+# )
+
+# Head html
+ui.add_head_html(
+    substitute(templates_dir / "header.html", COLORS),
+    shared=True,
+)
 
 # Database configuration
 register_tortoise(

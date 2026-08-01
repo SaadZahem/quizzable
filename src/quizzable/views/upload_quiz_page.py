@@ -1,5 +1,4 @@
-from nicegui import app, ui
-from nicegui.events import UploadEventArguments
+from nicegui import app, events, ui
 
 from ..services import qy
 from ..utils import protected
@@ -32,7 +31,7 @@ INSTRUCTIONS = """
 def upload_quiz_page():
     user = app.storage.client["user"]
 
-    async def on_upload(e: UploadEventArguments):
+    async def on_upload(e: events.UploadEventArguments):
         try:
             await qy.create_quiz_from_yaml(user, e.file)
         except AssertionError as error:

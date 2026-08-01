@@ -1,14 +1,11 @@
-from collections.abc import Callable
-from pathlib import Path
-from string import Template
-from typing import Any
+from typing import Any, Callable
 
 from nicegui import app, html, ui
 
 from .models import User
 from .services import auth
 
-# nicegui.html is provides h1 but misses h2..6
+# nicegui.html provides h1 but is missing h2..6
 for tag in (f"h{n}" for n in range(2, 7)):
     if not hasattr(html, tag):
         setattr(html, tag, html._create_html_element(tag))
@@ -42,15 +39,6 @@ async def copy_relative_url(relative_path: str):
 
 def totitle(name: str):
     return name.replace(*"- ").title()
-
-
-def substitute(file: Path, context: dict):
-    with file.open("rt") as f:
-        content = f.read()
-
-    template = Template(content)
-    styles = template.safe_substitute(context)
-    return styles
 
 
 def logout():
