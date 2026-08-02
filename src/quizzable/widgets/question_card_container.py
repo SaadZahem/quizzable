@@ -5,6 +5,8 @@ from .editable_question_card import EditableQuestionCard
 
 
 class QuestionCardContainer(ui.column):
+    card = EditableQuestionCard
+
     def __init__(self, user: User, quiz: MCQuiz, title_input: ui.input):
         super().__init__(align_items="stretch")
 
@@ -20,18 +22,13 @@ class QuestionCardContainer(ui.column):
 
     def add_editable_question_card(self, question: MCQuestion | None = None):
         with self:
-            if question:
-                # loading a question
-                EditableQuestionCard(question)
-            else:
-                # adding new question
-                EditableQuestionCard(MCQuestion())
+            self.card(question or MCQuestion())
 
     async def save(self):
-        cards = ElementFilter(kind=EditableQuestionCard).within(instance=self)
+        cards = list(ElementFilter[self.card](kind=self.card).within(instance=self))
         try:
             if not self.quiz.title:
-                raise ValueError("A quiz title is missing")
+                raise ValueError("Quiz title is missing")
 
             if not cards:
                 raise ValueError("Questions are missing")

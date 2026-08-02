@@ -52,7 +52,7 @@ class MCQuestion(models.Model):
             b=self.b,
             c=self.c,
             d=self.d,
-            k=self.correct.value,
+            k=self.correct and self.correct.value,
         )
         if self.e:
             questiondict.update(e=self.e)

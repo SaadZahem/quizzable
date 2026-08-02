@@ -45,7 +45,7 @@ async def create_quiz_from_yaml(user: User, file: ui.upload.FileUpload):
 
 
 def validate(questiondict: dict[str, str]) -> dict[str, str]:
-    assert questiondict["q"], "A question is missing"
+    assert questiondict["q"], "Question text is missing"
     assert questiondict["a"], "Option A is missing"
     assert questiondict["b"], "Option B is missing"
     assert questiondict["c"], "Option C is missing"
