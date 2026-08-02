@@ -1,11 +1,13 @@
+from contextlib import asynccontextmanager
 from typing import Callable
 
 from nicegui import ui
 
 from ..models import MCQuiz, User
-from ..utils import copy_relative_url, navigator
+from ..utils import navigator
 
 
+@asynccontextmanager
 async def create(
     user: User | None,
     quiz: MCQuiz,
@@ -39,30 +41,8 @@ async def create(
         ):
             ui.label(quiz.title).classes("text-xl mx-4 text-mywhite")
 
-            # Menu button
-            with (
-                ui.button(icon="more_vert", color="mywhite")
-                .classes("px-1")
-                .props("flat round"),
-                ui.menu().classes("text-primary"),
-            ):
-                (
-                    ui.menu_item("Edit")
-                    .set_enabled(owner)
-                    .on("click", navigator(url := f"/quiz/{quiz.id}/edit"))
-                )
-                (
-                    ui.menu_item("Delete")
-                    .set_enabled(owner)
-                    .classes("text-negative")
-                    .on("click", lambda: remove(quiz))
-                )
-                ui.separator()
-                ui.menu_item("Copy link", lambda: copy_relative_url(url))
-                ui.menu_item(
-                    "Download yaml",
-                    lambda: ui.download.from_url(f"/yaml/{quiz.file}"),
-                )
+            # let caller inject the menu button
+            yield dialog, owner
 
         # Middle part of the dialog
         with ui.element().classes("px-4 py-2"):
@@ -85,4 +65,3 @@ async def create(
             .props("flat icon-right=arrow_forward")
             .classes("ms-auto")
         )
-        return dialog

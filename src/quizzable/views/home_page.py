@@ -1,57 +1,50 @@
-from nicegui import app, ui
+from functools import partial
 
-from ..models import MCQuiz
-from ..utils import navigator
+from nicegui import app, background_tasks, events, ui
+from tortoise.expressions import Q
+
+from ..models import MCQuiz, User
+from ..utils import copy_relative_url, navigator
 from ..widgets import quiz_dialog
 
 
-async def home_page():
+async def home_page(q: str = ""):
     """View the home page."""
-
-    # Accessing all quizzes
-    all_quizzes = await MCQuiz.all()
 
     # Accessing the current user
     user = app.storage.client.get("user")
 
-    async def remove(quiz: MCQuiz) -> None:
-        """Remove a quiz from the list and from the database."""
-        all_quizzes.remove(quiz)
-        await quiz.delete()
-        handle_change()
+    component = HomePageCard(user, page_size=20)
 
-    async def open_dialog(quiz):
-        dialog = await quiz_dialog.create(user, quiz, remove=remove)
-        dialog.open()
-
-    def refresh():
-        with li:
-            for quiz in reversed(all_quizzes):
-                for term in search.value:
-                    if term.lower() not in quiz.title.lower():
-                        break
-                else:
-                    with ui.item(on_click=lambda: open_dialog(quiz)):
-                        with ui.item_section().classes("grow-0 me-4"):
-                            ui.icon("quiz").on("click")
-                        with ui.item_section():
-                            ui.label(quiz.title)
-
-    def handle_change():
-        li.clear()
-        refresh()
-
-    # Enables app.storage.tab
     await ui.context.client.connected()
 
-    # Main card element with search bar, a button, and a refreshable list
-    with ui.card().classes("grow self-stretch items-center"):
-        with (
-            ui.input_chips("Search quizzes", on_change=handle_change)
-            .classes("self-stretch")
-            .bind_value(app.storage.tab, "search") as search,
-            search.add_slot("after"),
-        ):
+    if q:
+        component.search_input.bind_value(app.storage.tab, "q").set_value(q)
+    else:
+        component.search_input.bind_value(app.storage.tab, "search")
+
+
+class HomePageCard(ui.card):
+    def __init__(self, user: User | None, *, page_size: int = 20):
+        super().__init__(align_items="center")
+
+        self.user = user
+        self.page_size = page_size
+        self.search_input: ui.input
+        self.results_list: ui.list
+
+        with self.classes("grow self-stretch"):
+            self._make()
+
+    def _make(self) -> None:
+        # Search input
+        self.search_input = ui.input(
+            "Search quizzes",
+            on_change=self.handle_search_change,
+        ).classes("self-stretch")
+
+        # Add putton
+        with self.search_input.add_slot("after"):
             (
                 ui.button(icon="add", color="accent")
                 .props("flat")
@@ -60,5 +53,69 @@ async def home_page():
             )
 
         # List - filtered with search bar
-        li = ui.list().props("separator").classes("w-full")
-        refresh()
+        self.results_list = ui.list().props("separator").classes("w-full")
+
+        # Load quizzes initially
+        ui.timer(0.1, self.load_quizzes, once=True)
+
+    def handle_search_change(self, e: events.ValueChangeEventArguments):
+        background_tasks.create_lazy(self.load_quizzes(e.value), name="load_quizzes")
+
+    async def load_quizzes(self, query: str = "") -> None:
+        query = (query or self.search_input.value).strip()
+
+        orm_query = MCQuiz.all()
+        if query:
+            orm_query = orm_query.filter(
+                Q(title__icontains=query) | Q(maintainer__username=query)
+            )
+
+        quizzes = await orm_query.order_by("-created").limit(self.page_size)
+
+        with self.results_list.clear():
+            if not quizzes:
+                ui.label("No results found.").classes("text-gray-500 italic")
+                return
+
+            for index, quiz in enumerate(quizzes):
+                with ui.item(on_click=partial(self.open_dialog, index, quiz)):
+                    with ui.item_section().classes("grow-0 me-4"):
+                        ui.icon("quiz").on("click")
+                    with ui.item_section():
+                        ui.label(quiz.title)
+
+    async def open_dialog(self, index: int, quiz: MCQuiz):
+        async def remove():
+            await quiz.delete()
+            list(self.results_list)[index].set_enabled(False)
+            dialog.close()
+
+        async with quiz_dialog.create(self.user, quiz, remove=remove) as (
+            dialog,
+            owner,
+        ):
+            with (
+                ui.button(icon="more_vert", color="mywhite")
+                .classes("px-1")
+                .props("flat round"),
+                ui.menu().classes("text-primary"),
+            ):
+                (
+                    ui.menu_item("Edit")
+                    .set_enabled(owner)
+                    .on("click", navigator(url := f"/quiz/{quiz.id}/edit"))
+                )
+                (
+                    ui.menu_item("Delete")
+                    .set_enabled(owner)
+                    .classes("text-negative")
+                    .on("click", remove)
+                )
+                ui.separator()
+                ui.menu_item("Copy link", partial(copy_relative_url, url))
+                ui.menu_item(
+                    "Download yaml",
+                    lambda: ui.download.from_url(f"/yaml/{quiz.file}"),
+                )
+
+        dialog.open()
