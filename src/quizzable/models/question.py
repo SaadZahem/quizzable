@@ -21,7 +21,7 @@ class ChoiceEnum(Enum):
 
 
 class MCQuestion(models.Model):
-    id = fields.IntField(pk=True)
+    id = fields.IntField(primary_key=True)
     text = fields.TextField()
     a = fields.TextField()
     b = fields.TextField()
