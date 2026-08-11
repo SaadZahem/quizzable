@@ -26,6 +26,16 @@ async def create(user: User | None, quiz: MCQuiz) -> ui.dialog:
     if owner:
         maintainer += " (You)"
 
+    lines = [
+        f"**Questions:** {count}",
+        f"**Maintainer:** {maintainer}",
+        f"**Created on:** {creation_date}",
+        f"**Last edited:** {editing_date}",
+    ]
+
+    if tags:
+        lines.append("**Tags::**")
+
     # Dialog to appear when the button "Open" is clicked
     with (
         ui.dialog() as dialog,
@@ -42,46 +52,26 @@ async def create(user: User | None, quiz: MCQuiz) -> ui.dialog:
 
         # Middle part of the dialog
         with ui.element().classes("px-4 py-2 w-full"):
-            ui.markdown(
-                "<br>".join(
-                    (
-                        f"**Questions:** {count}",
-                        f"**Maintainer:** {maintainer}",
-                        f"**Created on:** {creation_date}",
-                        f"**Last edited:** {editing_date}",
-                        "**Tags::**",
+            ui.markdown("<br>".join(lines))
+            if tags:
+                edge_fade = "linear-gradient(to right, transparent 0, black 1rem, black calc(100% - 1rem), transparent 100%)"
+                copy = "(e) => navigator.clipboard.writeText(e.currentTarget.innerText.trim())"
+                with (
+                    ui.row(wrap=False)
+                    .classes("w-full min-w-0 gap-0 overflow-x-auto select-none")
+                    .style(
+                        "scrollbar-width: none;"
+                        "-ms-overflow-style: none;"
+                        f"-webkit-mask-image: {edge_fade};"
+                        f"mask-image: {edge_fade};"
                     )
-                )
-            )
-            # Fill the dialog width so the scrollbar only appears when the
-            # tags actually overflow. min-w-0 lets the flex row shrink below
-            # its content width instead of pushing the dialog wider.
-            edge_fade = (
-                "linear-gradient(to right,"
-                " transparent 0, black 1rem,"
-                " black calc(100% - 1rem), transparent 100%)"
-            )
-            # Copy the clicked chip's text to the clipboard. Runs entirely
-            # client-side (no server round-trip); currentTarget is the chip
-            # itself, so innerText is the tag regardless of what was clicked.
-            copy = (
-                "(e) => navigator.clipboard.writeText(e.currentTarget.innerText.trim())"
-            )
-            with (
-                ui.row(wrap=False)
-                .classes("w-full min-w-0 gap-0 overflow-x-auto select-none")
-                # hide the scrollbar and fade the left/right edges so the
-                # horizontal cut looks soft instead of sharp
-                .style(
-                    "scrollbar-width: none;"
-                    "-ms-overflow-style: none;"
-                    f"-webkit-mask-image: {edge_fade};"
-                    f"mask-image: {edge_fade};"
-                )
-            ):
-                for tag in tags:
-                    # `clickable` is required for a QChip to emit click events
-                    ui.chip(tag).props("outline clickable").on("click", js_handler=copy)
+                ):
+                    for tag in tags:
+                        (
+                            ui.chip(tag)
+                            .props("outline clickable")
+                            .on("click", js_handler=copy)
+                        )
 
         # Lower part of the dialog
         ui.separator()
