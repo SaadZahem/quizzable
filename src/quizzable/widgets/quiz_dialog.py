@@ -15,6 +15,7 @@ async def create(user: User | None, quiz: MCQuiz) -> ui.dialog:
     """
 
     # Info about the quiz
+    tags = quiz.tags.splitlines()
     count = len(await quiz.questions)
     maintainer = (await quiz.maintainer).username
     owner = user and user.username == maintainer
@@ -40,17 +41,40 @@ async def create(user: User | None, quiz: MCQuiz) -> ui.dialog:
             yield dialog, owner
 
         # Middle part of the dialog
-        with ui.element().classes("px-4 py-2"):
+        with ui.element().classes("px-4 py-2 w-full"):
             ui.markdown(
                 "<br>".join(
                     (
                         f"Number of questions: {count}",
                         maintainer_label,
-                        f"Created on {creation_date}",
+                        f"Created on: {creation_date}",
                         f"Last edited: {editing_date}",
+                        "Tags:",
                     )
                 )
             )
+            # Fill the dialog width so the scrollbar only appears when the
+            # tags actually overflow. min-w-0 lets the flex row shrink below
+            # its content width instead of pushing the dialog wider.
+            edge_fade = (
+                "linear-gradient(to right,"
+                " transparent 0, black 1rem,"
+                " black calc(100% - 1rem), transparent 100%)"
+            )
+            with (
+                ui.row(wrap=False)
+                .classes("w-full min-w-0 gap-0 overflow-x-auto")
+                # hide the scrollbar and fade the left/right edges so the
+                # horizontal cut looks soft instead of sharp
+                .style(
+                    "scrollbar-width: none;"
+                    "-ms-overflow-style: none;"
+                    f"-webkit-mask-image: {edge_fade};"
+                    f"mask-image: {edge_fade};"
+                )
+            ):
+                for tag in tags:
+                    ui.chip(tag).props("outline")
 
         # Lower part of the dialog
         ui.separator()
