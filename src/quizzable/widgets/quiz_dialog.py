@@ -61,9 +61,15 @@ async def create(user: User | None, quiz: MCQuiz) -> ui.dialog:
                 " transparent 0, black 1rem,"
                 " black calc(100% - 1rem), transparent 100%)"
             )
+            # Copy the clicked chip's text to the clipboard. Runs entirely
+            # client-side (no server round-trip); currentTarget is the chip
+            # itself, so innerText is the tag regardless of what was clicked.
+            copy = (
+                "(e) => navigator.clipboard.writeText(e.currentTarget.innerText.trim())"
+            )
             with (
                 ui.row(wrap=False)
-                .classes("w-full min-w-0 gap-0 overflow-x-auto")
+                .classes("w-full min-w-0 gap-0 overflow-x-auto select-none")
                 # hide the scrollbar and fade the left/right edges so the
                 # horizontal cut looks soft instead of sharp
                 .style(
@@ -74,7 +80,8 @@ async def create(user: User | None, quiz: MCQuiz) -> ui.dialog:
                 )
             ):
                 for tag in tags:
-                    ui.chip(tag).props("outline")
+                    # `clickable` is required for a QChip to emit click events
+                    ui.chip(tag).props("outline clickable").on("click", js_handler=copy)
 
         # Lower part of the dialog
         ui.separator()
