@@ -34,7 +34,7 @@ class QuestionCardContainer(ui.column):
                 raise ValueError("Questions are missing")
 
             for card in cards:
-                card.validate_values()
+                card.validate_values()  # raises AssertionError
 
         except ValueError as error:
             ui.notify(error.args[0], color="negative")

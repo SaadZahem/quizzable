@@ -23,8 +23,13 @@ async def create(user: User, quiz: MCQuiz | None = None):
 
             title_input = (
                 ui.input(prefix="Title:")
-                .props("autofocus dense outlined counter maxlength=255 autogrow")
+                .props("autofocus dense outlined counter maxlength=255")
                 .bind_value(quiz, "title")
+                # .on("keydown.enter", )
+            )
+
+            ui.input_chips().props('prefix="Tags:" dense outlined').bind_value(
+                quiz, "tags", forward="\n".join, backward=str.splitlines
             )
 
         container = question_card_container(user, quiz, title_input)
