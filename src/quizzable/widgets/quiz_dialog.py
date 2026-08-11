@@ -1,19 +1,15 @@
 from contextlib import asynccontextmanager
-from typing import Callable
 
 from nicegui import ui
 
 from ..models import MCQuiz, User
 from ..utils import navigator
 
+DATETIME_FORMAT = "%Y-%m-%d %I:%M %p UTC"
+
 
 @asynccontextmanager
-async def create(
-    user: User | None,
-    quiz: MCQuiz,
-    *,
-    remove: Callable[[MCQuiz], None],
-) -> ui.dialog:
+async def create(user: User | None, quiz: MCQuiz) -> ui.dialog:
     """
     Create a dialog holding the quiz details.
     """
@@ -22,9 +18,8 @@ async def create(
     count = len(await quiz.questions)
     maintainer = (await quiz.maintainer).username
     owner = user and user.username == maintainer
-    datetime_format = "%Y-%m-%d %I:%M %p UTC"
-    creation_date = quiz.created.strftime(datetime_format)
-    editing_date = quiz.last_edited.strftime(datetime_format)
+    creation_date = quiz.created.strftime(DATETIME_FORMAT)
+    editing_date = quiz.last_edited.strftime(DATETIME_FORMAT)
 
     maintainer_label = f"Maintainer: {maintainer}"
     if owner:
