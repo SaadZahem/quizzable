@@ -1,23 +1,14 @@
 import os
 from pathlib import Path
-from string import Template
-from typing import Any
 
 from dotenv import load_dotenv
 from nicegui import app, ui
 from tortoise.contrib.fastapi import register_tortoise
 
+from .utils import substitute
+
 if not load_dotenv(".env"):
     raise ValueError(".env file is missing")
-
-
-def substitute(file: Path, context: dict[str, Any]) -> str:
-    with file.open("rt") as f:
-        content = f.read()
-
-    template = Template(content)
-    styles = template.safe_substitute(context)
-    return styles
 
 
 STORAGE_SECRET = os.getenv("STORAGE_SECRET")

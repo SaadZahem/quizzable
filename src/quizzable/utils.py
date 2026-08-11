@@ -1,3 +1,5 @@
+from pathlib import Path
+from string import Template
 from typing import Any, Callable
 
 from nicegui import app, html, ui
@@ -39,6 +41,15 @@ async def copy_relative_url(relative_path: str):
 
 def totitle(name: str):
     return name.replace(*"- ").title()
+
+
+def substitute(file: Path, context: dict[str, Any]) -> str:
+    with file.open("rt") as f:
+        content = f.read()
+
+    template = Template(content)
+    styles = template.safe_substitute(context)
+    return styles
 
 
 def logout():
