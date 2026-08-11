@@ -1,11 +1,8 @@
-import sys
-
 from nicegui import app, ui
+from tortoise.contrib.fastapi import register_tortoise
 
+from . import config, utils
 from . import widgets as my
-from .argument_parser import CustomArgumentParser
-from .config import STORAGE_SECRET
-from .utils import current_user
 from .views import (
     edit_quiz_page,
     home_page,
@@ -18,9 +15,7 @@ from .views import (
 )
 
 
-@ui.page("/")
-@ui.page("/{_:path}")
-async def main_page():
+async def root():
     # Setting default values that elements in the header can bind to
     auth = app.storage.user.setdefault("auth", False)
     app.storage.user.setdefault("username", "")
@@ -31,7 +26,7 @@ async def main_page():
     # - allow other pages to update this value
     # - only verify the access token on page reloads or navigation even if it was expired
     if auth:
-        app.storage.client["user"] = await current_user()
+        app.storage.client["user"] = await utils.current_user()
 
     with my.scaffold():
         my.custom_sub_pages(
@@ -50,17 +45,39 @@ async def main_page():
 
 def main(**kwargs):
     # Parsing arguments
-    args = CustomArgumentParser().parse_args(sys.argv[1:])
+    args = utils.parse_args()
+
+    # Static files
+    app.add_static_files("/yaml", "static/yaml")
+
+    # Database configuration
+    register_tortoise(
+        app,
+        db_url="sqlite://db.sqlite3",
+        modules={"quizzable": ["quizzable.models"]},
+        generate_schemas=True,
+    )
+
+    # Theme
+    app.colors(**config.COLORS)
+
+    # Head html
+    ui.add_head_html(
+        utils.substitute(config.templates_dir / "header.html", config.COLORS),
+        shared=True,
+    )
 
     # Starting/Reloading the server
     ui.run(
+        root,
         port=args.port,
         title="Quizzable",
         language="en-US",
-        storage_secret=STORAGE_SECRET,
+        storage_secret=config.STORAGE_SECRET,
         **kwargs,
     )
 
 
 if __name__ in {"__main__", "__mp_main__"}:
+    # Run in development (reload=True)
     main(uvicorn_reload_includes="*.py, *.html")

@@ -2,15 +2,14 @@ from pathlib import Path
 from string import Template
 from typing import Any, Callable
 
-from nicegui import app, html, ui
+from nicegui import app, ui
 
-from .models import User
-from .services import auth
+from ..models import User
+from ..services import auth
+from .argument_parser import CustomArgumentParser
 
-# nicegui.html provides h1 but is missing h2..6
-for tag in (f"h{n}" for n in range(2, 7)):
-    if not hasattr(html, tag):
-        setattr(html, tag, html._create_html_element(tag))
+parser = CustomArgumentParser()
+parse_args = parser.parse_args
 
 
 def navigator(location, *, redirect: bool = False):
