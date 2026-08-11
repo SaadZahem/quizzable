@@ -22,9 +22,9 @@ async def create(user: User | None, quiz: MCQuiz) -> ui.dialog:
     creation_date = quiz.created.strftime(DATETIME_FORMAT)
     editing_date = quiz.last_edited.strftime(DATETIME_FORMAT)
 
-    maintainer_label = f"Maintainer: {maintainer}"
+    # adding extra bit of info
     if owner:
-        maintainer_label += " (You)"
+        maintainer += " (You)"
 
     # Dialog to appear when the button "Open" is clicked
     with (
@@ -45,11 +45,11 @@ async def create(user: User | None, quiz: MCQuiz) -> ui.dialog:
             ui.markdown(
                 "<br>".join(
                     (
-                        f"Number of questions: {count}",
-                        maintainer_label,
-                        f"Created on: {creation_date}",
-                        f"Last edited: {editing_date}",
-                        "Tags:",
+                        f"**Questions:** {count}",
+                        f"**Maintainer:** {maintainer}",
+                        f"**Created on:** {creation_date}",
+                        f"**Last edited:** {editing_date}",
+                        "**Tags::**",
                     )
                 )
             )
