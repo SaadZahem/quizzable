@@ -9,7 +9,12 @@ from ..services import auth
 from .argument_parser import CustomArgumentParser
 
 parser = CustomArgumentParser()
-parse_args = parser.parse_args
+
+
+def parse_args(argv=None):
+    # Ignore unknown args so external runners (e.g. pytest) can pass their own
+    args, _ = parser.parse_known_args(argv)
+    return args
 
 
 def navigator(location, *, redirect: bool = False):
