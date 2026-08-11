@@ -12,7 +12,7 @@ async def edit_quiz_page(quiz_id: int):
     quiz = await MCQuiz.filter(id=quiz_id).first()
 
     # more protection
-    if user is not quiz.maintainer:
+    if user.id != quiz.maintainer_id:
         error_card(403, ["Forbidden"])
         return
 
