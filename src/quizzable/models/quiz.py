@@ -2,7 +2,7 @@ from tortoise import fields, models
 
 
 class MCQuiz(models.Model):
-    id = fields.IntField(pk=True)
+    id = fields.IntField(primary_key=True)
     title = fields.CharField(max_length=255, unique=True)
     maintainer = fields.ForeignKeyField("quizzable.User", related_name="quizzes")
     tags = fields.TextField(default="")
