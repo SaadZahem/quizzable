@@ -1529,28 +1529,40 @@ wheels = [
 [[package]]
 name = "quizzable"
 version = "0.3.10"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
-    { name = "ipython" },
-    { name = "nest-asyncio" },
     { name = "nicegui" },
     { name = "pwdlib", extra = ["argon2"] },
     { name = "pyjwt", extra = ["crypto"] },
+    { name = "python-dotenv" },
+    { name = "pyyaml" },
+    { name = "tortoise-orm" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "ipython" },
+    { name = "nest-asyncio" },
     { name = "pytest-asyncio" },
     { name = "pytest-selenium" },
-    { name = "tortoise-orm" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "ipython", specifier = ">=9.15.0" },
-    { name = "nest-asyncio", specifier = ">=1.6.0" },
     { name = "nicegui", specifier = ">=3.14.0" },
     { name = "pwdlib", extras = ["argon2"], specifier = ">=0.3.0" },
     { name = "pyjwt", extras = ["crypto"], specifier = ">=2.13.0" },
+    { name = "python-dotenv", specifier = ">=1.0.0" },
+    { name = "pyyaml", specifier = ">=6.0.0" },
+    { name = "tortoise-orm", specifier = ">=1.1.7" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "ipython", specifier = ">=9.15.0" },
+    { name = "nest-asyncio", specifier = ">=1.6.0" },
     { name = "pytest-asyncio", specifier = ">=1.4.0" },
     { name = "pytest-selenium", specifier = ">=4.1.0" },
-    { name = "tortoise-orm", specifier = ">=1.1.7" },
 ]
 
 [[package]]

@@ -17,7 +17,7 @@ ENV UV_COMPILE_BYTECODE=1 \
 # the project itself as a package (there's no build backend declared); instead
 # PYTHONPATH below makes the `quizzable` package importable straight from src.
 COPY pyproject.toml uv.lock ./
-RUN uv sync --frozen --no-install-project
+RUN uv sync --frozen --no-install-project --no-dev
 
 # Application code. main.py is the entrypoint; static/ is served at runtime.
 COPY main.py ./
