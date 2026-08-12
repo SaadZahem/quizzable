@@ -4,8 +4,8 @@ from nicegui import app, background_tasks, events, ui
 from tortoise.expressions import Q
 
 from ..models import MCQuiz, User
-from ..utils import copy_relative_url, navigator
-from ..widgets import quiz_dialog
+from ..utils import navigator
+from ..widgets import menu_button, quiz_dialog
 
 
 async def home_page(q: str = ""):
@@ -19,7 +19,7 @@ async def home_page(q: str = ""):
     await ui.context.client.connected()
 
     if q:
-        component.search_input.bind_value(app.storage.tab, "q").set_value(q)
+        component.search_input.set_value(q).bind_value_to(app.storage.tab, "search")
     else:
         component.search_input.bind_value(app.storage.tab, "search")
 
@@ -90,32 +90,7 @@ class HomePageCard(ui.card):
             list(self.results_list)[index].set_enabled(False)
             dialog.close()
 
-        async with quiz_dialog.create(self.user, quiz, remove=remove) as (
-            dialog,
-            owner,
-        ):
-            with (
-                ui.button(icon="more_vert", color="mywhite")
-                .classes("px-1")
-                .props("flat round"),
-                ui.menu().classes("text-primary"),
-            ):
-                (
-                    ui.menu_item("Edit")
-                    .set_enabled(owner)
-                    .on("click", navigator(url := f"/quiz/{quiz.id}/edit"))
-                )
-                (
-                    ui.menu_item("Delete")
-                    .set_enabled(owner)
-                    .classes("text-negative")
-                    .on("click", remove)
-                )
-                ui.separator()
-                ui.menu_item("Copy link", partial(copy_relative_url, url))
-                ui.menu_item(
-                    "Download yaml",
-                    lambda: ui.download.from_url(f"/yaml/{quiz.file}"),
-                )
+        async with quiz_dialog.create(self.user, quiz) as (dialog, owner):
+            menu_button.create(quiz, enabled=owner, remove=remove)
 
         dialog.open()

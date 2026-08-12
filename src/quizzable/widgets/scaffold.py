@@ -11,7 +11,7 @@ def scaffold():
     ui.query("body").classes("bg-brand")
     ui.query("#app").classes("h-screen")
     ui.query("main").classes("flex flex-row items-stretch")
-    ui.query(".nicegui-content").classes("p-0 gap-0 grow")
+    ui.query(".nicegui-content").classes("p-0 gap-0 grow min-w-0")
 
     with ui.header().classes("bg-brand border-b-1 border-dashed border-myblack"):
         with ui.row().classes("container mx-auto items-center text-primary"):

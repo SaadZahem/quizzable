@@ -1,34 +1,40 @@
 from contextlib import asynccontextmanager
-from typing import Callable
 
 from nicegui import ui
 
 from ..models import MCQuiz, User
 from ..utils import navigator
 
+DATETIME_FORMAT = "%Y-%m-%d %I:%M %p UTC"
+
 
 @asynccontextmanager
-async def create(
-    user: User | None,
-    quiz: MCQuiz,
-    *,
-    remove: Callable[[MCQuiz], None],
-) -> ui.dialog:
+async def create(user: User | None, quiz: MCQuiz) -> ui.dialog:
     """
     Create a dialog holding the quiz details.
     """
 
     # Info about the quiz
+    tags = quiz.tags.splitlines()
     count = len(await quiz.questions)
     maintainer = (await quiz.maintainer).username
     owner = user and user.username == maintainer
-    datetime_format = "%Y-%m-%d %I:%M %p UTC"
-    creation_date = quiz.created.strftime(datetime_format)
-    editing_date = quiz.last_edited.strftime(datetime_format)
+    creation_date = quiz.created.strftime(DATETIME_FORMAT)
+    editing_date = quiz.last_edited.strftime(DATETIME_FORMAT)
 
-    maintainer_label = f"Maintainer: {maintainer}"
+    # adding extra bit of info
     if owner:
-        maintainer_label += " (You)"
+        maintainer += " (You)"
+
+    lines = [
+        f"**Questions:** {count}",
+        f"**Maintainer:** {maintainer}",
+        f"**Created on:** {creation_date}",
+        f"**Last edited:** {editing_date}",
+    ]
+
+    if tags:
+        lines.append("**Tags::**")
 
     # Dialog to appear when the button "Open" is clicked
     with (
@@ -45,17 +51,27 @@ async def create(
             yield dialog, owner
 
         # Middle part of the dialog
-        with ui.element().classes("px-4 py-2"):
-            ui.markdown(
-                "<br>".join(
-                    (
-                        f"Number of questions: {count}",
-                        maintainer_label,
-                        f"Created on {creation_date}",
-                        f"Last edited: {editing_date}",
+        with ui.element().classes("px-4 py-2 w-full"):
+            ui.markdown("<br>".join(lines))
+            if tags:
+                edge_fade = "linear-gradient(to right, transparent 0, black 1rem, black calc(100% - 1rem), transparent 100%)"
+                copy = "(e) => navigator.clipboard.writeText(e.currentTarget.innerText.trim())"
+                with (
+                    ui.row(wrap=False)
+                    .classes("w-full min-w-0 gap-0 overflow-x-auto select-none")
+                    .style(
+                        "scrollbar-width: none;"
+                        "-ms-overflow-style: none;"
+                        f"-webkit-mask-image: {edge_fade};"
+                        f"mask-image: {edge_fade};"
                     )
-                )
-            )
+                ):
+                    for tag in tags:
+                        (
+                            ui.chip(tag)
+                            .props("outline clickable")
+                            .on("click", js_handler=copy)
+                        )
 
         # Lower part of the dialog
         ui.separator()

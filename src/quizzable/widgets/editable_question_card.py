@@ -60,8 +60,10 @@ class EditableQuestionCard(ChoiceElement):
 
     def _make_input(self, bind: str, prefix: str = "") -> ui.input:
         if not prefix:
+            # input for question
             w = ui.input().classes("self-stretch")
         else:
+            # input for choices
             w = ui.input(prefix="%c)" % prefix).classes("min-w-3/4")
 
         return w.props("outlined dense autogrow").bind_value(self.question, bind)
