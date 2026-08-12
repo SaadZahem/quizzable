@@ -17,3 +17,8 @@ dependencies = [
 
 [tool.tortoise]
 tortoise_orm = "settings.TORTOISE_ORM"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+main_file = "main.py"
+addopts = "-p nicegui.testing.plugin"
