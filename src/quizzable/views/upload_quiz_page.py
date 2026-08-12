@@ -25,11 +25,12 @@ Each question supports these keys:
 |**e**| Fifth choice | yes |
 |**k**| Correct choice letter | no |
 
-<br>
+<hr><br>
 
 **Example**
+"""
 
-```yaml
+EXAMPLE = """\
 title: Cardiology Basics
 tags:
   - cardiology
@@ -40,9 +41,7 @@ questions:
     b: "60-100 bpm"
     c: "100-120 bpm"
     d: "120-140 bpm"
-    k: b
-```
-"""
+    k: b"""
 
 
 @protected
@@ -74,8 +73,5 @@ def upload_quiz_page():
     )
 
     with ui.card().classes("w-full min-w-0"):
-        # min-w-0 + [&_pre]:overflow-x-auto keep long code lines inside the
-        # card (they scroll) instead of widening it past the viewport
-        ui.markdown(INSTRUCTIONS).classes(
-            "text-base w-full min-w-0 [&_pre]:overflow-x-auto [&_pre]:max-w-full"
-        )
+        ui.markdown(INSTRUCTIONS).classes("text-base w-full")
+        ui.codemirror(EXAMPLE, language="yaml").set_enabled(False)
