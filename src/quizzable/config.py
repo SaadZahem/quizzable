@@ -13,6 +13,9 @@ STORAGE_SECRET = os.getenv("STORAGE_SECRET")
 SECRET_KEY = os.getenv("SECRET_KEY")
 "used to secure JWT tokens"
 
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite://db.sqlite3")
+"Tortoise connection string; defaults to local SQLite, overridden with Postgres in production"
+
 ALGORITHM = "HS256"
 "widely used algorithm to secure JWT tokens"
 

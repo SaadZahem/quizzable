@@ -10,7 +10,7 @@ dependencies = [
     "pyjwt[crypto]>=2.13.0",
     "python-dotenv>=1.0.0",
     "pyyaml>=6.0.0",
-    "tortoise-orm>=1.1.7",
+    "tortoise-orm[asyncpg]>=1.1.7",
 ]
 
 [dependency-groups]

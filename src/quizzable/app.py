@@ -53,7 +53,7 @@ def main(**kwargs):
     # Database configuration
     register_tortoise(
         app,
-        db_url="sqlite://db.sqlite3",
+        db_url=config.DATABASE_URL,
         modules={"quizzable": ["quizzable.models"]},
         generate_schemas=True,
     )
