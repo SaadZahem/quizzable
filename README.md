@@ -1,50 +1,63 @@
 # Quizzable
 
-A website for making/sharing/taking quizzes.
+A web app for making, sharing, and taking multiple-choice quizzes.
 
-The app also includes an SQLite database managed by `tortoise-orm`.
-The app handles simple authentication with JWT tokens and password hashing.
+Built with [NiceGUI](https://nicegui.io/) and [Tortoise ORM](https://tortoise.github.io/),
+with JWT-based authentication and password hashing. It runs on SQLite for local
+development and PostgreSQL in production.
 
-## Running the project
+## Features
 
-The project is structured as a package and is managed by `uv`.
-Note that a [`.env`](#.env) file is required by this project.
-The following command will set it up for you.
+- Create, edit, and take multiple-choice quizzes
+- User accounts with JWT auth and hashed passwords
+- Quiz tagging and copy-to-clipboard tags
+- Upload quizzes from YAML files (set title and tags inside the file)
+- Sample quizzes included under `static/yaml/`
 
-    bin/init_env.sh
+## Tech stack
 
-There are 2 options for starting the project.
+| Layer     | Choice                                             |
+| --------- | -------------------------------------------------- |
+| Runtime   | Python 3.13, managed with [`uv`](https://docs.astral.sh/uv/) |
+| Web       | NiceGUI (FastAPI + uvicorn)                        |
+| Database  | Tortoise ORM — SQLite (dev) / PostgreSQL (prod)    |
+| Auth      | PyJWT + pwdlib (argon2)                            |
 
-### Running for development
+## Quick start (development)
 
-    uv add -r requirements.txt
-    uv pip install -e .
-    source .venv/bin/activate
-    python -m quizzable.app
+Requires [`uv`](https://docs.astral.sh/uv/getting-started/installation/) and Python
+3.13 (uv can install it for you).
 
-### Running in production (without reload)
+```bash
+bin/init_env.sh                    # generate the required .env secrets
+uv sync                            # install deps (runtime + dev) into .venv
+uv run python -m quizzable.app     # start with auto-reload
+```
 
-    uv add -r requirements.txt
-    uv pip install .
-    source .venv/bin/activate
-    python -m quizzable
+Then open <http://localhost:8080>.
 
-## Suplementary Scripts
+> A `.env` file is **required** — the app refuses to start without it. See the
+> environment section of the running guide.
 
-The `bin/` directory houses additional scripts that aids in development.
+## Running with Docker
 
-One script in there is `init_db.py`.
-This reads quizzes data from `data/` directory and adds them to the database.
-This requires the project to be first installed as a package.
+```bash
+docker compose up -d --build                            # SQLite stack
+docker compose -f docker-compose.prod.yml up -d --build # PostgreSQL stack
+```
 
-Another script is `init_env.py`.
-This creates a `.env` file in the current directory which is required for this project to run.
+## Testing
 
-## .env
+```bash
+uv run pytest -q
+```
 
-`SECRET_KEY`.
-Used to hash users passwords.
+## Documentation
 
-`STORAGE_SECRET`.
-Used to encrypt user data.
-Required by `nicegui` to enable use of `app.storage.user`.
+Full instructions — environment variables, all run modes, Docker (SQLite and
+PostgreSQL), the database model, helper scripts, project layout, and troubleshooting —
+live in **[docs/RUNNING.md](docs/RUNNING.md)**.
+
+## License
+
+[MIT](LICENSE.md) © Saad El-Sayed Zahem
