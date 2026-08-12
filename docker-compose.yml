@@ -1,0 +1,14 @@
+services:
+  quizzable:
+    container_name: quizzable
+    build: .
+    ports:
+      - "8080:8080"
+    user: "1000:1000"
+    volumes:
+      # Secrets: kept out of the image, supplied read-only at runtime.
+      - ./.env:/app/.env:ro
+      # Persist the SQLite database and NiceGUI user storage across restarts.
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./.nicegui:/app/.nicegui
+    restart: unless-stopped

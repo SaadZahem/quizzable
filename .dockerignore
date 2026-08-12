@@ -1,0 +1,22 @@
+# Local virtualenv (host-specific, rebuilt inside the image)
+.venv/
+
+# VCS and caches
+.git/
+.gitignore
+**/__pycache__/
+*.py[oc]
+.pytest_cache/
+
+# Runtime state — provided at runtime via bind mounts, never baked in
+.env
+.nicegui/
+db.sqlite3*
+
+# Docker files themselves
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Tests aren't needed in the runtime image
+tests/
