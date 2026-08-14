@@ -1,0 +1,52 @@
+title: Pediatrics Week 4
+tags:
+  - pediatrics
+  - hepatology
+questions:
+  - q: "A 10-year-old boy presents with fever, malaise, anorexia, and nausea for several days. One week later he develops jaundice, dark urine, and pale stools. His parents report that he recently attended a school trip where sanitation conditions were poor. Which of the following is the most likely mode of transmission of the causative virus?"
+    a: "Blood transfusion"
+    b: "Fecal-oral transmission through contaminated food or water"
+    c: "Vertical transmission during delivery"
+    d: "Transmission via intravenous drug use"
+    e: "Sexual transmission"
+    k: b
+
+  - q: "A first-time mother asks for advice on how to create a safe sleep environment for her 2-month-old baby to reduce the risk of SIDS. Which of the following recommendations should be given to the mother?"
+    a: "Place the baby on a firm mattress in a crib with no soft bedding or toys."
+    b: "Place the baby on his side to sleep to prevent aspiration."
+    c: "Keep a light blanket in the crib to ensure the baby stays warm."
+    d: "Bring the baby into the parents' bed to facilitate breastfeeding at night."
+    e: "Introduce a pacifier by tucking it into the baby's mouth after he falls asleep."
+    k: a
+
+  - q: "A neonate is suspected to have biliary atresia after presenting with persistent jaundice and acholic stools. Which investigation is considered the gold standard for confirming the diagnosis?"
+    a: "Liver biopsy"
+    b: "Intraoperative cholangiography"
+    c: "Abdominal ultrasound"
+    d: "Serum bilirubin measurement"
+    e: "HIDA scan"
+    k: b
+
+  - q: "A 2-week-old infant is brought to the ER with jaundice, dark urine, and acholic (pale) stools. Physical examination reveals hepatomegaly. Laboratory tests show a conjugated (direct) hyperbilirubinemia. Which of the following is the most critical next step in the management of this infant?"
+    a: "Perform a simple exchange transfusion."
+    b: "Prescribe a course of oral antibiotics."
+    c: "Start phototherapy immediately."
+    d: "Switch from breastfeeding to a special formula."
+    e: "Refer to a specialized center for prompt evaluation."
+    k: e
+
+  - q: "A child suspected of having chronic liver disease undergoes evaluation. Which investigation is considered essential in the initial assessment to establish diagnosis and assess disease severity?"
+    a: "Liver biopsy"
+    b: "Complete blood count"
+    c: "Serum bilirubin level"
+    d: "Urine analysis"
+    e: "Abdominal X-ray"
+    k: a
+
+  - q: "A 6-month-old infant presents with a 3-day history of vomiting and watery, non-bloody diarrhea. On examination, the infant is listless, has sunken eyes, and dry mucous membranes. The mother reports the infant has not had a wet diaper in over 8 hours. What is the cornerstone of management for this infant's condition?"
+    a: "Broad-spectrum antibiotics to cover bacterial pathogens."
+    b: "Immediate administration of anti-diarrheal medication."
+    c: "A bolus of intravenous isotonic fluids."
+    d: "Stool culture to identify the causative organism."
+    e: "Encouraging small, frequent sips of clear water."
+    k: c

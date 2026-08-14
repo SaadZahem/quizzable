@@ -1,0 +1,100 @@
+title: Pediatrics Week 3
+tags:
+  - pediatrics
+  - cardiology
+questions:
+  - q: "A 2-week-old baby presents with weak femoral pulses, higher blood pressure in the upper limbs than lower limbs, and signs of heart failure. What congenital lesion is most likely?"
+    a: "Transposition of great arteries"
+    b: "Tetralogy of Fallot"
+    c: "Patent ductus arteriosus"
+    d: "Aortic valve stenosis"
+    e: "Aortic coarctation"
+    k: e
+
+  - q: "A 6-month-old infant has central cyanosis, a boot-shaped heart on x-ray, and decreased pulmonary vascularity. Which diagnosis best fits?"
+    a: "Total anomalous pulmonary venous return"
+    b: "Transposition of great arteries"
+    c: "Tetralogy of Fallot"
+    d: "Patent ductus arteriosus with Eisenmenger"
+    e: "Pulmonary atresia with intact septum"
+    k: c
+
+  - q: "A child presents with fever, a new regurgitant murmur, elevated CRP, and a positive blood culture for Haemophilus parainfluenzae. Echocardiography shows a mitral valve vegetation. What is the most likely diagnosis?"
+    a: "Viral myocarditis"
+    b: "Bacterial pneumonia with sepsis"
+    c: "Kawasaki disease"
+    d: "Acute rheumatic fever"
+    e: "Infective endocarditis"
+    k: e
+
+  - q: "A newborn with suspected critical aortic stenosis presents with poor perfusion and heart failure. Which immediate drug is recommended to help stabilize circulation?"
+    a: "Intravenous furosemide"
+    b: "Prostaglandin E1 infusion"
+    c: "Oral propranolol"
+    d: "IV digoxin"
+    e: "Oral ACE inhibitor"
+    k: b
+
+  - q: "Which cardiac condition is NOT typically associated with an increased risk of infective endocarditis?"
+    a: "Cyanotic congenital heart disease"
+    b: "Rheumatic valvular disease"
+    c: "Prosthetic valve"
+    d: "Secundum atrial septal defect"
+    e: "Patent ductus arteriosus"
+    k: d
+
+  - q: "Which combination meets the 2015 diagnostic criteria for an initial episode of rheumatic fever?"
+    a: "Isolated fever for 3 days"
+    b: "Two major manifestations plus evidence of prior streptococcal infection"
+    c: "Three minor manifestations without streptococcal evidence"
+    d: "Single prolonged PR interval only"
+    e: "One minor manifestation alone without streptococcal evidence"
+    k: b
+
+  - q: "Which complication is least directly associated with chronic central cyanosis in congenital heart disease?"
+    a: "Polycythemia with hyperviscosity"
+    b: "Acute appendicitis"
+    c: "Bleeding disorders with platelet dysfunction"
+    d: "Brain abscess and stroke risk"
+    e: "Clubbing of fingers"
+    k: b
+
+  - q: "Which finding is most characteristic of an atrial septal defect on chest x-ray and hemodynamics?"
+    a: "Left ventricular enlargement with pulmonary oligemia"
+    b: "Normal heart size with unilateral lung hyperinflation"
+    c: "Prominent aortic knob with decreased pulmonary markings"
+    d: "Maximal cardiomegaly without pulmonary changes"
+    e: "Right heart enlargement with increased pulmonary vascularity"
+    k: e
+
+  - q: "Which major manifestation of rheumatic fever does NOT require evidence of preceding streptococcal infection for diagnosis?"
+    a: "Acute carditis"
+    b: "Polyarthritis"
+    c: "Subcutaneous nodules"
+    d: "Erythema marginatum"
+    e: "Sydenham's chorea"
+    k: e
+
+  - q: "Which management step is appropriate for an infant in a hypercyanotic spell from Tetralogy of Fallot?"
+    a: "Knee-chest position, IV fluids, propranolol, oxygen, and morphine"
+    b: "Immediate prostaglandin infusion without other measures"
+    c: "Immediate heparinization and thrombolysis"
+    d: "High-dose diuretics and ACE inhibitor"
+    e: "Urgent blood transfusion only"
+    k: a
+
+  - q: "Which mechanism explains hypoxic (hypercyanotic) spells in infants with Tetralogy of Fallot?"
+    a: "Left-to-right shunt increase through VSD"
+    b: "Acute rupture of ventricular septal patch"
+    c: "Acute pulmonary embolism"
+    d: "Increased RVOT obstruction with decreased SVR"
+    e: "Sudden decrease in pulmonary vascular resistance"
+    k: d
+
+  - q: "Which statement about prostaglandin E1 in congenital heart disease is correct?"
+    a: "It keeps the ductus arteriosus open to support circulation"
+    b: "It is contraindicated in pulmonary atresia"
+    c: "It permanently closes the ductus arteriosus"
+    d: "It is the first-line long-term therapy for coarctation"
+    e: "It reverses pulmonic valve stenosis"
+    k: a

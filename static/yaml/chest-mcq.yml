@@ -1,0 +1,467 @@
+title: Chest MCQ
+tags:
+  - pediatrics
+  - respiratory
+questions:
+  - q: "Expiratory grunting is a sign of:"
+    a: "Bronchial asthma"
+    b: "Bacterial pneumonia"
+    c: "Viral croup"
+    d: "Acute epiglottitis"
+    e: "Acute bronchitis"
+    k: b
+
+  - q: "One of the following is a characteristic feature of Mycoplasma pneumonia in the pediatric age group:"
+    a: "Dramatic response to penicillin therapy"
+    b: "High grade fever is a common presentation"
+    c: "Poor correlation between the severity of symptoms & the physical findings"
+    d: "Sudden onset of symptoms"
+    e: "Is primarily a disease of infancy"
+    k: c
+
+  - q: "Foreign body partially obstructing the left main bronchus is likely to cause which of the following abnormalities:"
+    a: "Increased air entry on the left hemithorax"
+    b: "Homogenous opacity of the right hemithorax on CXR"
+    c: "Hyperinflated right hemithorax on CXR"
+    d: "Tracheal shift to the left side"
+    e: "Shift of the mediastinum to the right side in expiratory film"
+    k: e
+
+  - q: "Acute laryngotracheobronchitis is associated with which of the following radiological signs:"
+    a: "Generalized hyperinflation"
+    b: "Lobar consolidation"
+    c: "Steeple sign"
+    d: "Thumb sign"
+    e: "Wide superior mediastinum"
+    k: c
+
+  - q: "The most common cause of pleural effusion in children is:"
+    a: "Bacterial pneumonia"
+    b: "Congestive heart failure"
+    c: "Viral pneumonia"
+    d: "Metastatic intrathoracic malignancy"
+    e: "Postoperative injury to thoracic duct"
+    k: a
+
+  - q: "The combination of recurrent wheezing, abnormal stool & marked failure to thrive are suggesting of:"
+    a: "Bronchopulmonary dysplasia"
+    b: "Cystic fibrosis"
+    c: "Chronic persistent asthma"
+    d: "Missed foreign body aspiration"
+    e: "Vascular ring"
+    k: b
+
+  - q: "The most appropriate treatment for newly diagnosed bronchial asthma with occasional symptoms:"
+    a: "Inhaled short acting β2 agonist"
+    b: "Low dose inhaled corticosteroid (ICS)"
+    c: "Anti-leukotriene"
+    d: "Slow release theophyline"
+    e: "Anti-IgE"
+    k: b
+
+  - q: "A 6 year-old boy has a 1 year history of cough that is worse at night & with exercise. Which one of the following tests is most likely to assist you to make a diagnosis?"
+    a: "Barium swallow"
+    b: "Bronchoscopy"
+    c: "Chest radiograph"
+    d: "Spirometry"
+    e: "CT chest"
+    k: d
+
+  - q: "Characteristic physical signs of pneumothorax include:"
+    a: "Rhonchi are heard on the affected side"
+    b: "The mediastinum is shifted towards the opposite side"
+    c: "Percussion over the affected side reveals dullness"
+    d: "End-respiratory crepitations are detected"
+    e: "Fine rales must be heard on the affected side"
+    k: b
+
+  - q: "Atypical bacterial pneumonia is more likely to occur in:"
+    a: "Newborn infants"
+    b: "Toddlers"
+    c: "Preschool children"
+    d: "School aged children"
+    e: "Males more than females"
+    k: d
+
+  - q: "The most common cause of persistent wheezes in the first year of life is:"
+    a: "Acute bronchiolitis"
+    b: "Cystic fibrosis"
+    c: "Foreign body aspiration"
+    d: "Bronchial asthma"
+    e: "Allergic rhinitis"
+    k: a
+
+  - q: "Acute bronchiolitis is characterized by:"
+    a: "Ribavirin is the treatment of choice for hospitalized cases"
+    b: "Bronchodilators are usually effective"
+    c: "Feeding difficulties are common"
+    d: "Upper airway obstruction is a common feature"
+    e: "It must be treated by antibiotics"
+    k: c
+
+  - q: "A 4 year-old boy brought to emergency department by drooling saliva, sore throat. On examination, there was high fever, hyperextension of neck & mild stridor. The most appropriate diagnosis is:"
+    a: "Viral pneumonia"
+    b: "Croup"
+    c: "Acute epiglottitis"
+    d: "Bacterial pneumonia"
+    e: "Bronchiolitis"
+    k: c
+
+  - q: "The most common cause of afebrile pneumonia of infancy is:"
+    a: "Chlamydia trachomatis"
+    b: "Streptococcus pneumoniae"
+    c: "Staphylococcus aureus"
+    d: "Hemophilus influenza"
+    e: "Listeria monocytogenes"
+    k: a
+
+  - q: "A 3 year-old brought to ER by his mother, with sudden onset of cough, choking & gasping. Physical examination revealed wheezes on the right lung. Chest X-ray was normal. What is the most likely diagnosis:"
+    a: "Acute epiglottitis"
+    b: "Foreign body aspiration"
+    c: "Acute bronchiolitis"
+    d: "Aspiration pneumonia"
+    e: "Tension pneumothorax"
+    k: b
+
+  - q: "In a child with stridor, the radiological thumb sign is characteristic of:"
+    a: "Acute epiglottitis"
+    b: "Foreign body aspiration"
+    c: "Laryngeal web"
+    d: "Laryngomalacia"
+    e: "Laryngotracheobronchitis"
+    k: a
+
+  - q: "Wheezes is a common manifestation of pneumonia caused by:"
+    a: "Streptococcus pneumonia"
+    b: "Staphylococcus aureus"
+    c: "Fungal infection"
+    d: "Viral infection"
+    e: "Klebsiella"
+    k: d
+
+  - q: "Tachypnea in a 3-year old child is defined as a respiratory rate exceeding:"
+    a: "60 /min"
+    b: "50 /min"
+    c: "40 /min"
+    d: "25 /min"
+    e: "30 /min"
+    k: c
+
+  - q: "Bronchial asthma in children is characterized by:"
+    a: "Associated with bronchial hyper-reactivity"
+    b: "It shows irreversible airway obstruction"
+    c: "Usually presents with high fever"
+    d: "Neutrophils are the main cell inducing airway inflammation"
+    e: "Chronic cases are associated with clubbing of fingers"
+    k: a
+
+  - q: "Which of the following physical findings would be least likely on examination of a child with moderate to severe asthma:"
+    a: "Tachypnea"
+    b: "Wheezing"
+    c: "Clubbing"
+    d: "Increased antero-posterior diameter of the chest"
+    e: "Allergic rhinitis"
+    k: c
+
+  - q: "Which of the following is not true about tension pneumothorax?"
+    a: "The onset is usually abrupt"
+    b: "There is pain, dyspnea & cyanosis"
+    c: "Respiratory distress & retractions"
+    d: "Marked decreased breath sounds over the involved lung"
+    e: "The percussion note over the involved area is dull"
+    k: e
+
+  - q: "Effector cells in asthma:"
+    a: "Mast cells, basophils, TH2 cells"
+    b: "Epithelial cells"
+    c: "Macrophages"
+    d: "Plasma cells"
+    e: "Neutrophils"
+    k: a
+
+  - q: "Viral pneumonia differs from acute bronchiolitis in:"
+    a: "Presence or absence of wheezes"
+    b: "Constant fine rales"
+    c: "Cough as a main symptom"
+    d: "Normal C reactive protein"
+    e: "High ESR"
+    k: b
+
+  - q: "Which of the following drugs is necessary for asthma control:"
+    a: "Terbutaline"
+    b: "Inhaled corticosteroids"
+    c: "Mucolytics"
+    d: "Antibiotics"
+    e: "Antitussive drugs"
+    k: b
+
+  - q: "Atypical bacterial pneumonia is characterized by:"
+    a: "Wheezing is a frequent finding"
+    b: "No extra pulmonary manifestations"
+    c: "Presence of Pneumatoceles or pleural effusion"
+    d: "Segmental or lobar consolidation"
+    e: "High grade fever"
+    k: a
+
+  - q: "As regards the etiology of pleural effusion:"
+    a: "Chylous effusion is common"
+    b: "Lymphoma is the most common malignancy related effusion"
+    c: "Malignancy effusion is usually bilateral & bloody"
+    d: "Streptococcus pneumonia is the most common pathogen"
+    e: "Congestive heart failure can cause unilateral & transudative effusion"
+    k: d
+
+  - q: "Regarding foreign body aspiration one of the following statement is NOT true:"
+    a: "Normal chest X-ray does not exclude F.B. aspiration"
+    b: "Negative clinical manifestations does not exclude F.B. aspiration"
+    c: "Tracheal foreign body present with hoarseness or aphonia"
+    d: "When F.B. aspiration is suspected bronchoscopy must be done"
+    e: "Children 1 - 3 years are the most susceptible"
+    k: c
+
+  - q: "Acute bronchiolitis:"
+    a: "Is usually caused by adenovirus"
+    b: "More common in summer"
+    c: "Responds rapidly with inhaled selective β2 agonist"
+    d: "Caused neutrophilic infiltration to airway as a response to RSV infection"
+    e: "Autoimmune disorder"
+    k: d
+
+  - q: "Controlled asthmatic patient usually present with:"
+    a: "Normal pulmonary function tests"
+    b: "Day time symptoms > twice/week"
+    c: "Nocturnal symptoms once/week"
+    d: "Limitation of activities"
+    e: "Exercise induced cough"
+    k: a
+
+  - q: "A child 5 years old, presented with respiratory distress, fever, cough & stony dullness. On percussion, X-ray chest revealed right sided pleural effusion. Trial aspiration revealed fluid with PH 7, high LDH & it was sent for culture. What do you immediate recommend?"
+    a: "Conservative & wait for culture"
+    b: "Repeated thoracentesis daily"
+    c: "Chest tube drainage"
+    d: "Antibiotics with antipyretic"
+    e: "Thoracoscopy"
+    k: c
+
+  - q: "Infant aged 7 months presented with respiratory rate 80/min, cyanosis & marked intercostal retraction. The condition was preceded by rhinorrhea & low grade fever. Perinatal history was free. What is your possible diagnosis?"
+    a: "Bronchial asthma"
+    b: "Foreign body inhalation"
+    c: "Acute bronchiolitis"
+    d: "Mycoplasma pneumonia"
+    e: "Acute laryngotracheobronchitis"
+    k: c
+
+  - q: "Which of the following is not a typical complication of bacterial pneumonia:"
+    a: "Sepsis"
+    b: "Empyema"
+    c: "Pneumothorax"
+    d: "Endocarditis"
+    e: "Pleural effusion"
+    k: d
+
+  - q: "A one year old children aspirates a foreign body. On presentation, the trachea is shifted to the right, there is diminished airy entry & wheezing all over the left side. X ray shows hyperinflated left lung. What is the most likely location of foreign body?"
+    a: "Above the vocal cords"
+    b: "In the trachea"
+    c: "At the carina"
+    d: "In the left main bronchus"
+    e: "In the right main bronchus"
+    k: d
+
+  - q: "One of the following is false about tension pneumothorax:"
+    a: "It is closed pneumothorax"
+    b: "It could be spontaneous or traumatic"
+    c: "The patient is hemodynamically compromised"
+    d: "Management include rapid needle decompression"
+    e: "Management include oxygen therapy, close observation & antibiotics"
+    k: a
+
+  - q: "Regarding acute bronchiolitis, one of the following statement is false:"
+    a: "Respiratory syncytial virus is the most common cause"
+    b: "Peak incidence between 2 & 6 months of age"
+    c: "X-ray chest shows hyperinflation"
+    d: "Inhaled steroids is the treatment of choice"
+    e: "There is possible association with bronchial asthma"
+    k: d
+
+  - q: "In acute bronchiolitis, one of the following is TRUE:"
+    a: "Ribavirin is the treatment of choice for hospitalized cases"
+    b: "Bronchodilators are usually effective"
+    c: "Feeding difficulties are common"
+    d: "Upper airway obstruction is a common feature"
+    k: c
+
+  - q: "One of the following signs is FALSE regarding features of obstructive emphysema due to foreign body inhalation:"
+    a: "Percussion note is usually hyperresonant on the affected side"
+    b: "Breath sounds are reduced on the affected side"
+    c: "Total airway obstruction is the underlying mechanism"
+    d: "Mediastinum is pushed away from the affected side"
+    e: "Intercostal spaces on the affected side may be widened"
+    k: c
+
+  - q: "Regarding bronchial asthma in children, one of the following statement is TRUE:"
+    a: "Associated with bronchial hyper-reactivity"
+    b: "It shows irreversible airway obstruction"
+    c: "Usually presents with high fever"
+    d: "Neutrophils are the main cell inducing airway inflammation"
+    e: "Chronic cases are associated with clubbing of fingers"
+    k: a
+
+  - q: "Stridor is characteristic feature of the following disease except:"
+    a: "Laryngeal diphtheria"
+    b: "Angioneurotic edema"
+    c: "Adenoid hypertrophy"
+    d: "Bilateral abductor vocal cord paralysis"
+    k: c
+
+  - q: "The most appropriate treatment option of a 10 yr old child with intermittent symptoms of mild asthma is:"
+    a: "Environmental control & patient education only; no medication is indicated"
+    b: "Oral theophyline"
+    c: "Inhaled β2 agonist as needed for symptoms"
+    d: "Daily inhaled corticosteroid"
+    k: c
+
+  - q: "Important causes of wheezing infancy include all of the following except:"
+    a: "Bronchiolitis"
+    b: "Asthma"
+    c: "Gastroesophageal reflux"
+    d: "Hypocalcemia"
+    k: c
+
+  - q: "All are true about massive pleural effusion except:"
+    a: "Trachea is shifted to the opposite side"
+    b: "Overlying stone dullness"
+    c: "Tactile vocal fremitus is increased"
+    d: "It may be complicated by purulent pericarditis"
+    k: c
+
+  - q: "Regarding foreign body aspiration one of the following statement is false:"
+    a: "All children with bronchial foreign FBs typically present with classic triad"
+    b: "Negative clinical manifestation does not exclude F.B. aspiration"
+    c: "Laryngeal foreign body present with hoarseness or aphonia"
+    d: "When F.B. aspiration is suspected bronchoscopy must be done"
+    e: "None of the above"
+    k: a
+
+  - q: "Concerning acute bronchiolitis, all of the following are true except:"
+    a: "Epidemics often occur during winter"
+    b: "The disease typically affects infants younger than 2 years of age"
+    c: "Immunodeficiency is an indication for treatment with ribavirin"
+    d: "The disease is more benign in infants born prematurely"
+    e: "Respiratory syncytial virus is the most common causative virus"
+    k: d
+
+  - q: "Regarding acute asthma exacerbations management, all of the following are false except:"
+    a: "Inhaled corticosteroids, nebulized β2 agonists, I.V. aminophylline"
+    b: "Nebulized β2 agonists, systemic corticosteroids, ipratropium bromide"
+    c: "Formoterol, methylxanthines, systemic steroids"
+    d: "Nebulized β2 agonist, salmeterol, systemic corticosteroids, theophyline"
+    e: "Leukotriene modifiers, inhaled corticosteroids, LABA"
+    k: a
+
+  - q: "Regarding bronchial asthma, all of the following are true except:"
+    a: "Episodic symptoms of airflow obstruction are present"
+    b: "Reversibility of symptoms with β2 agonists"
+    c: "Chest examination must reveal bilateral wheezes"
+    d: "Inhaled corticosteroids are cornerstone in long term therapy"
+    e: "Control of environmental factors & co-morbid conditions is essential"
+    k: c
+
+  - q: "All are true regarding croup except:"
+    a: "Most common organism is para influenza virus"
+    b: "Peak age group affected is 2 years"
+    c: "Incidence is higher in females"
+    d: "A strong family history may be present"
+    k: c
+
+  - q: "All of the following signs may be present in acute bronchiolitis except:"
+    a: "Tachypnea"
+    b: "Chest retraction"
+    c: "Crepitations"
+    d: "Wheezes"
+    e: "Impaired note on percussion"
+    k: e
+
+  - q: "Which of the following statements about bronchial asthma is correct:"
+    a: "TH1 immune response"
+    b: "Eosinophil is the main effector cell"
+    c: "Increased serum IgA levels"
+    d: "Viral infection is the main cause"
+    k: b
+
+  - q: "Patient with Mycoplasma pneumonia can have:"
+    a: "Poor correlation between symptoms which are so severe with minimal physical findings"
+    b: "Poor correlation between severe physical findings & minimal symptoms"
+    c: "High grade fever"
+    d: "Sudden onset of symptoms"
+    k: a
+
+  - q: "Initial management of the acute asthma exacerbation include:"
+    a: "Oxygen therapy, nebulized β2 agonist, systemic steroids"
+    b: "Intravenous aminophylline, nebulized β2 agonist"
+    c: "Oxygen therapy, intravenous aminophylline, steroids"
+    d: "Nebulized β2 agonist, intravenous magnesium sulphate"
+    k: a
+
+  - q: "Recognized clinical features of pneumothorax include each of the following EXCEPT:"
+    a: "Reduced movements of the chest on affected side"
+    b: "Shift of mediastinum to opposite side"
+    c: "Hyper resonant percussion note"
+    d: "Vesicular breath sounds with reduced air entry"
+    e: "Whispering pectoriloquy in all cases"
+    k: e
+
+  - q: "One of the following indicates severe laryngitis:"
+    a: "Inspiratory stridor"
+    b: "Suprasternal retraction"
+    c: "Rhinorrhea"
+    d: "Biphasic stridor"
+    e: "Croupy cough"
+    k: d
+
+  - q: "Regarding foreign body aspiration one of the following statement is not true:"
+    a: "History of foreign body aspiration is essential for diagnosis"
+    b: "Negative clinical manifestations dose not exclude F.B. aspiration"
+    c: "Normal chest X-ray does not exclude F.B. aspiration"
+    d: "When F.B. aspiration is suspected bronchoscopy must be done"
+    e: "Most of the aspirated materials are radiolucent"
+    k: a
+
+  - q: "Expiratory grunting is a sign of:"
+    a: "Asthma exacerbation"
+    b: "Pneumonia"
+    c: "Pleural effusion"
+    d: "Croup"
+    e: "Acute bronchitis"
+    k: b
+
+  - q: "Atelectasis due to foreign body inhalation is characterized by each of the following EXCEPT:"
+    a: "Mediastinum is pulled towards the affected side"
+    b: "Intercostal spaces on the affected side may be narrowed"
+    c: "Percussion note is usually normal"
+    d: "Breath sounds are reduced"
+    e: "Total airway obstruction is present"
+    k: c
+
+  - q: "Lobar pneumonia is characterized by the following EXCEPT:"
+    a: "Bronchial breathing"
+    b: "Fine consonating crepitations"
+    c: "Increase vocal resonance"
+    d: "Hyper-resonance on percussion"
+    e: "Respiratory distress & grunting"
+    k: d
+
+  - q: "Pleural friction rub is characterized by all the following EXCEPT:"
+    a: "It is audible during inspiratory phase of breathing"
+    b: "It may be associated with pain"
+    c: "It is unaltered by coughing"
+    d: "Better heard with chest piece of stethoscope tightly placed over chest wall"
+    e: "It may disappear when pleural exudate increase in quantity"
+    k: a
+
+  - q: "The incorrect statement regarding corticosteroids in allergy is:"
+    a: "The mechanism of action is not known"
+    b: "Corticosteroids are lymphopenic"
+    c: "Corticosteroids decrease synthesis of prostaglandins"
+    d: "Long-term usage suppresses linear growth in children"
+    e: "Alternate-day regimens decrease side effects"
+    k: a

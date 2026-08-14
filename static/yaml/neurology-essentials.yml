@@ -1,0 +1,84 @@
+title: Neurology Essentials
+tags:
+  - neurology
+  - internal medicine
+questions:
+  - q: "A patient presents with sudden right-sided weakness and expressive aphasia. Which cerebral artery territory is most likely affected?"
+    a: "Right middle cerebral artery"
+    b: "Left middle cerebral artery"
+    c: "Anterior cerebral artery"
+    d: "Posterior cerebral artery"
+    e: "Basilar artery"
+    k: b
+
+  - q: "Which cranial nerve is responsible for the efferent (motor) limb of the pupillary light reflex?"
+    a: "Optic nerve (II)"
+    b: "Oculomotor nerve (III)"
+    c: "Trochlear nerve (IV)"
+    d: "Abducens nerve (VI)"
+    e: "Trigeminal nerve (V)"
+    k: b
+
+  - q: "The classic triad of normal pressure hydrocephalus is:"
+    a: "Headache, vomiting, papilledema"
+    b: "Gait disturbance, urinary incontinence, dementia"
+    c: "Ataxia, nystagmus, dysarthria"
+    d: "Fever, neck stiffness, photophobia"
+    e: "Tremor, rigidity, bradykinesia"
+    k: b
+
+  - q: "Resting tremor, bradykinesia, and cogwheel rigidity are hallmark features of:"
+    a: "Essential tremor"
+    b: "Multiple sclerosis"
+    c: "Parkinson's disease"
+    d: "Huntington's disease"
+    e: "Cerebellar stroke"
+    k: c
+
+  - q: "In Guillain-Barré syndrome, the classic pattern of weakness is:"
+    a: "Descending and asymmetric"
+    b: "Ascending and symmetric"
+    c: "Purely distal upper limb"
+    d: "Unilateral facial"
+    e: "Bulbar only"
+    k: b
+
+  - q: "Which finding on lumbar puncture is characteristic of Guillain-Barré syndrome?"
+    a: "Low glucose"
+    b: "Neutrophilic pleocytosis"
+    c: "Albuminocytologic dissociation"
+    d: "Elevated opening pressure"
+    e: "Positive Gram stain"
+    k: c
+
+  - q: "A patient with ptosis and diplopia that worsen through the day likely has:"
+    a: "Bell's palsy"
+    b: "Myasthenia gravis"
+    c: "Horner's syndrome"
+    d: "Third nerve palsy from aneurysm"
+    e: "Multiple sclerosis"
+    k: b
+
+  - q: "The most common cause of a subarachnoid hemorrhage is:"
+    a: "Hypertensive bleed"
+    b: "Ruptured saccular (berry) aneurysm"
+    c: "Arteriovenous malformation"
+    d: "Trauma"
+    e: "Amyloid angiopathy"
+    k: b
+
+  - q: "Which demyelinating disease is characterized by lesions separated in time and space on MRI?"
+    a: "Amyotrophic lateral sclerosis"
+    b: "Multiple sclerosis"
+    c: "Parkinson's disease"
+    d: "Guillain-Barré syndrome"
+    e: "Myasthenia gravis"
+    k: b
+
+  - q: "A 'thunderclap' headache described as the worst headache of life should raise suspicion for:"
+    a: "Tension headache"
+    b: "Migraine"
+    c: "Cluster headache"
+    d: "Subarachnoid hemorrhage"
+    e: "Sinus headache"
+    k: d

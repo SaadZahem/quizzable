@@ -1,0 +1,84 @@
+title: Antibiotics Pharmacology
+tags:
+  - pharmacology
+  - infectious disease
+questions:
+  - q: "Which class of antibiotics inhibits bacterial cell wall synthesis by binding penicillin-binding proteins?"
+    a: "Aminoglycosides"
+    b: "Macrolides"
+    c: "Beta-lactams"
+    d: "Fluoroquinolones"
+    e: "Tetracyclines"
+    k: c
+
+  - q: "Which antibiotic class carries the greatest risk of tendon rupture and is generally avoided in children?"
+    a: "Cephalosporins"
+    b: "Fluoroquinolones"
+    c: "Penicillins"
+    d: "Sulfonamides"
+    e: "Glycopeptides"
+    k: b
+
+  - q: "Vancomycin infused too rapidly can cause which reaction due to histamine release?"
+    a: "Serotonin syndrome"
+    b: "Red man syndrome"
+    c: "Stevens-Johnson syndrome"
+    d: "Disulfiram-like reaction"
+    e: "Gray baby syndrome"
+    k: b
+
+  - q: "Aminoglycosides such as gentamicin are most associated with which two toxicities?"
+    a: "Hepatotoxicity and neurotoxicity"
+    b: "Cardiotoxicity and nephrotoxicity"
+    c: "Nephrotoxicity and ototoxicity"
+    d: "Bone marrow suppression and rash"
+    e: "Photosensitivity and hepatotoxicity"
+    k: c
+
+  - q: "Which antibiotic inhibits the 30S ribosomal subunit and should be avoided in children under 8 due to teeth staining?"
+    a: "Erythromycin"
+    b: "Clindamycin"
+    c: "Doxycycline"
+    d: "Ceftriaxone"
+    e: "Metronidazole"
+    k: c
+
+  - q: "Metronidazole taken with alcohol can produce which reaction?"
+    a: "Red man syndrome"
+    b: "Disulfiram-like reaction"
+    c: "Serotonin syndrome"
+    d: "Neuroleptic malignant syndrome"
+    e: "Anaphylaxis"
+    k: b
+
+  - q: "Which antibiotic is the treatment of choice for MRSA in a serious systemic infection?"
+    a: "Amoxicillin"
+    b: "Vancomycin"
+    c: "Ciprofloxacin"
+    d: "Azithromycin"
+    e: "Cephalexin"
+    k: b
+
+  - q: "Macrolides such as erythromycin exert their antibacterial effect by:"
+    a: "Inhibiting DNA gyrase"
+    b: "Inhibiting the 50S ribosomal subunit"
+    c: "Disrupting the cell membrane"
+    d: "Inhibiting folate synthesis"
+    e: "Cross-linking DNA"
+    k: b
+
+  - q: "Which antibiotic class is most likely to cause a hypersensitivity reaction due to sulfa allergy?"
+    a: "Trimethoprim-sulfamethoxazole"
+    b: "Penicillin"
+    c: "Clindamycin"
+    d: "Gentamicin"
+    e: "Vancomycin"
+    k: a
+
+  - q: "Clostridioides difficile colitis following antibiotic use is best treated first-line with:"
+    a: "Intravenous vancomycin"
+    b: "Oral vancomycin or fidaxomicin"
+    c: "Ciprofloxacin"
+    d: "Ceftriaxone"
+    e: "Amoxicillin-clavulanate"
+    k: b

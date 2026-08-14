@@ -1,0 +1,75 @@
+title: Pediatrics Week 6 and 7
+tags:
+  - pediatrics
+questions:
+  - q: "During monitoring of children with type 1 diabetes, what is the Glycemic Control target of HbA1c level?"
+    a: "less than 5%"
+    b: "9-10%"
+    c: "8-9%"
+    d: "less than 7%"
+    e: "more than 12%"
+    k: d
+
+  - q: "Benefits of delayed cord clamping include which of the following?"
+    a: "Lower incidence of respiratory distress syndrome."
+    b: "Lower incidence of transient tachypnea of newborn."
+    c: "Improved vitamin D stores at 3 to 4 months."
+    d: "Improved iron stores at 3 to 6 months."
+    e: "Improved calcium stores in the baby."
+    k: d
+
+  - q: "The most important screening that should be done before discharge of a very low birth weight baby exposed to O2 for a long time:"
+    a: "X-ray chest for pneumonia"
+    b: "Hearing test"
+    c: "Transfontanelle U/S"
+    d: "U/S abdomen"
+    e: "Retinal examination for retinopathy"
+    k: e
+
+  - q: "As regards pubertal development in females, which of the following is correct?"
+    a: "The average age of menarche is 14 years old"
+    b: "Breast asymmetry during development is very rare"
+    c: "Growth spurt occurs very late in females and usually marks the end of puberty"
+    d: "Puberty in females starts with the development of pubic hair"
+    e: "After menarche there is minimal growth remaining until adult height is attained"
+    k: e
+
+  - q: "Diagnosis of urinary tract infection requires which of the following?"
+    a: "Presence of more than 10,000 CFU colony count/ml of a single uropathogenic bacterium if collected by clean catch method."
+    b: "Colony count more than 1000 CFU colony count/ml of a single uropathogenic bacterium if collected by suprapubic aspiration."
+    c: "Presence of significant pyuria alone."
+    d: "Presence of colony count more than 1000 CFU colony count/ml of a single uropathogenic bacterium if collected by catheter."
+    e: "Presence of bacterial growth of two different urinary pathogens."
+    k: b
+
+  - q: "Which of the following is NOT a feature of acute glomerulonephritis (AGN)?"
+    a: "Massive edema"
+    b: "Oliguria"
+    c: "Hypertension"
+    d: "Hematuria"
+    e: "Proteinuria"
+    k: a
+
+  - q: "Which of the following is true regarding phenylketonuria?"
+    a: "All forms of the disease are permanent."
+    b: "It is an autosomal dominant disease."
+    c: "Phenylalanine restriction is the most important line of treatment."
+    d: "Enzyme assay is the most suitable diagnostic test."
+    e: "Macrocephaly and convulsions are common features of the disease."
+    k: c
+
+  - q: "Assessment of gestational age can be done by using which of the following tools?"
+    a: "INTERGROWTH-21st charts."
+    b: "Barlow test."
+    c: "Ortolani test."
+    d: "Oslen charts."
+    e: "Ballard score."
+    k: e
+
+  - q: "Hypothyroidism due to pituitary disorders is called what of the following?"
+    a: "Thyroid resistance syndrome"
+    b: "Tertiary hypothyroidism"
+    c: "Primary hypothyroidism"
+    d: "Secondary hypothyroidism"
+    e: "Graves' disease"
+    k: d

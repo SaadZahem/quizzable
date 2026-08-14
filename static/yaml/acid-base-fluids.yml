@@ -1,0 +1,68 @@
+title: Acid-Base and Fluids
+tags:
+  - physiology
+  - internal medicine
+questions:
+  - q: "An arterial blood gas shows low pH, high PaCO2, and normal bicarbonate. This represents:"
+    a: "Acute respiratory acidosis"
+    b: "Metabolic acidosis"
+    c: "Respiratory alkalosis"
+    d: "Metabolic alkalosis"
+    e: "Mixed disorder"
+    k: a
+
+  - q: "Which of the following is a cause of a high anion gap metabolic acidosis?"
+    a: "Diarrhea"
+    b: "Diabetic ketoacidosis"
+    c: "Renal tubular acidosis"
+    d: "Excessive normal saline"
+    e: "Vomiting"
+    k: b
+
+  - q: "The primary compensatory response to a metabolic acidosis is:"
+    a: "Renal bicarbonate retention"
+    b: "Hyperventilation to lower PaCO2"
+    c: "Hypoventilation to raise PaCO2"
+    d: "Increased renal acid excretion only"
+    e: "No compensation occurs"
+    k: b
+
+  - q: "Prolonged vomiting classically leads to which acid-base disturbance?"
+    a: "Metabolic acidosis"
+    b: "Respiratory acidosis"
+    c: "Metabolic alkalosis"
+    d: "Respiratory alkalosis"
+    e: "Normal acid-base status"
+    k: c
+
+  - q: "Which IV fluid is isotonic and commonly used for volume resuscitation?"
+    a: "5% dextrose in water"
+    b: "0.45% saline"
+    c: "0.9% normal saline"
+    d: "3% hypertonic saline"
+    e: "10% dextrose"
+    k: c
+
+  - q: "The most immediate life-threatening consequence of severe hyperkalemia is:"
+    a: "Muscle cramps"
+    b: "Cardiac arrhythmia"
+    c: "Metabolic alkalosis"
+    d: "Polyuria"
+    e: "Tetany"
+    k: b
+
+  - q: "First-line treatment to stabilize the cardiac membrane in severe hyperkalemia is:"
+    a: "Insulin and glucose"
+    b: "Calcium gluconate"
+    c: "Sodium bicarbonate"
+    d: "Nebulized salbutamol"
+    e: "Loop diuretics"
+    k: b
+
+  - q: "Rapid correction of chronic hyponatremia risks which complication?"
+    a: "Cerebral edema"
+    b: "Osmotic demyelination syndrome"
+    c: "Seizures from hypocalcemia"
+    d: "Acute kidney injury"
+    e: "Rhabdomyolysis"
+    k: b

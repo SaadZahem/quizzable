@@ -1,0 +1,76 @@
+title: Pediatrics Week 5
+tags:
+  - pediatrics
+  - neurology
+questions:
+  - q: "While providing pre-hospital care for a child having a generalized tonic-clonic seizure, what action is most important for the caregiver to take?"
+    a: "Give the child a dose of oral acetaminophen to reduce fever."
+    b: "Position the child on their side in the recovery position."
+    c: "Place a tongue depressor or other object in the child's mouth to prevent biting."
+    d: "Hold the child down firmly to stop the jerking movements."
+    e: "Immediately try to wake the child up by calling their name loudly."
+    k: b
+
+  - q: "Teratogenic dose of vitamin A:"
+    a: "11000 IU daily"
+    b: "8000 IU daily"
+    c: "12000 IU daily"
+    d: "9000 IU daily"
+    e: "15000 IU daily"
+    k: c
+
+  - q: "A 14-year-old girl with type 1 diabetes mellitus is found unresponsive with generalized shaking. Her blood glucose is measured at 32 mg/dL. After intravenous glucose administration, the shaking stops and she regains consciousness. This event is best classified as:"
+    a: "A diagnosis of epilepsy"
+    b: "A non-epileptic seizure"
+    c: "An unprovoked epileptic seizure"
+    d: "A primary generalized seizure"
+    e: "A focal aware seizure"
+    k: b
+
+  - q: "According to the DSM-5 diagnostic criteria mentioned, which of the following features is a core component in the diagnosis of ADHD?"
+    a: "Presence of certain repetitive behaviors"
+    b: "Trouble paying attention and controlling impulsive behaviors"
+    c: "Significant intellectual impairment requiring extensive support"
+    d: "Difficulty with social interaction and communication"
+    e: "Onset of symptoms only after entering adolescence"
+    k: b
+
+  - q: "Which statement accurately reflects a characteristic of ADHD mentioned in the presentation?"
+    a: "It is a rare neurobehavioral disorder of childhood."
+    b: "Symptoms are static and do not change as a person ages."
+    c: "It is one of the most common neurobehavioral disorders of childhood."
+    d: "Diagnosis is typically made for the first time in adulthood."
+    e: "It is a complex neurodevelopmental disorder that affects behavior, communication and social functioning."
+    k: c
+
+  - q: "A Hemophilic male married normal female. The possibility for their boys to have no disease is:"
+    a: "50%"
+    b: "25%"
+    c: "75%"
+    d: "0%"
+    e: "100%"
+    k: e
+
+  - q: "A 10-day-old neonate presents with poor feeding, constipation, and a weak cry. Over the next 24 hours, the infant develops progressive hypotonia, loss of deep tendon reflexes, and ptosis. The parents report no significant perinatal history. Which diagnostic test is most likely to confirm the suspected diagnosis?"
+    a: "Genetic testing for SMN1 gene deletion"
+    b: "Edrophonium (Tensilon) test"
+    c: "Serum creatine kinase level"
+    d: "DNA testing for myotonic dystrophy"
+    e: "Identification of botulinum toxin in the stool"
+    k: e
+
+  - q: "According to the International Workshop on Definition and Classification of Cerebral Palsy, which of the following is a core component of the definition of Cerebral Palsy?"
+    a: "A hereditary disorder caused by a genetic defect."
+    b: "A disorder that always presents before the age of 5 years with sensory loss."
+    c: "A non-progressive disturbance that occurred in the developing brain."
+    d: "A progressive disorder of the upper motor neuron."
+    e: "A pure motor disorder with no accompanying disturbances in sensation or cognition."
+    k: c
+
+  - q: "What is the most common type of malignancy complicating cases of Down syndrome?"
+    a: "Wilms' tumor"
+    b: "Acute myeloid leukemia"
+    c: "Chronic lymphoblastic leukemia"
+    d: "Neuroblastoma"
+    e: "Acute lymphoblastic leukemia"
+    k: b

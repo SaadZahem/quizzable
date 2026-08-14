@@ -1,0 +1,84 @@
+title: Cardiology Basics
+tags:
+  - cardiology
+  - internal medicine
+questions:
+  - q: "Which artery most commonly supplies the SA (sinoatrial) node?"
+    a: "Left anterior descending artery"
+    b: "Left circumflex artery"
+    c: "Right coronary artery"
+    d: "Posterior descending artery"
+    e: "Left main coronary artery"
+    k: c
+
+  - q: "What ECG finding is most characteristic of acute pericarditis?"
+    a: "ST depression in V1-V3"
+    b: "Diffuse concave ST elevation with PR depression"
+    c: "Peaked T waves"
+    d: "Delta wave"
+    e: "Prolonged QT interval"
+    k: b
+
+  - q: "A patient with atrial fibrillation has an irregularly irregular pulse. Which chamber loses effective contraction?"
+    a: "Left ventricle"
+    b: "Right ventricle"
+    c: "Both ventricles"
+    d: "The atria"
+    e: "None of the above"
+    k: d
+
+  - q: "Which valve lesion classically produces a mid-diastolic rumbling murmur best heard at the apex?"
+    a: "Aortic stenosis"
+    b: "Mitral stenosis"
+    c: "Aortic regurgitation"
+    d: "Tricuspid regurgitation"
+    e: "Pulmonary stenosis"
+    k: b
+
+  - q: "First-line pharmacologic therapy to reduce mortality in heart failure with reduced ejection fraction includes:"
+    a: "Calcium channel blockers"
+    b: "Digoxin"
+    c: "ACE inhibitors and beta blockers"
+    d: "Loop diuretics alone"
+    e: "Nitrates alone"
+    k: c
+
+  - q: "Which of the following is the earliest cardiac biomarker to rise after myocardial infarction?"
+    a: "Troponin I"
+    b: "CK-MB"
+    c: "Myoglobin"
+    d: "LDH"
+    e: "AST"
+    k: c
+
+  - q: "A wide, fixed splitting of the second heart sound (S2) is characteristic of:"
+    a: "Atrial septal defect"
+    b: "Ventricular septal defect"
+    c: "Patent ductus arteriosus"
+    d: "Aortic stenosis"
+    e: "Mitral regurgitation"
+    k: a
+
+  - q: "Which antihypertensive class is contraindicated in a pregnant patient?"
+    a: "Labetalol"
+    b: "Methyldopa"
+    c: "Nifedipine"
+    d: "ACE inhibitors"
+    e: "Hydralazine"
+    k: d
+
+  - q: "The most common cause of sudden cardiac death in young athletes is:"
+    a: "Coronary artery disease"
+    b: "Hypertrophic cardiomyopathy"
+    c: "Dilated cardiomyopathy"
+    d: "Myocarditis"
+    e: "Aortic dissection"
+    k: b
+
+  - q: "Beck's triad (hypotension, distended neck veins, muffled heart sounds) indicates:"
+    a: "Tension pneumothorax"
+    b: "Massive pulmonary embolism"
+    c: "Cardiac tamponade"
+    d: "Aortic dissection"
+    e: "Constrictive pericarditis"
+    k: c
