@@ -1,0 +1,987 @@
+title: Pediatrics MCQ Bank
+tags:
+  - pediatrics
+questions:
+  - q: "The hallmark of meningitis is:"
+    a: "Altered consciousness"
+    b: "Seizures"
+    c: "Fever, headache & vomiting"
+    d: "Meningeal irritation signs"
+    k: d
+
+  - q: "Kernig's sign in meningitis is characterized by:"
+    a: "Subdural effusion on CT scan"
+    b: "Pain on knee extension with hips flexed 90°"
+    c: "Headache"
+    d: "Bulging fontanelle"
+    e: "Flexion of the neck causing hip/knee flexion"
+    k: b
+
+  - q: "Passive flexion of the neck results in involuntary flexion of the hips and knees. This is called?"
+    a: "Brudzinski's sign"
+    b: "Kernig's sign"
+    c: "Gower's sign"
+    d: "None of the above"
+    k: a
+
+  - q: "The commonest pathogen of bacterial meningitis in a non-vaccinated 2 year old child is:"
+    a: "S. pneumoniae"
+    b: "H. influenzae b"
+    c: "N. meningitidis"
+    d: "L. monocytogenes"
+    k: b
+
+  - q: "Acyclovir is indicated for treatment of:"
+    a: "Herpes simplex (HSV)"
+    b: "Enteroviruses"
+    c: "Mumps"
+    d: "Measles"
+    k: a
+
+  - q: "Viral meningitis is considered when the CSF of a child shows:"
+    a: "Lymphocytosis, mild protein increment, normal glucose"
+    b: "Decreased glucose + lymphocytosis"
+    c: "Neutrophilia + normal glucose"
+    d: "Neutrophilia + decreased glucose + -ve Gram stain"
+    k: a
+
+  - q: "A 2 months old infant with bacterial meningitis is treated empirically with:"
+    a: "Ceftriaxone + ampicillin"
+    b: "Ampicillin + vancomycin"
+    c: "Ampicillin"
+    d: "Chloramphenicol"
+    k: b
+
+  - q: "A 3 day old boy presented with persistent vomiting followed by convulsions and disturbed conscious level. CSF was clear and showed 5 WBCs/ul, glucose 80 mg/dl, protein 40 mg/dl and negative Gram stain. Blood glucose was 90 mg/dl at the same time. You would interpret the CSF described above as:"
+    a: "Normal"
+    b: "Bacterial meningitis"
+    c: "Viral encephalitis"
+    d: "TB meningitis"
+    k: c
+
+  - q: "Encephalitis is called when the child has acute onset of:"
+    a: "Altered consciousness"
+    b: "Seizures"
+    c: "Altered cognition & personality"
+    d: "All of the above"
+    e: "All of the above plus neck stiffness"
+    k: d
+
+  - q: "A 5-year-old girl was brought to the ED when she developed altered mental status. Kernig and Brudzinski signs were present. CSF examination showed: WBCs 1500/ul (80% neutrophils), sugar 20 mg/dl, protein 400 mg/dl, positive Gram stain. You would interpret the CSF described above as:"
+    a: "Normal"
+    b: "Bacterial meningitis"
+    c: "Viral encephalitis"
+    d: "TB meningitis"
+    k: b
+
+  - q: "Which CSF finding is typical of viral meningoencephalitis?"
+    a: "Protein >100 mg/dL + Gram-positive cocci"
+    b: "Gram positive stain"
+    c: "Elevated lactate + turbid appearance"
+    d: "Neutrophilic pleocytosis + low glucose"
+    e: "Lymphocytic pleocytosis + normal glucose"
+    k: e
+
+  - q: "Which of the following is the most crucial step in the initial evaluation of a patient with Fever of Unknown Origin (FUO)?"
+    a: "Extensive laboratory testing"
+    b: "Empiric antibiotic therapy"
+    c: "Document the fever & duration"
+    d: "Imaging studies (e.g., CT scan, MRI)"
+    k: c
+
+  - q: "Most common cause of PUO is:"
+    a: "Infection"
+    b: "Collagen"
+    c: "Cancer"
+    d: "Miscellaneous"
+    k: a
+
+  - q: "PUO (Pyrexia of Unknown Origin) is defined as fever >38.3°C lasting:"
+    a: ">1 week"
+    b: ">1 month"
+    c: ">6 weeks"
+    d: ">3 months"
+    e: ">3 weeks"
+    k: e
+
+  - q: "Elevated ESR (>100 mm/h) in PUO is most suggestive of:"
+    a: "Tuberculosis or malignancy"
+    b: "Autoimmune thyroiditis"
+    c: "Tonsilitis"
+    d: "Drug fever"
+    e: "Viral infection"
+    k: a
+
+  - q: "A 7-year-old child presents with a maculopapular rash, fever, and on examination there are red lines at the skin flexures. What is the most likely diagnosis?"
+    a: "Group A Streptococcal infection (GAS)"
+    b: "Measles"
+    c: "Rubella"
+    d: "Erythema infectiosum (Fifth disease)"
+    k: a
+
+  - q: "Scarlet fever is characterized by:"
+    a: "The rash is maculopapular"
+    b: "Reaches intensity in 3 weeks"
+    c: "Goose skin is a characteristic"
+    d: "Non-membranous tonsillitis"
+    e: "Group B beta haemolytic Streptococci"
+    k: a
+
+  - q: "Scarlet fever:"
+    a: "Slapped cheek like rash"
+    b: "Post auricular lymph node enlargement"
+    c: "+ve Pastia's sign"
+    d: "Rash fades causing branny desquamation"
+    e: "Rash appears as fever subsides by crisis"
+    k: c
+
+  - q: "The following is characteristic of measles:"
+    a: "The spots are blue-purple in colour"
+    b: "It spreads in 3 days"
+    c: "Koplik's spots are present 2 days after the rash appears"
+    d: "Koplik's spots are present opposite the premolars"
+    e: "Incubation period is 3 weeks"
+    k: b
+
+  - q: "Measles:"
+    a: "Slapped cheek like rash"
+    b: "Post auricular lymph node enlargement"
+    c: "+ve Pastia sign"
+    d: "Rash fades causing branny desquamation"
+    e: "Rash appears as fever subsides by crisis"
+    k: d
+
+  - q: "Which of the following is a live attenuated vaccine?"
+    a: "Inactivated polio vaccine (IPV)"
+    b: "Rubella vaccine"
+    c: "Hepatitis B vaccine"
+    d: "Tetanus toxoid vaccine"
+    k: b
+
+  - q: "Which virus causes erythema infectiosum (Fifth disease)?"
+    a: "Rubella virus"
+    b: "Human herpesvirus 6"
+    c: "Parvovirus B19"
+    d: "Varicella-zoster virus"
+    k: c
+
+  - q: "Which infectious disease is characterized by a sandpaper-like rash and strawberry tongue?"
+    a: "Measles"
+    b: "Mumps"
+    c: "Rubella"
+    d: "Scarlet fever"
+    e: "Erythema infectiosum"
+    k: d
+
+  - q: "What is the pathognomonic sign of measles?"
+    a: "Circumoral pallor"
+    b: "Koplik's spots"
+    c: "Slapped-cheek rash"
+    d: "Postauricular lymphadenopathy"
+    e: "Skin rash"
+    k: b
+
+  - q: "A child presents with high fever for 3 days followed by a rash once the fever subsides. What is the most likely diagnosis?"
+    a: "Chickenpox"
+    b: "Rubella"
+    c: "Roseola infantum"
+    d: "Measles"
+    e: "Scarlet fever"
+    k: c
+
+  - q: "Which of the following is an absolute contraindication to breast feeding?"
+    a: "Large breast abscess"
+    b: "Inverted nipples"
+    c: "Galactosemia"
+    d: "Maternal DM"
+    e: "Cleft lip"
+    k: c
+
+  - q: "Which of the following is true about breast feeding?"
+    a: "It protects against infection because it contains secretory IgA, macrophages, T&B-lymphocytes"
+    b: "It protects against type 2 diabetes"
+    c: "It increases the risk of breast cancer for the mother"
+    d: "It does not affect visual development"
+    e: "It protects against intestinal obstruction in late childhood"
+    k: a
+
+  - q: "Exclusive breastfeeding is recommended for the first:"
+    a: "18 months"
+    b: "9 months"
+    c: "12 months"
+    d: "3 months"
+    e: "6 months"
+    k: e
+
+  - q: "The WHO recommends starting weaning at:"
+    a: "18 months"
+    b: "3 months"
+    c: "7-9 months"
+    d: "4-6 months"
+    e: "12 months"
+    k: d
+
+  - q: "A key sign of readiness for weaning is:"
+    a: "Start smiling"
+    b: "Birth weight tripled"
+    c: "Loss of tongue-thrust reflex"
+    d: "Ability to crawl"
+    e: "First tooth eruption"
+    k: c
+
+  - q: "Vitamin D supplementation for exclusively breastfed infants should begin at:"
+    a: "1 week"
+    b: "6 months"
+    c: "1 month"
+    d: "3 months"
+    e: "Birth"
+    k: e
+
+  - q: "The minimal dose of vitamin D supplement is:"
+    a: "100 IU/day"
+    b: "200 IU/day"
+    c: "400 IU/day"
+    d: "800 IU/day"
+    e: "1000 IU/day"
+    k: c
+
+  - q: "Appearance of 4 ossific centres occurs at the age of:"
+    a: "3 months"
+    b: "6 months"
+    c: "9 months"
+    d: "1 year"
+    e: "3 years"
+    k: e
+
+  - q: "First milk molar eruption:"
+    a: "6 months"
+    b: "9 months"
+    c: "12 months"
+    d: "3 years"
+    e: "5 years"
+    k: c
+
+  - q: "The first permanent tooth to erupt is:"
+    a: "First molar at 6/7 years"
+    b: "Canine at 6 years"
+    c: "Lateral incisor at 6 years"
+    d: "None of the above"
+    k: a
+
+  - q: "Second molar eruption (teething) occurs at:"
+    a: "12 months"
+    b: "7 months"
+    c: "24 months"
+    d: "30 months"
+    e: "36 months"
+    k: c
+
+  - q: "What is the dose of vitamin K for every baby soon after delivery?"
+    a: "1-2 ml"
+    b: "5 ml"
+    c: "10 ml"
+    d: "15 ml"
+    e: "50 ml"
+    k: a
+
+  - q: "A 6-month-old infant requires how much protein daily?"
+    a: "3.5 g/kg"
+    b: "4.5 g/kg"
+    c: "5 g/kg"
+    d: "1.5 g/kg"
+    e: "2.0 g/kg"
+    k: a
+
+  - q: "The most appropriate age for saying 'ba ba ta ta' is:"
+    a: "12 months"
+    b: "7 months"
+    c: "24 months"
+    d: "30 months"
+    e: "36 months"
+    k: b
+
+  - q: "A baby at 10 months can do all of the following except:"
+    a: "Say mama dada"
+    b: "Say one real word"
+    c: "Inhibition to \"no\""
+    d: "Follow one word without gesture"
+    k: b
+
+  - q: "Walking upstairs alone and alternating feet occurs at:"
+    a: "12 months"
+    b: "7 months"
+    c: "24 months"
+    d: "30 months"
+    e: "36 months"
+    k: d
+
+  - q: "Which of the following is associated with Autism Spectrum Disorder (ASD)?"
+    a: "Gross motor skill deficits"
+    b: "Language deficit"
+    c: "Visual impairment"
+    d: "Physical growth delay"
+    k: b
+
+  - q: "The only type of rickets associated with hyperphosphatemia is:"
+    a: "Infantile rickets"
+    b: "Renal rickets"
+    c: "Vitamin D dependent rickets"
+    d: "Hepatic rickets"
+    k: b
+
+  - q: "Hypophosphatemic rickets is characterized by:"
+    a: "Renal failure"
+    b: "X-linked dominant inheritance"
+    c: "Elevated PTH"
+    d: "High phosphate"
+    e: "Hypercalcemia"
+    k: b
+
+  - q: "In nutritional (infantile) rickets, laboratory findings include:"
+    a: "High Ca, low P, low alkaline phosphatase"
+    b: "Low Ca, low P, high alkaline phosphatase"
+    c: "Low Ca, high P, low alkaline phosphatase"
+    d: "Normal Ca, low P, high alkaline phosphatase"
+    e: "High Ca, high P, high alkaline phosphatase"
+    k: d
+
+  - q: "Which of the following statements is true regarding the treatment of rickets?"
+    a: "300,000-600,000 IU of vitamin D is typically administered as a single, high-dose \"shock therapy\""
+    b: "Calcium supplementation is unnecessary if vitamin D levels are adequately restored"
+    c: "Rickets resolves spontaneously without any treatment in most cases"
+    d: "None of the above"
+    k: a
+
+  - q: "Which of the following types of rickets is characterized by normal serum calcium, low serum phosphate, and elevated 1,25-dihydroxyvitamin D levels?"
+    a: "Vitamin D deficiency rickets"
+    b: "Type 1 vitamin D-dependent rickets"
+    c: "Type 2 vitamin D-dependent rickets"
+    d: "Renal tubular acidosis"
+    k: c
+
+  - q: "A 3-year-old child presents with bowed legs, delayed walking, and widening of the wrists. Laboratory findings reveal normal serum calcium, low serum phosphate, and normal to slightly elevated 1,25-dihydroxyvitamin D levels. Which of the following is the most likely diagnosis?"
+    a: "Vitamin D deficiency rickets"
+    b: "Type 1 vitamin D-dependent rickets"
+    c: "X-linked hypophosphatemic rickets"
+    d: "Renal tubular acidosis"
+    k: c
+
+  - q: "Which of the following is an early manifestation of rickets:"
+    a: "Craniotabes"
+    b: "Bone deformities"
+    c: "Delayed physical development"
+    d: "Macrocephaly"
+    e: "Pigeon chest"
+    k: a
+
+  - q: "Marasmus is defined by:"
+    a: "Edema + hypoalbuminemia"
+    b: "Hepatomegaly + fatty liver"
+    c: "Neuropsychiatric changes"
+    d: "Hypocalcemia + tetany"
+    e: "Weight loss >40% without edema"
+    k: e
+
+  - q: "Kwashiorkor's essential criteria include all EXCEPT:"
+    a: "Psychomotor changes"
+    b: "Growth retardation"
+    c: "Edema"
+    d: "Hair discoloration"
+    k: d
+
+  - q: "Wellcome classification expected weight of kwashiorkor:"
+    a: "60-80"
+    b: "60-80% with edema"
+    c: "60-80, edema, hair changes"
+    d: "60-80%, edema, skin changes"
+    k: b
+
+  - q: "Which of the following is among the constant features of KWO:"
+    a: "Anemia"
+    b: "Hair changes"
+    c: "Hepatomegaly"
+    d: "Muscle wasting"
+    e: "Skin changes"
+    k: d
+
+  - q: "Which of the following is suggestive of typical bacterial pneumonia:"
+    a: "The onset is gradual and associated with preceding upper airway symptoms (e.g., rhinorrhea, congestion)"
+    b: "Febrile patient appearing ill and toxic with symptoms of sepsis and localized chest pain"
+    c: "Auscultatory findings are usually diffuse and bilateral"
+    d: "Wheezing is more frequent in patients with viral than bacterial pneumonia"
+    k: b
+
+  - q: "Regarding atypical pneumonia the most common pathogen is:"
+    a: "Mycoplasma pneumoniae"
+    b: "Enterovirus"
+    c: "Respiratory syncytial virus (RSV)"
+    d: "Staph aureus"
+    e: "Pneumococci"
+    k: a
+
+  - q: "Which finding on chest X-ray is typical of viral pneumonia:"
+    a: "Lobar consolidation"
+    b: "Pleural effusion"
+    c: "Mediastinal shift"
+    d: "Cavitary lesions"
+    e: "Hyperinflation with interstitial infiltrates"
+    k: e
+
+  - q: "Strong indication for hospitalization in a patient with pneumonia?"
+    a: "Mild cough, low-grade fever"
+    b: "Severe respiratory distress"
+    c: "Ability to maintain oral hydration and nutrition"
+    d: "Age between 5 and 65 years with no significant comorbidities"
+    k: b
+
+  - q: "Which clinical feature is most suggestive of bacterial pneumonia in a child?"
+    a: "Low-grade fever and cough"
+    b: "Gradual onset with rhinorrhea"
+    c: "Diffuse bilateral wheezing"
+    d: "Toxic appearance and focal chest findings"
+    e: "Elevated lymphocytes on CBC"
+    k: d
+
+  - q: "A conscious 3-year-old child is suspected of having a foreign body airway obstruction. The child is coughing weakly and ineffectively and is unable to speak. What is the MOST appropriate immediate management?"
+    a: "Encourage the child to continue coughing forcefully"
+    b: "Perform a series of 5 back blows followed by 5 abdominal thrusts"
+    c: "Perform chest thrusts"
+    d: "Observe the child closely for any changes in condition"
+    k: b
+
+  - q: "The most susceptible age group for foreign body aspiration is:"
+    a: "4-6 years"
+    b: "10-12 years"
+    c: "Less than 1 year"
+    d: "1-3 years"
+    e: "7-10 years"
+    k: d
+
+  - q: "All of the following are TRUE regarding foreign body aspiration in children EXCEPT:"
+    a: "A positive history of choking or a witnessed event is not essential for diagnosis"
+    b: "A normal chest X-ray does not exclude the diagnosis"
+    c: "Bronchoscopy is contraindicated if foreign body aspiration is suspected"
+    d: "The right bronchus is more commonly involved than the left due to its wider and more vertical orientation"
+    k: c
+
+  - q: "Which of the following is true regarding foreign body aspiration?"
+    a: "Absence of clinical chest manifestations excludes foreign body aspiration"
+    b: "Metallic matter is the most common foreign body aspirated"
+    c: "Negative history of aspiration excludes foreign body aspiration"
+    d: "Normal chest x-ray excludes foreign body aspiration"
+    e: "No contraindications for bronchoscopy when foreign body is suspected"
+    k: e
+
+  - q: "A child presents with fever and wheezing. A chest X-ray taken during expiration shows hyperinflation of the left lung with a shift of the mediastinum to the right. The most probable diagnosis is:"
+    a: "Pneumonia"
+    b: "Asthma exacerbation"
+    c: "Foreign body aspiration"
+    d: "Bronchiolitis"
+    k: c
+
+  - q: "Which of the following clinical findings is MOST suggestive of a foreign body in the airway?"
+    a: "Bilateral wheezing"
+    b: "Unilateral wheezing with decreased breath sounds on the affected side"
+    c: "High-pitched stridor"
+    d: "A barking cough"
+    k: b
+
+  - q: "Which of the following statements regarding foreign body aspiration (FBA) in children is NOT true?"
+    a: "It commonly presents with a sudden onset of cough or choking"
+    b: "Partial airway obstruction can manifest as wheezing or stridor"
+    c: "A clear history of a witnessed choking episode is essential for diagnosis"
+    d: "Recurrent pneumonia in the same lung segment should raise suspicion for FBA"
+    k: c
+
+  - q: "Which of the following imaging findings is suggestive of foreign body aspiration?"
+    a: "Consolidation"
+    b: "Atelectasis"
+    c: "Hyperinflation on expiratory films"
+    d: "All of the above"
+    e: "None of the above"
+    k: d
+
+  - q: "Which of the following viruses is the most common cause of the common cold (acute viral rhinosinusitis)?"
+    a: "Influenza virus"
+    b: "Parainfluenza virus"
+    c: "Coronavirus"
+    d: "Rhinovirus"
+    e: "Adenovirus"
+    k: d
+
+  - q: "The first-line treatment for group A streptococcal pharyngitis is?"
+    a: "Oral penicillin V for 7 days"
+    b: "Oral penicillin V for 10 days"
+    c: "Benzathine penicillin once/day IM injection for ten days"
+    d: "Benzathine penicillin twice/day IM injection for ten days"
+    e: "Amoxicillin-clavulanate"
+    k: b
+
+  - q: "Features suggestive of group A streptococcal (GAS) pharyngitis?"
+    a: "Tonsillar yellowish exudate"
+    b: "Cough"
+    c: "Gradual onset sore throat"
+    d: "Affects any age"
+    k: a
+
+  - q: "Which is a complication of untreated GAS pharyngitis?"
+    a: "Asthma"
+    b: "Pneumonia"
+    c: "Acute rheumatic fever"
+    d: "Otitis media"
+    e: "Sinusitis"
+    k: c
+
+  - q: "The most serious complication of sinusitis is?"
+    a: "Orbital cellulitis"
+    b: "Brain abscess"
+    c: "Dural sinus thrombosis"
+    d: "Osteomyelitis of the frontal sinus"
+    e: "Meningitis"
+    k: a
+
+  - q: "What is the most common bacterial pathogen of most cases of acute sinusitis in children?"
+    a: "Streptococcus pneumoniae"
+    b: "Staphylococcus aureus"
+    c: "Chlamydia trachomatis"
+    d: "Pseudomonas aeruginosa"
+    e: "Streptococcus pyogenes"
+    k: a
+
+  - q: "In infants, the most frequent symptoms of acute otitis media are:"
+    a: "Nonspecific"
+    b: "Fever"
+    c: "Otalgia"
+    d: "Otorrhea"
+    k: a
+
+  - q: "An 8-month-old female infant presents with a 2-day history of irritability, poor feeding, and high-grade fever (>39.5 °C) with bilateral otorrhea. On examination you note that she looks toxic with a bulging tympanic membrane. What is your next step in management?"
+    a: "Amoxicillin/clavulanic acid"
+    b: "Oral corticosteroids"
+    c: "Amoxicillin"
+    d: "Aminoglycosides"
+    e: "Intravenous fluids"
+    k: a
+
+  - q: "The most common causative organism for croup is?"
+    a: "Adenoviruses"
+    b: "Parainfluenza virus type 1"
+    c: "Respiratory syncytial virus"
+    d: "Streptococcus pneumoniae"
+    e: "Mycoplasma"
+    k: b
+
+  - q: "A 3-year-old with a \"barking cough,\" stridor, and mild fever likely has:"
+    a: "Epiglottitis"
+    b: "Pertussis"
+    c: "Retropharyngeal abscess"
+    d: "Bacterial tracheitis"
+    e: "Viral croup"
+    k: e
+
+  - q: "Which pathogen is the most common cause of epiglottitis in unvaccinated children?"
+    a: "Respiratory syncytial virus"
+    b: "Haemophilus influenzae type B"
+    c: "Streptococcus pneumoniae"
+    d: "Staphylococcus aureus"
+    e: "Mycoplasma pneumoniae"
+    k: b
+
+  - q: "Which is true regarding whooping cough:"
+    a: "No preventable vaccines"
+    b: "Complications are usually in early childhood"
+    c: "Common in child 1-5 y/o"
+    d: "One of viral infection"
+    e: "Treated by corticosteroid"
+    k: c
+
+  - q: "The following is true regarding the cause of a wheezy chest?"
+    a: "Asthma causes both acute and recurrent wheezes"
+    b: "Vascular abnormalities cause functional wheeze"
+    c: "Gastroesophageal reflux is a structural cause for wheezes"
+    d: "Tracheal stenosis causes acute wheezes"
+    e: "Foreign body aspiration causes chronic wheezes"
+    k: a
+
+  - q: "Which of the following is an indication for hospital admission in a case of bronchiolitis:"
+    a: "Signs of mild respiratory distress"
+    b: "Patient needs oxygen supply to keep his saturation above 93%"
+    c: "If there is pallor"
+    d: "If there is jaundice"
+    e: "Family unable to cope"
+    k: e
+
+  - q: "Most characteristic of acute bronchiolitis?"
+    a: "Firing"
+    b: "Stony dullness on percussion"
+    c: "Obstructive emphysema"
+    d: "Stridor is diagnostic"
+    e: "Absence of spontaneous cough and agitation"
+    k: c
+
+  - q: "Which is not seen in acute bronchiolitis on chest X-ray?"
+    a: "Hypergranulation"
+    b: "Small pleural effusion"
+    c: "Hilar opacities"
+    d: "Hyperinflation"
+    k: a
+
+  - q: "Regarding acute bronchiolitis, which of the following is true:"
+    a: "It is the least common cause of severe LRTI worldwide"
+    b: "It occurs primarily in children aged more than 24 months"
+    c: "The history and the physical examination form the primary basis for the diagnosis of bronchiolitis"
+    d: "Chest x-ray and CBC are mandatory for diagnosis"
+    e: "It never presents with apnea"
+    k: c
+
+  - q: "Infants with RSV bronchiolitis are at increased risk for:"
+    a: "Interstitial lung disease"
+    b: "Recurrent wheezing and decreased pulmonary function"
+    c: "Recurrent pneumonia"
+    d: "Growth failure"
+    e: "Bronchopulmonary dysplasia"
+    k: e
+
+  - q: "A 6-month-old infant with respiratory distress and wheezing has a history of prematurity. Which prophylaxis is indicated to prevent severe RSV infection?"
+    a: "Ribavirin"
+    b: "Dexamethasone"
+    c: "Amoxicillin"
+    d: "Palivizumab"
+    e: "Oseltamivir"
+    k: d
+
+  - q: "Which is a risk factor for severe RSV bronchiolitis?"
+    a: "Term of birth"
+    b: "Age more than 5 years"
+    c: "Absence of wheezing"
+    d: "Congenital heart disease"
+    e: "Normal immune function"
+    k: d
+
+  - q: "Which of the following is the most accepted diagnostic criteria of asthma?"
+    a: "Cough or wheeze in a child who has tested positive for allergens on skin prick testing"
+    b: "Cough or wheeze in a child with a strong family history of asthma"
+    c: "Recurrent cough or wheeze that responds to bronchodilator therapy"
+    d: "Persistent cough or wheeze in a child exposed to passive smoking in the home"
+    e: "Onset of wheezes after 3 years of age"
+    k: c
+
+  - q: "The predominant pathogen in childhood empyema is:"
+    a: "Streptococcus pneumoniae"
+    b: "Methicillin resistant Staphylococcus aureus"
+    c: "Pseudomonas"
+    d: "Mycobacterium tuberculosis"
+    e: "Candida albicans"
+    k: a
+
+  - q: "The most common cause of pleural effusion in children is:"
+    a: "Malignancy"
+    b: "Congestive heart failure"
+    c: "Infection"
+    d: "Hypoalbuminemia"
+    e: "Collagen diseases"
+    k: c
+
+  - q: "The cardinal manifestation of pneumothorax is:"
+    a: "Dyspnea"
+    b: "Tachypnea"
+    c: "Sudden chest pain"
+    d: "Cyanosis"
+    e: "Tachycardia"
+    k: c
+
+  - q: "Matching: dry pleurisy"
+    a: "Aegophony"
+    b: "Basal crepitations"
+    c: "Firing course"
+    d: "Obstructive emphysema"
+    e: "Pleural rub"
+    k: e
+
+  - q: "Matching: pleural effusion"
+    a: "Aegophony"
+    b: "Basal crepitations"
+    c: "Firing course"
+    d: "Obstructive emphysema"
+    e: "Pleural rub"
+    k: a
+
+  - q: "Which of the following is a characteristic finding observed in a patient with a tension pneumothorax?"
+    a: "Tracheal deviation towards the affected side"
+    b: "Decreased breath sounds on the contralateral side"
+    c: "Mediastinal shift to the opposite side"
+    d: "Absence of respiratory distress"
+    k: c
+
+  - q: "Tension pneumothorax requires immediate management with?"
+    a: "Intravenous antibiotics"
+    b: "Needle decompression or chest tube insertion"
+    c: "Pleurodesis"
+    d: "Observation and supplemental oxygen"
+    e: "Bronchodilators"
+    k: b
+
+  - q: "A pleural effusion with pH less than 7.1 and glucose less than 40 mg/dL is characteristic of:"
+    a: "Chylothorax"
+    b: "Tuberculous effusion"
+    c: "Transudative effusion"
+    d: "Complicated parapneumonic effusion"
+    e: "Hemothorax"
+    k: d
+
+  - q: "Which of the following criteria differentiates an exudative pleural effusion from a transudative effusion?"
+    a: "Pleural fluid LDH less than 200 IU/L"
+    b: "Pleural fluid protein less than 3 g/dL"
+    c: "Pleural fluid glucose more than 60 mg/dL"
+    d: "Pleural fluid/serum LDH ratio more than 0.6"
+    e: "Pleural fluid cholesterol less than 55 mg/dL"
+    k: d
+
+  - q: "The organizing phase of empyema is characterized by:"
+    a: "Elevated pH"
+    b: "Fibrinopurulent exudate"
+    c: "Normal glucose levels"
+    d: "Thin, free-flowing fluid"
+    e: "Fibrous peel formation"
+    k: e
+
+  - q: "What is the most characteristic diagnostic criteria of bronchial asthma?"
+    a: "Tightness in the chest"
+    b: "Wheezing"
+    c: "Recurrence of the attacks"
+    d: "Good response to B2 agonist"
+    e: "Nocturnal cough"
+    k: d
+
+  - q: "The main anti-inflammatory drug used for treatment of asthma exacerbation is:"
+    a: "Corticosteroids"
+    b: "Salbutamol"
+    c: "Nebulized adrenaline"
+    d: "Antibiotics"
+    e: "Nasal saline"
+    k: a
+
+  - q: "Which of the following is considered a controller medication for asthma:"
+    a: "Aminophylline IV"
+    b: "B-agonist nebulization"
+    c: "Magnesium sulfate IV"
+    d: "Antibiotics"
+    e: "Montelukast"
+    k: e
+
+  - q: "In which step of asthma management can oral steroids and anti-IgE be added?"
+    a: "Step 1"
+    b: "Step 2"
+    c: "Step 3"
+    d: "Step 4"
+    e: "Step 5"
+    k: e
+
+  - q: "Characteristic of bronchial asthma?"
+    a: "Bilateral extensive wheezing"
+    b: "Recurrence in all cases"
+    c: "Episodic and reversibility of airflow obstruction by bronchodilator (salbutamol) therapy"
+    d: "None of the above"
+    k: c
+
+  - q: "Prolonged expiration, often accompanied by wheezing, is a characteristic physical finding observed in which of the following conditions?"
+    a: "Restrictive lung disease"
+    b: "Pulmonary fibrosis"
+    c: "Pneumonia"
+    d: "Asthma"
+    k: d
+
+  - q: "Which of the following is NOT a typical symptom of asthma?"
+    a: "Productive cough"
+    b: "Nocturnal cough"
+    c: "Wheezing"
+    d: "Shortness of breath"
+    e: "Chest tightness"
+    k: a
+
+  - q: "What is the first-line treatment for mild persistent asthma in children?"
+    a: "Oral corticosteroids"
+    b: "Leukotriene receptor antagonists (LTRA)"
+    c: "Short-acting β2-agonists (SABA)"
+    d: "Long-acting β2-agonists (LABA)"
+    e: "Low-dose inhaled corticosteroids (ICS)"
+    k: e
+
+  - q: "What is the primary mechanism of action of inhaled corticosteroids (ICS) in asthma management?"
+    a: "Stimulation of β2-receptors"
+    b: "Inhibition of mast cell degranulation"
+    c: "Bronchodilation"
+    d: "Increase mucus production"
+    e: "Reduction of airway hyperresponsiveness"
+    k: e
+
+  - q: "The most objective and commonly used diagnostic tool to confirm the presence of airflow obstruction and its reversibility in a patient suspected of having bronchial asthma?"
+    a: "Chest X-ray"
+    b: "Peak expiratory flow rate (PEFR) monitoring at home"
+    c: "Allergen-specific IgE blood test"
+    d: "Spirometry"
+    k: d
+
+  - q: "The most common initial manifestation of acute rheumatic fever?"
+    a: "Carditis (inflammation of the heart)"
+    b: "Polyarthritis (inflammation of multiple joints)"
+    c: "Chorea (involuntary jerky movements)"
+    d: "Erythema marginatum (a characteristic rash)"
+    k: b
+
+  - q: "Which of the following is TRUE regarding the polyarthritis associated with acute rheumatic fever?"
+    a: "Large and small joints are equally affected"
+    b: "Non-migratory and monoarticular"
+    c: "It leaves permanent deformity to the joints"
+    d: "Shows response to acetyl salicylic acid"
+    k: d
+
+  - q: "A 5 year old presents with arthritis migrating from the left knee to the right ankle then left ankle. On examination he looks pale and has a galloping rhythm and ECG shows long PR interval. He has raised ASO titre. What is his diagnosis?"
+    a: "Scarlet fever"
+    b: "Systemic lupus erythematosus"
+    c: "Congenital aortic valve disease"
+    d: "Rheumatic fever"
+    e: "Kawasaki disease"
+    k: d
+
+  - q: "All are major criteria of rheumatic fever except:"
+    a: "Arthralgia"
+    b: "Carditis"
+    c: "Polyarthritis"
+    d: "Chorea"
+    e: "Erythema marginatum"
+    k: a
+
+  - q: "Which of the following is NOT considered one of the minor criteria for the diagnosis of acute rheumatic fever (Jones criteria)?"
+    a: "Fever"
+    b: "Arthralgia (joint pain)"
+    c: "Elevated erythrocyte sedimentation rate (ESR) or C-reactive protein (CRP)"
+    d: "Elevated or rising anti-streptococcal antibody titer"
+    e: "Prolonged P-R interval"
+    k: d
+
+  - q: "Which is a criterion of the polyarthritis of acute rheumatic fever?"
+    a: "Monoarthritis"
+    b: "Affects the small joints more than large joints"
+    c: "Least common; affects the neonate"
+    d: "No history of streptococcal infection"
+    e: "Good response to salicylates even in therapeutic dose"
+    k: e
+
+  - q: "Features of a hypercyanotic spell are all of the following except:"
+    a: "Increasing cyanosis"
+    b: "Increase in the intensity of the murmur"
+    c: "Hyperpnea"
+    d: "Irritability"
+    e: "Lethargy"
+    k: b
+
+  - q: "Treatment of a hypercyanotic spell includes all of the following except:"
+    a: "Propranolol"
+    b: "Digoxin"
+    c: "Morphine"
+    d: "Sodium bicarbonate"
+    e: "Oxygen"
+    k: b
+
+  - q: "Cyanosis in a 6 month old infant with TOF is due to:"
+    a: "Congestive heart failure"
+    b: "Arterial hypoxemia"
+    c: "VSD"
+    d: "Methemoglobinemia"
+    e: "Arrhythmia"
+    k: b
+
+  - q: "A 5 year old patient with Tetralogy of Fallot is scheduled for tonsillectomy. Which of the following drugs should be used as prophylaxis?"
+    a: "Amikacin"
+    b: "Amoxicillin"
+    c: "Benzathine penicillin G"
+    d: "Ceftriaxone"
+    e: "Gentamicin"
+    k: b
+
+  - q: "The drug of choice in a newborn with tetralogy of Fallot and pulmonary atresia is:"
+    a: "Furosemide"
+    b: "Digoxin"
+    c: "Prostaglandin E1"
+    d: "Propranolol"
+    e: "Morphine"
+    k: c
+
+  - q: "The complications of TOF include all of the following except:"
+    a: "Bleeding tendency"
+    b: "Anoxic infarction of CNS"
+    c: "Brain abscess"
+    d: "Heart failure"
+    e: "Infective endocarditis"
+    k: d
+
+  - q: "Congenital cyanotic heart diseases are all the following except:"
+    a: "Transposition of great arteries"
+    b: "Patent ductus arteriosus"
+    c: "Tetralogy of Fallot"
+    d: "Tricuspid atresia"
+    e: "Pulmonary atresia"
+    k: b
+
+  - q: "Most common type of ventricular septal defect (VSD) is?"
+    a: "Perimembranous"
+    b: "Infundibular"
+    c: "Muscular"
+    d: "AVSD"
+    k: a
+
+  - q: "A 4 year old infant is admitted to hospital. Normal BUN, creatinine and blood count, but has failure to thrive. The patient is tachypneic, tachycardic and there is a pansystolic murmur over the left parasternal area on auscultation. The most likely diagnosis is?"
+    a: "Small VSD"
+    b: "Severe pulmonary stenosis"
+    c: "Large VSD"
+    d: "Coarctation of aorta"
+    e: "PDA"
+    k: c
+
+  - q: "Most common type of atrial septal defect (ASD):"
+    a: "Ostium secundum"
+    b: "Ostium primum"
+    c: "Sinus venosus"
+    d: "None of the above"
+    k: a
+
+  - q: "Which of the following conditions is the primary cause of pulmonary venous congestion?"
+    a: "Right-sided heart failure"
+    b: "Pulmonary embolism"
+    c: "Hypertension in the systemic circulation"
+    d: "Left-sided heart failure"
+    k: d
+
+  - q: "The following is a major Duke criterion for the diagnosis of endocarditis:"
+    a: "New valve regurgitant flow by echocardiography"
+    b: "Osler nodes"
+    c: "Single positive blood culture"
+    d: "Fever"
+    e: "High erythrocyte sedimentation rate"
+    k: a
+
+  - q: "The leading causative agent for endocarditis in pediatric patients is:"
+    a: "Viral infection"
+    b: "Staphylococcus aureus"
+    c: "Pseudomonas aeruginosa"
+    d: "Fungal organisms"
+    e: "Serratia marcescens"
+    k: b
+
+  - q: "The following cardiac lesions are at increased risk for bacterial endocarditis EXCEPT:"
+    a: "Mitral insufficiency"
+    b: "Aortic stenosis"
+    c: "Atrial septal defect secundum"
+    d: "Coarctation of the aorta"
+    e: "Patent ductus arteriosus"
+    k: c
+
+  - q: "Which is not a clinical or lab finding of infective endocarditis?"
+    a: "Anorexia, myalgia"
+    b: "Fever"
+    c: "Erythema marginatum"
+    d: "PMN with shift to left"
+    k: c
+
+# __END__ (append new questions before this line)
