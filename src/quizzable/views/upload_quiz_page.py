@@ -69,7 +69,7 @@ def upload_quiz_page():
     (
         ui.upload(label="Upload yaml files", on_upload=on_upload)
         .classes("self-center")
-        .props("accept='application/yaml, application/yml'")
+        .props("accept='application/yaml, application/yml' multiple")
     )
 
     with ui.card().classes("w-full min-w-0"):
