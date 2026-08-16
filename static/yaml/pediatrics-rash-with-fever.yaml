@@ -1,0 +1,84 @@
+title: Pediatrics Rash with Fever
+tags:
+  - pediatrics
+  - fever
+  - rash
+  - infection
+questions:
+  - q: "A 7-year-old child presents with a maculopapular rash, fever, and on examination there are red lines at the skin flexures. What is the most likely diagnosis?"
+    a: "Group A Streptococcal infection (GAS)"
+    b: "Measles"
+    c: "Rubella"
+    d: "Erythema infectiosum (Fifth disease)"
+    k: a
+
+  - q: "Scarlet fever is characterized by:"
+    a: "The rash is maculopapular"
+    b: "Reaches intensity in 3 weeks"
+    c: "Goose skin is a characteristic"
+    d: "Non-membranous tonsillitis"
+    e: "Group B beta haemolytic Streptococci"
+    k: a
+
+  - q: "Scarlet fever:"
+    a: "Slapped cheek like rash"
+    b: "Post auricular lymph node enlargement"
+    c: "+ve Pastia's sign"
+    d: "Rash fades causing branny desquamation"
+    e: "Rash appears as fever subsides by crisis"
+    k: c
+
+  - q: "The following is characteristic of measles:"
+    a: "The spots are blue-purple in colour"
+    b: "It spreads in 3 days"
+    c: "Koplik's spots are present 2 days after the rash appears"
+    d: "Koplik's spots are present opposite the premolars"
+    e: "Incubation period is 3 weeks"
+    k: b
+
+  - q: "Measles:"
+    a: "Slapped cheek like rash"
+    b: "Post auricular lymph node enlargement"
+    c: "+ve Pastia sign"
+    d: "Rash fades causing branny desquamation"
+    e: "Rash appears as fever subsides by crisis"
+    k: d
+
+  - q: "Which of the following is a live attenuated vaccine?"
+    a: "Inactivated polio vaccine (IPV)"
+    b: "Rubella vaccine"
+    c: "Hepatitis B vaccine"
+    d: "Tetanus toxoid vaccine"
+    k: b
+
+  - q: "Which virus causes erythema infectiosum (Fifth disease)?"
+    a: "Rubella virus"
+    b: "Human herpesvirus 6"
+    c: "Parvovirus B19"
+    d: "Varicella-zoster virus"
+    k: c
+
+  - q: "Which infectious disease is characterized by a sandpaper-like rash and strawberry tongue?"
+    a: "Measles"
+    b: "Mumps"
+    c: "Rubella"
+    d: "Scarlet fever"
+    e: "Erythema infectiosum"
+    k: d
+
+  - q: "What is the pathognomonic sign of measles?"
+    a: "Circumoral pallor"
+    b: "Koplik's spots"
+    c: "Slapped-cheek rash"
+    d: "Postauricular lymphadenopathy"
+    e: "Skin rash"
+    k: b
+
+  - q: "A child presents with high fever for 3 days followed by a rash once the fever subsides. What is the most likely diagnosis?"
+    a: "Chickenpox"
+    b: "Rubella"
+    c: "Roseola infantum"
+    d: "Measles"
+    e: "Scarlet fever"
+    k: c
+

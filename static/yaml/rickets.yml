@@ -1,0 +1,57 @@
+title: Rickets
+tags:
+  - pediatrics
+  - rickets
+questions:
+  - q: "The only type of rickets associated with hyperphosphatemia is:"
+    a: "Infantile rickets"
+    b: "Renal rickets"
+    c: "Vitamin D dependent rickets"
+    d: "Hepatic rickets"
+    k: b
+
+  - q: "Hypophosphatemic rickets is characterized by:"
+    a: "Renal failure"
+    b: "X-linked dominant inheritance"
+    c: "Elevated PTH"
+    d: "High phosphate"
+    e: "Hypercalcemia"
+    k: b
+
+  - q: "In nutritional (infantile) rickets, laboratory findings include:"
+    a: "High Ca, low P, low alkaline phosphatase"
+    b: "Low Ca, low P, high alkaline phosphatase"
+    c: "Low Ca, high P, low alkaline phosphatase"
+    d: "Normal Ca, low P, high alkaline phosphatase"
+    e: "High Ca, high P, high alkaline phosphatase"
+    k: d
+
+  - q: "Which of the following statements is true regarding the treatment of rickets?"
+    a: "300,000-600,000 IU of vitamin D is typically administered as a single, high-dose \"shock therapy\""
+    b: "Calcium supplementation is unnecessary if vitamin D levels are adequately restored"
+    c: "Rickets resolves spontaneously without any treatment in most cases"
+    d: "None of the above"
+    k: a
+
+  - q: "Which of the following types of rickets is characterized by normal serum calcium, low serum phosphate, and elevated 1,25-dihydroxyvitamin D levels?"
+    a: "Vitamin D deficiency rickets"
+    b: "Type 1 vitamin D-dependent rickets"
+    c: "Type 2 vitamin D-dependent rickets"
+    d: "Renal tubular acidosis"
+    k: c
+
+  - q: "A 3-year-old child presents with bowed legs, delayed walking, and widening of the wrists. Laboratory findings reveal normal serum calcium, low serum phosphate, and normal to slightly elevated 1,25-dihydroxyvitamin D levels. Which of the following is the most likely diagnosis?"
+    a: "Vitamin D deficiency rickets"
+    b: "Type 1 vitamin D-dependent rickets"
+    c: "X-linked hypophosphatemic rickets"
+    d: "Renal tubular acidosis"
+    k: c
+
+  - q: "Which of the following is an early manifestation of rickets:"
+    a: "Craniotabes"
+    b: "Bone deformities"
+    c: "Delayed physical development"
+    d: "Macrocephaly"
+    e: "Pigeon chest"
+    k: a
+

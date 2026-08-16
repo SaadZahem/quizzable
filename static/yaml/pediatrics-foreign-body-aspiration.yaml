@@ -1,0 +1,64 @@
+title: Pediatrics Foreign Body Aspiration
+tags:
+  - pediatrics
+  - respiratory
+  - emergency
+questions:
+  - q: "A conscious 3-year-old child is suspected of having a foreign body airway obstruction. The child is coughing weakly and ineffectively and is unable to speak. What is the MOST appropriate immediate management?"
+    a: "Encourage the child to continue coughing forcefully"
+    b: "Perform a series of 5 back blows followed by 5 abdominal thrusts"
+    c: "Perform chest thrusts"
+    d: "Observe the child closely for any changes in condition"
+    k: b
+
+  - q: "The most susceptible age group for foreign body aspiration is:"
+    a: "4-6 years"
+    b: "10-12 years"
+    c: "Less than 1 year"
+    d: "1-3 years"
+    e: "7-10 years"
+    k: d
+
+  - q: "All of the following are TRUE regarding foreign body aspiration in children EXCEPT:"
+    a: "A positive history of choking or a witnessed event is not essential for diagnosis"
+    b: "A normal chest X-ray does not exclude the diagnosis"
+    c: "Bronchoscopy is contraindicated if foreign body aspiration is suspected"
+    d: "The right bronchus is more commonly involved than the left due to its wider and more vertical orientation"
+    k: c
+
+  - q: "Which of the following is true regarding foreign body aspiration?"
+    a: "Absence of clinical chest manifestations excludes foreign body aspiration"
+    b: "Metallic matter is the most common foreign body aspirated"
+    c: "Negative history of aspiration excludes foreign body aspiration"
+    d: "Normal chest x-ray excludes foreign body aspiration"
+    e: "No contraindications for bronchoscopy when foreign body is suspected"
+    k: e
+
+  - q: "A child presents with fever and wheezing. A chest X-ray taken during expiration shows hyperinflation of the left lung with a shift of the mediastinum to the right. The most probable diagnosis is:"
+    a: "Pneumonia"
+    b: "Asthma exacerbation"
+    c: "Foreign body aspiration"
+    d: "Bronchiolitis"
+    k: c
+
+  - q: "Which of the following clinical findings is MOST suggestive of a foreign body in the airway?"
+    a: "Bilateral wheezing"
+    b: "Unilateral wheezing with decreased breath sounds on the affected side"
+    c: "High-pitched stridor"
+    d: "A barking cough"
+    k: b
+
+  - q: "Which of the following statements regarding foreign body aspiration (FBA) in children is NOT true?"
+    a: "It commonly presents with a sudden onset of cough or choking"
+    b: "Partial airway obstruction can manifest as wheezing or stridor"
+    c: "A clear history of a witnessed choking episode is essential for diagnosis"
+    d: "Recurrent pneumonia in the same lung segment should raise suspicion for FBA"
+    k: c
+
+  - q: "Which of the following imaging findings is suggestive of foreign body aspiration?"
+    a: "Consolidation"
+    b: "Atelectasis"
+    c: "Hyperinflation on expiratory films"
+    d: "All of the above"
+    e: "None of the above"
+    k: d

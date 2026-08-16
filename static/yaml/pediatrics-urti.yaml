@@ -1,0 +1,100 @@
+title: Pediatrics Upper Respiratory Tract Infection
+tags:
+  - pediatrics
+  - respiratory
+  - infection
+  - URTI
+questions:
+  - q: "Which of the following viruses is the most common cause of the common cold (acute viral rhinosinusitis)?"
+    a: "Influenza virus"
+    b: "Parainfluenza virus"
+    c: "Coronavirus"
+    d: "Rhinovirus"
+    e: "Adenovirus"
+    k: d
+
+  - q: "The first-line treatment for group A streptococcal pharyngitis is?"
+    a: "Oral penicillin V for 7 days"
+    b: "Oral penicillin V for 10 days"
+    c: "Benzathine penicillin once/day IM injection for ten days"
+    d: "Benzathine penicillin twice/day IM injection for ten days"
+    e: "Amoxicillin-clavulanate"
+    k: b
+
+  - q: "Features suggestive of group A streptococcal (GAS) pharyngitis?"
+    a: "Tonsillar yellowish exudate"
+    b: "Cough"
+    c: "Gradual onset sore throat"
+    d: "Affects any age"
+    k: a
+
+  - q: "Which is a complication of untreated GAS pharyngitis?"
+    a: "Asthma"
+    b: "Pneumonia"
+    c: "Acute rheumatic fever"
+    d: "Otitis media"
+    e: "Sinusitis"
+    k: c
+
+  - q: "The most serious complication of sinusitis is?"
+    a: "Orbital cellulitis"
+    b: "Brain abscess"
+    c: "Dural sinus thrombosis"
+    d: "Osteomyelitis of the frontal sinus"
+    e: "Meningitis"
+    k: a
+
+  - q: "What is the most common bacterial pathogen of most cases of acute sinusitis in children?"
+    a: "Streptococcus pneumoniae"
+    b: "Staphylococcus aureus"
+    c: "Chlamydia trachomatis"
+    d: "Pseudomonas aeruginosa"
+    e: "Streptococcus pyogenes"
+    k: a
+
+  - q: "In infants, the most frequent symptoms of acute otitis media are:"
+    a: "Nonspecific"
+    b: "Fever"
+    c: "Otalgia"
+    d: "Otorrhea"
+    k: a
+
+  - q: "An 8-month-old female infant presents with a 2-day history of irritability, poor feeding, and high-grade fever (>39.5 °C) with bilateral otorrhea. On examination you note that she looks toxic with a bulging tympanic membrane. What is your next step in management?"
+    a: "Amoxicillin/clavulanic acid"
+    b: "Oral corticosteroids"
+    c: "Amoxicillin"
+    d: "Aminoglycosides"
+    e: "Intravenous fluids"
+    k: a
+
+  - q: "The most common causative organism for croup is?"
+    a: "Adenoviruses"
+    b: "Parainfluenza virus type 1"
+    c: "Respiratory syncytial virus"
+    d: "Streptococcus pneumoniae"
+    e: "Mycoplasma"
+    k: b
+
+  - q: "A 3-year-old with a \"barking cough,\" stridor, and mild fever likely has:"
+    a: "Epiglottitis"
+    b: "Pertussis"
+    c: "Retropharyngeal abscess"
+    d: "Bacterial tracheitis"
+    e: "Viral croup"
+    k: e
+
+  - q: "Which pathogen is the most common cause of epiglottitis in unvaccinated children?"
+    a: "Respiratory syncytial virus"
+    b: "Haemophilus influenzae type B"
+    c: "Streptococcus pneumoniae"
+    d: "Staphylococcus aureus"
+    e: "Mycoplasma pneumoniae"
+    k: b
+
+  - q: "Which is true regarding whooping cough:"
+    a: "No preventable vaccines"
+    b: "Complications are usually in early childhood"
+    c: "Common in child 1-5 y/o"
+    d: "One of viral infection"
+    e: "Treated by corticosteroid"
+    k: c

@@ -1,0 +1,82 @@
+title: Pediatrics Bronchial Asthma
+tags:
+  - pediatrics
+  - respiratory
+  - asthma
+questions:
+  - q: "What is the most characteristic diagnostic criteria of bronchial asthma?"
+    a: "Tightness in the chest"
+    b: "Wheezing"
+    c: "Recurrence of the attacks"
+    d: "Good response to B2 agonist"
+    e: "Nocturnal cough"
+    k: d
+
+  - q: "The main anti-inflammatory drug used for treatment of asthma exacerbation is:"
+    a: "Corticosteroids"
+    b: "Salbutamol"
+    c: "Nebulized adrenaline"
+    d: "Antibiotics"
+    e: "Nasal saline"
+    k: a
+
+  - q: "Which of the following is considered a controller medication for asthma:"
+    a: "Aminophylline IV"
+    b: "B-agonist nebulization"
+    c: "Magnesium sulfate IV"
+    d: "Antibiotics"
+    e: "Montelukast"
+    k: e
+
+  - q: "In which step of asthma management can oral steroids and anti-IgE be added?"
+    a: "Step 1"
+    b: "Step 2"
+    c: "Step 3"
+    d: "Step 4"
+    e: "Step 5"
+    k: e
+
+  - q: "Characteristic of bronchial asthma?"
+    a: "Bilateral extensive wheezing"
+    b: "Recurrence in all cases"
+    c: "Episodic and reversibility of airflow obstruction by bronchodilator (salbutamol) therapy"
+    d: "None of the above"
+    k: c
+
+  - q: "Prolonged expiration, often accompanied by wheezing, is a characteristic physical finding observed in which of the following conditions?"
+    a: "Restrictive lung disease"
+    b: "Pulmonary fibrosis"
+    c: "Pneumonia"
+    d: "Asthma"
+    k: d
+
+  - q: "Which of the following is NOT a typical symptom of asthma?"
+    a: "Productive cough"
+    b: "Nocturnal cough"
+    c: "Wheezing"
+    d: "Shortness of breath"
+    e: "Chest tightness"
+    k: a
+
+  - q: "What is the first-line treatment for mild persistent asthma in children?"
+    a: "Oral corticosteroids"
+    b: "Leukotriene receptor antagonists (LTRA)"
+    c: "Short-acting β2-agonists (SABA)"
+    d: "Long-acting β2-agonists (LABA)"
+    e: "Low-dose inhaled corticosteroids (ICS)"
+    k: e
+
+  - q: "What is the primary mechanism of action of inhaled corticosteroids (ICS) in asthma management?"
+    a: "Stimulation of β2-receptors"
+    b: "Inhibition of mast cell degranulation"
+    c: "Bronchodilation"
+    d: "Increase mucus production"
+    e: "Reduction of airway hyperresponsiveness"
+    k: e
+
+  - q: "The most objective and commonly used diagnostic tool to confirm the presence of airflow obstruction and its reversibility in a patient suspected of having bronchial asthma?"
+    a: "Chest X-ray"
+    b: "Peak expiratory flow rate (PEFR) monitoring at home"
+    c: "Allergen-specific IgE blood test"
+    d: "Spirometry"
+    k: d

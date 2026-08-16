@@ -1,0 +1,84 @@
+title: Pediatrics Pleural Disease
+tags:
+  - pediatrics
+  - respiratory
+  - pleura
+questions:
+  - q: "The predominant pathogen in childhood empyema is:"
+    a: "Streptococcus pneumoniae"
+    b: "Methicillin resistant Staphylococcus aureus"
+    c: "Pseudomonas"
+    d: "Mycobacterium tuberculosis"
+    e: "Candida albicans"
+    k: a
+
+  - q: "The most common cause of pleural effusion in children is:"
+    a: "Malignancy"
+    b: "Congestive heart failure"
+    c: "Infection"
+    d: "Hypoalbuminemia"
+    e: "Collagen diseases"
+    k: c
+
+  - q: "The cardinal manifestation of pneumothorax is:"
+    a: "Dyspnea"
+    b: "Tachypnea"
+    c: "Sudden chest pain"
+    d: "Cyanosis"
+    e: "Tachycardia"
+    k: c
+
+  - q: "Matching: dry pleurisy"
+    a: "Aegophony"
+    b: "Basal crepitations"
+    c: "Firing course"
+    d: "Obstructive emphysema"
+    e: "Pleural rub"
+    k: e
+
+  - q: "Matching: pleural effusion"
+    a: "Aegophony"
+    b: "Basal crepitations"
+    c: "Firing course"
+    d: "Obstructive emphysema"
+    e: "Pleural rub"
+    k: a
+
+  - q: "Which of the following is a characteristic finding observed in a patient with a tension pneumothorax?"
+    a: "Tracheal deviation towards the affected side"
+    b: "Decreased breath sounds on the contralateral side"
+    c: "Mediastinal shift to the opposite side"
+    d: "Absence of respiratory distress"
+    k: c
+
+  - q: "Tension pneumothorax requires immediate management with?"
+    a: "Intravenous antibiotics"
+    b: "Needle decompression or chest tube insertion"
+    c: "Pleurodesis"
+    d: "Observation and supplemental oxygen"
+    e: "Bronchodilators"
+    k: b
+
+  - q: "A pleural effusion with pH less than 7.1 and glucose less than 40 mg/dL is characteristic of:"
+    a: "Chylothorax"
+    b: "Tuberculous effusion"
+    c: "Transudative effusion"
+    d: "Complicated parapneumonic effusion"
+    e: "Hemothorax"
+    k: d
+
+  - q: "Which of the following criteria differentiates an exudative pleural effusion from a transudative effusion?"
+    a: "Pleural fluid LDH less than 200 IU/L"
+    b: "Pleural fluid protein less than 3 g/dL"
+    c: "Pleural fluid glucose more than 60 mg/dL"
+    d: "Pleural fluid/serum LDH ratio more than 0.6"
+    e: "Pleural fluid cholesterol less than 55 mg/dL"
+    k: d
+
+  - q: "The organizing phase of empyema is characterized by:"
+    a: "Elevated pH"
+    b: "Fibrinopurulent exudate"
+    c: "Normal glucose levels"
+    d: "Thin, free-flowing fluid"
+    e: "Fibrous peel formation"
+    k: e

@@ -1,0 +1,61 @@
+title: Pediatrics Congenital Cyanotic Heart Disease
+tags:
+  - pediatrics
+  - cardiology
+  - congenital
+questions:
+  - q: "Features of a hypercyanotic spell are all of the following except:"
+    a: "Increasing cyanosis"
+    b: "Increase in the intensity of the murmur"
+    c: "Hyperpnea"
+    d: "Irritability"
+    e: "Lethargy"
+    k: b
+
+  - q: "Treatment of a hypercyanotic spell includes all of the following except:"
+    a: "Propranolol"
+    b: "Digoxin"
+    c: "Morphine"
+    d: "Sodium bicarbonate"
+    e: "Oxygen"
+    k: b
+
+  - q: "Cyanosis in a 6 month old infant with TOF is due to:"
+    a: "Congestive heart failure"
+    b: "Arterial hypoxemia"
+    c: "VSD"
+    d: "Methemoglobinemia"
+    e: "Arrhythmia"
+    k: b
+
+  - q: "A 5 year old patient with Tetralogy of Fallot is scheduled for tonsillectomy. Which of the following drugs should be used as prophylaxis?"
+    a: "Amikacin"
+    b: "Amoxicillin"
+    c: "Benzathine penicillin G"
+    d: "Ceftriaxone"
+    e: "Gentamicin"
+    k: b
+
+  - q: "The drug of choice in a newborn with tetralogy of Fallot and pulmonary atresia is:"
+    a: "Furosemide"
+    b: "Digoxin"
+    c: "Prostaglandin E1"
+    d: "Propranolol"
+    e: "Morphine"
+    k: c
+
+  - q: "The complications of TOF include all of the following except:"
+    a: "Bleeding tendency"
+    b: "Anoxic infarction of CNS"
+    c: "Brain abscess"
+    d: "Heart failure"
+    e: "Infective endocarditis"
+    k: d
+
+  - q: "Congenital cyanotic heart diseases are all the following except:"
+    a: "Transposition of great arteries"
+    b: "Patent ductus arteriosus"
+    c: "Tetralogy of Fallot"
+    d: "Tricuspid atresia"
+    e: "Pulmonary atresia"
+    k: b

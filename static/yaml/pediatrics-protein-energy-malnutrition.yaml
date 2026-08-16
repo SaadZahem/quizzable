@@ -1,0 +1,35 @@
+title: Pediatrics Protein Energy Malnutrition
+tags:
+  - pediatrics
+  - nutrition
+  - malnutrition
+questions:
+  - q: "Marasmus is defined by:"
+    a: "Edema + hypoalbuminemia"
+    b: "Hepatomegaly + fatty liver"
+    c: "Neuropsychiatric changes"
+    d: "Hypocalcemia + tetany"
+    e: "Weight loss >40% without edema"
+    k: e
+
+  - q: "Kwashiorkor's essential criteria include all EXCEPT:"
+    a: "Psychomotor changes"
+    b: "Growth retardation"
+    c: "Edema"
+    d: "Hair discoloration"
+    k: d
+
+  - q: "Wellcome classification expected weight of kwashiorkor:"
+    a: "60-80"
+    b: "60-80% with edema"
+    c: "60-80, edema, hair changes"
+    d: "60-80%, edema, skin changes"
+    k: b
+
+  - q: "Which of the following is among the constant features of KWO:"
+    a: "Anemia"
+    b: "Hair changes"
+    c: "Hepatomegaly"
+    d: "Muscle wasting"
+    e: "Skin changes"
+    k: d

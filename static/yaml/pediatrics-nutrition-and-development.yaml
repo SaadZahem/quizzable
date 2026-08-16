@@ -1,0 +1,99 @@
+title: Pediatrics Nutrition and Assessment of Development
+tags:
+  - pediatrics
+  - nutrition
+  - development
+questions:
+  - q: "Vitamin D supplementation for exclusively breastfed infants should begin at:"
+    a: "1 week"
+    b: "6 months"
+    c: "1 month"
+    d: "3 months"
+    e: "Birth"
+    k: e
+
+  - q: "The minimal dose of vitamin D supplement is:"
+    a: "100 IU/day"
+    b: "200 IU/day"
+    c: "400 IU/day"
+    d: "800 IU/day"
+    e: "1000 IU/day"
+    k: c
+
+  - q: "Appearance of 4 ossific centres occurs at the age of:"
+    a: "3 months"
+    b: "6 months"
+    c: "9 months"
+    d: "1 year"
+    e: "3 years"
+    k: e
+
+  - q: "First milk molar eruption:"
+    a: "6 months"
+    b: "9 months"
+    c: "12 months"
+    d: "3 years"
+    e: "5 years"
+    k: c
+
+  - q: "The first permanent tooth to erupt is:"
+    a: "First molar at 6/7 years"
+    b: "Canine at 6 years"
+    c: "Lateral incisor at 6 years"
+    d: "None of the above"
+    k: a
+
+  - q: "Second molar eruption (teething) occurs at:"
+    a: "12 months"
+    b: "7 months"
+    c: "24 months"
+    d: "30 months"
+    e: "36 months"
+    k: c
+
+  - q: "What is the dose of vitamin K for every baby soon after delivery?"
+    a: "1-2 ml"
+    b: "5 ml"
+    c: "10 ml"
+    d: "15 ml"
+    e: "50 ml"
+    k: a
+
+  - q: "A 6-month-old infant requires how much protein daily?"
+    a: "3.5 g/kg"
+    b: "4.5 g/kg"
+    c: "5 g/kg"
+    d: "1.5 g/kg"
+    e: "2.0 g/kg"
+    k: a
+
+  - q: "The most appropriate age for saying 'ba ba ta ta' is:"
+    a: "12 months"
+    b: "7 months"
+    c: "24 months"
+    d: "30 months"
+    e: "36 months"
+    k: b
+
+  - q: "A baby at 10 months can do all of the following except:"
+    a: "Say mama dada"
+    b: "Say one real word"
+    c: "Inhibition to \"no\""
+    d: "Follow one word without gesture"
+    k: b
+
+  - q: "Walking upstairs alone and alternating feet occurs at:"
+    a: "12 months"
+    b: "7 months"
+    c: "24 months"
+    d: "30 months"
+    e: "36 months"
+    k: d
+
+  - q: "Which of the following is associated with Autism Spectrum Disorder (ASD)?"
+    a: "Gross motor skill deficits"
+    b: "Language deficit"
+    c: "Visual impairment"
+    d: "Physical growth delay"
+    k: b
+

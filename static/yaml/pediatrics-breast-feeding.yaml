@@ -1,0 +1,47 @@
+title: Pediatrics Breast Feeding and Weaning
+tags:
+  - pediatrics
+  - nutrition
+  - feeding
+  - weaning
+questions:
+  - q: "Which of the following is an absolute contraindication to breast feeding?"
+    a: "Large breast abscess"
+    b: "Inverted nipples"
+    c: "Galactosemia"
+    d: "Maternal DM"
+    e: "Cleft lip"
+    k: c
+
+  - q: "Which of the following is true about breast feeding?"
+    a: "It protects against infection because it contains secretory IgA, macrophages, T&B-lymphocytes"
+    b: "It protects against type 2 diabetes"
+    c: "It increases the risk of breast cancer for the mother"
+    d: "It does not affect visual development"
+    e: "It protects against intestinal obstruction in late childhood"
+    k: a
+
+  - q: "Exclusive breastfeeding is recommended for the first:"
+    a: "18 months"
+    b: "9 months"
+    c: "12 months"
+    d: "3 months"
+    e: "6 months"
+    k: e
+
+  - q: "The WHO recommends starting weaning at:"
+    a: "18 months"
+    b: "3 months"
+    c: "7-9 months"
+    d: "4-6 months"
+    e: "12 months"
+    k: d
+
+  - q: "A key sign of readiness for weaning is:"
+    a: "Start smiling"
+    b: "Birth weight tripled"
+    c: "Loss of tongue-thrust reflex"
+    d: "Ability to crawl"
+    e: "First tooth eruption"
+    k: c
+

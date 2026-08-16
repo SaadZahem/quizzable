@@ -1,0 +1,51 @@
+title: Pediatrics Rheumatic Fever
+tags:
+  - pediatrics
+  - cardiology
+  - rheumatic fever
+questions:
+  - q: "The most common initial manifestation of acute rheumatic fever?"
+    a: "Carditis (inflammation of the heart)"
+    b: "Polyarthritis (inflammation of multiple joints)"
+    c: "Chorea (involuntary jerky movements)"
+    d: "Erythema marginatum (a characteristic rash)"
+    k: b
+
+  - q: "Which of the following is TRUE regarding the polyarthritis associated with acute rheumatic fever?"
+    a: "Large and small joints are equally affected"
+    b: "Non-migratory and monoarticular"
+    c: "It leaves permanent deformity to the joints"
+    d: "Shows response to acetyl salicylic acid"
+    k: d
+
+  - q: "A 5 year old presents with arthritis migrating from the left knee to the right ankle then left ankle. On examination he looks pale and has a galloping rhythm and ECG shows long PR interval. He has raised ASO titre. What is his diagnosis?"
+    a: "Scarlet fever"
+    b: "Systemic lupus erythematosus"
+    c: "Congenital aortic valve disease"
+    d: "Rheumatic fever"
+    e: "Kawasaki disease"
+    k: d
+
+  - q: "All are major criteria of rheumatic fever except:"
+    a: "Arthralgia"
+    b: "Carditis"
+    c: "Polyarthritis"
+    d: "Chorea"
+    e: "Erythema marginatum"
+    k: a
+
+  - q: "Which of the following is NOT considered one of the minor criteria for the diagnosis of acute rheumatic fever (Jones criteria)?"
+    a: "Fever"
+    b: "Arthralgia (joint pain)"
+    c: "Elevated erythrocyte sedimentation rate (ESR) or C-reactive protein (CRP)"
+    d: "Elevated or rising anti-streptococcal antibody titer"
+    e: "Prolonged P-R interval"
+    k: d
+
+  - q: "Which is a criterion of the polyarthritis of acute rheumatic fever?"
+    a: "Monoarthritis"
+    b: "Affects the small joints more than large joints"
+    c: "Least common; affects the neonate"
+    d: "No history of streptococcal infection"
+    e: "Good response to salicylates even in therapeutic dose"
+    k: e

@@ -1,0 +1,34 @@
+title: Pediatrics Congenital Acyanotic Heart Disease
+tags:
+  - pediatrics
+  - cardiology
+  - congenital
+questions:
+  - q: "Most common type of ventricular septal defect (VSD) is?"
+    a: "Perimembranous"
+    b: "Infundibular"
+    c: "Muscular"
+    d: "AVSD"
+    k: a
+
+  - q: "A 4 year old infant is admitted to hospital. Normal BUN, creatinine and blood count, but has failure to thrive. The patient is tachypneic, tachycardic and there is a pansystolic murmur over the left parasternal area on auscultation. The most likely diagnosis is?"
+    a: "Small VSD"
+    b: "Severe pulmonary stenosis"
+    c: "Large VSD"
+    d: "Coarctation of aorta"
+    e: "PDA"
+    k: c
+
+  - q: "Most common type of atrial septal defect (ASD):"
+    a: "Ostium secundum"
+    b: "Ostium primum"
+    c: "Sinus venosus"
+    d: "None of the above"
+    k: a
+
+  - q: "Which of the following conditions is the primary cause of pulmonary venous congestion?"
+    a: "Right-sided heart failure"
+    b: "Pulmonary embolism"
+    c: "Hypertension in the systemic circulation"
+    d: "Left-sided heart failure"
+    k: d

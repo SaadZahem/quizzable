@@ -1,0 +1,44 @@
+title: Pediatrics Pneumonia
+tags:
+  - pediatrics
+  - respiratory
+  - infection
+  - pneumonia
+questions:
+  - q: "Which of the following is suggestive of typical bacterial pneumonia:"
+    a: "The onset is gradual and associated with preceding upper airway symptoms (e.g., rhinorrhea, congestion)"
+    b: "Febrile patient appearing ill and toxic with symptoms of sepsis and localized chest pain"
+    c: "Auscultatory findings are usually diffuse and bilateral"
+    d: "Wheezing is more frequent in patients with viral than bacterial pneumonia"
+    k: b
+
+  - q: "Regarding atypical pneumonia the most common pathogen is:"
+    a: "Mycoplasma pneumoniae"
+    b: "Enterovirus"
+    c: "Respiratory syncytial virus (RSV)"
+    d: "Staph aureus"
+    e: "Pneumococci"
+    k: a
+
+  - q: "Which finding on chest X-ray is typical of viral pneumonia:"
+    a: "Lobar consolidation"
+    b: "Pleural effusion"
+    c: "Mediastinal shift"
+    d: "Cavitary lesions"
+    e: "Hyperinflation with interstitial infiltrates"
+    k: e
+
+  - q: "Strong indication for hospitalization in a patient with pneumonia?"
+    a: "Mild cough, low-grade fever"
+    b: "Severe respiratory distress"
+    c: "Ability to maintain oral hydration and nutrition"
+    d: "Age between 5 and 65 years with no significant comorbidities"
+    k: b
+
+  - q: "Which clinical feature is most suggestive of bacterial pneumonia in a child?"
+    a: "Low-grade fever and cough"
+    b: "Gradual onset with rhinorrhea"
+    c: "Diffuse bilateral wheezing"
+    d: "Toxic appearance and focal chest findings"
+    e: "Elevated lymphocytes on CBC"
+    k: d

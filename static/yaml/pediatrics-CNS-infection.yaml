@@ -1,0 +1,117 @@
+title: Pediatrics CNS infection
+tags:
+  - pediatrics
+  - neurology
+  - CNS
+  - infection
+questions:
+  - q: "The hallmark of meningitis is:"
+    a: "Altered consciousness"
+    b: "Seizures"
+    c: "Fever, headache & vomiting"
+    d: "Meningeal irritation signs"
+    k: d
+
+  - q: "Kernig's sign in meningitis is characterized by:"
+    a: "Subdural effusion on CT scan"
+    b: "Pain on knee extension with hips flexed 90°"
+    c: "Headache"
+    d: "Bulging fontanelle"
+    e: "Flexion of the neck causing hip/knee flexion"
+    k: b
+
+  - q: "Passive flexion of the neck results in involuntary flexion of the hips and knees. This is called?"
+    a: "Brudzinski's sign"
+    b: "Kernig's sign"
+    c: "Gower's sign"
+    d: "None of the above"
+    k: a
+
+  - q: "The commonest pathogen of bacterial meningitis in a non-vaccinated 2 year old child is:"
+    a: "S. pneumoniae"
+    b: "H. influenzae b"
+    c: "N. meningitidis"
+    d: "L. monocytogenes"
+    k: b
+
+  - q: "Acyclovir is indicated for treatment of:"
+    a: "Herpes simplex (HSV)"
+    b: "Enteroviruses"
+    c: "Mumps"
+    d: "Measles"
+    k: a
+
+  - q: "Viral meningitis is considered when the CSF of a child shows:"
+    a: "Lymphocytosis, mild protein increment, normal glucose"
+    b: "Decreased glucose + lymphocytosis"
+    c: "Neutrophilia + normal glucose"
+    d: "Neutrophilia + decreased glucose + -ve Gram stain"
+    k: a
+
+  - q: "A 2 months old infant with bacterial meningitis is treated empirically with:"
+    a: "Ceftriaxone + ampicillin"
+    b: "Ampicillin + vancomycin"
+    c: "Ampicillin"
+    d: "Chloramphenicol"
+    k: b
+
+  - q: "A 3 day old boy presented with persistent vomiting followed by convulsions and disturbed conscious level. CSF was clear and showed 5 WBCs/ul, glucose 80 mg/dl, protein 40 mg/dl and negative Gram stain. Blood glucose was 90 mg/dl at the same time. You would interpret the CSF described above as:"
+    a: "Normal"
+    b: "Bacterial meningitis"
+    c: "Viral encephalitis"
+    d: "TB meningitis"
+    k: c
+
+  - q: "Encephalitis is called when the child has acute onset of:"
+    a: "Altered consciousness"
+    b: "Seizures"
+    c: "Altered cognition & personality"
+    d: "All of the above"
+    e: "All of the above plus neck stiffness"
+    k: d
+
+  - q: "A 5-year-old girl was brought to the ED when she developed altered mental status. Kernig and Brudzinski signs were present. CSF examination showed: WBCs 1500/ul (80% neutrophils), sugar 20 mg/dl, protein 400 mg/dl, positive Gram stain. You would interpret the CSF described above as:"
+    a: "Normal"
+    b: "Bacterial meningitis"
+    c: "Viral encephalitis"
+    d: "TB meningitis"
+    k: b
+
+  - q: "Which CSF finding is typical of viral meningoencephalitis?"
+    a: "Protein >100 mg/dL + Gram-positive cocci"
+    b: "Gram positive stain"
+    c: "Elevated lactate + turbid appearance"
+    d: "Neutrophilic pleocytosis + low glucose"
+    e: "Lymphocytic pleocytosis + normal glucose"
+    k: e
+
+  - q: "Which of the following is the most crucial step in the initial evaluation of a patient with Fever of Unknown Origin (FUO)?"
+    a: "Extensive laboratory testing"
+    b: "Empiric antibiotic therapy"
+    c: "Document the fever & duration"
+    d: "Imaging studies (e.g., CT scan, MRI)"
+    k: c
+
+  - q: "Most common cause of PUO is:"
+    a: "Infection"
+    b: "Collagen"
+    c: "Cancer"
+    d: "Miscellaneous"
+    k: a
+
+  - q: "PUO (Pyrexia of Unknown Origin) is defined as fever >38.3°C lasting:"
+    a: ">1 week"
+    b: ">1 month"
+    c: ">6 weeks"
+    d: ">3 months"
+    e: ">3 weeks"
+    k: e
+
+  - q: "Elevated ESR (>100 mm/h) in PUO is most suggestive of:"
+    a: "Tuberculosis or malignancy"
+    b: "Autoimmune thyroiditis"
+    c: "Tonsilitis"
+    d: "Drug fever"
+    e: "Viral infection"
+    k: a
+

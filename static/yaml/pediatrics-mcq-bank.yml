@@ -374,6 +374,7 @@ questions:
     e: "Pigeon chest"
     k: a
 
+    # protein energy malnutrition
   - q: "Marasmus is defined by:"
     a: "Edema + hypoalbuminemia"
     b: "Hepatomegaly + fatty liver"
@@ -404,6 +405,7 @@ questions:
     e: "Skin changes"
     k: d
 
+    # pneumonia
   - q: "Which of the following is suggestive of typical bacterial pneumonia:"
     a: "The onset is gradual and associated with preceding upper airway symptoms (e.g., rhinorrhea, congestion)"
     b: "Febrile patient appearing ill and toxic with symptoms of sepsis and localized chest pain"
@@ -442,6 +444,7 @@ questions:
     e: "Elevated lymphocytes on CBC"
     k: d
 
+    # Foreign body aspiration
   - q: "A conscious 3-year-old child is suspected of having a foreign body airway obstruction. The child is coughing weakly and ineffectively and is unable to speak. What is the MOST appropriate immediate management?"
     a: "Encourage the child to continue coughing forcefully"
     b: "Perform a series of 5 back blows followed by 5 abdominal thrusts"
@@ -501,6 +504,7 @@ questions:
     e: "None of the above"
     k: d
 
+    # URTI
   - q: "Which of the following viruses is the most common cause of the common cold (acute viral rhinosinusitis)?"
     a: "Influenza virus"
     b: "Parainfluenza virus"
@@ -595,6 +599,7 @@ questions:
     e: "Treated by corticosteroid"
     k: c
 
+    # Wheezing and bronchiolitis
   - q: "The following is true regarding the cause of a wheezy chest?"
     a: "Asthma causes both acute and recurrent wheezes"
     b: "Vascular abnormalities cause functional wheeze"
@@ -666,6 +671,7 @@ questions:
     e: "Onset of wheezes after 3 years of age"
     k: c
 
+    # pleural disease
   - q: "The predominant pathogen in childhood empyema is:"
     a: "Streptococcus pneumoniae"
     b: "Methicillin resistant Staphylococcus aureus"
@@ -745,6 +751,7 @@ questions:
     e: "Fibrous peel formation"
     k: e
 
+    # bronchial asthma
   - q: "What is the most characteristic diagnostic criteria of bronchial asthma?"
     a: "Tightness in the chest"
     b: "Wheezing"
@@ -822,6 +829,7 @@ questions:
     d: "Spirometry"
     k: d
 
+    # rheumatic fever
   - q: "The most common initial manifestation of acute rheumatic fever?"
     a: "Carditis (inflammation of the heart)"
     b: "Polyarthritis (inflammation of multiple joints)"
@@ -868,6 +876,7 @@ questions:
     e: "Good response to salicylates even in therapeutic dose"
     k: e
 
+    # congenital cyanotic heart disease
   - q: "Features of a hypercyanotic spell are all of the following except:"
     a: "Increasing cyanosis"
     b: "Increase in the intensity of the murmur"
@@ -924,6 +933,7 @@ questions:
     e: "Pulmonary atresia"
     k: b
 
+    # congenital acyanotic heart disease
   - q: "Most common type of ventricular septal defect (VSD) is?"
     a: "Perimembranous"
     b: "Infundibular"
@@ -953,6 +963,7 @@ questions:
     d: "Left-sided heart failure"
     k: d
 
+    # infective endocarditis
   - q: "The following is a major Duke criterion for the diagnosis of endocarditis:"
     a: "New valve regurgitant flow by echocardiography"
     b: "Osler nodes"
@@ -983,5 +994,12 @@ questions:
     c: "Erythema marginatum"
     d: "PMN with shift to left"
     k: c
+
+  - q: "Which of the following doesn't require prophylaxis for IE:"
+    a: "Hypertrophic cardiomyopathy"
+    b: "Patients with prosthetic valve"
+    c: "Patients with a previous episode of IE"
+    d: "Patients with CHD"
+    k: a
 
 # __END__ (append new questions before this line)

@@ -1,0 +1,76 @@
+title: Pediatrics Wheezing and Bronchiolitis
+tags:
+  - pediatrics
+  - respiratory
+  - bronchiolitis
+questions:
+  - q: "The following is true regarding the cause of a wheezy chest?"
+    a: "Asthma causes both acute and recurrent wheezes"
+    b: "Vascular abnormalities cause functional wheeze"
+    c: "Gastroesophageal reflux is a structural cause for wheezes"
+    d: "Tracheal stenosis causes acute wheezes"
+    e: "Foreign body aspiration causes chronic wheezes"
+    k: a
+
+  - q: "Which of the following is an indication for hospital admission in a case of bronchiolitis:"
+    a: "Signs of mild respiratory distress"
+    b: "Patient needs oxygen supply to keep his saturation above 93%"
+    c: "If there is pallor"
+    d: "If there is jaundice"
+    e: "Family unable to cope"
+    k: e
+
+  - q: "Most characteristic of acute bronchiolitis?"
+    a: "Firing"
+    b: "Stony dullness on percussion"
+    c: "Obstructive emphysema"
+    d: "Stridor is diagnostic"
+    e: "Absence of spontaneous cough and agitation"
+    k: c
+
+  - q: "Which is not seen in acute bronchiolitis on chest X-ray?"
+    a: "Hypergranulation"
+    b: "Small pleural effusion"
+    c: "Hilar opacities"
+    d: "Hyperinflation"
+    k: a
+
+  - q: "Regarding acute bronchiolitis, which of the following is true:"
+    a: "It is the least common cause of severe LRTI worldwide"
+    b: "It occurs primarily in children aged more than 24 months"
+    c: "The history and the physical examination form the primary basis for the diagnosis of bronchiolitis"
+    d: "Chest x-ray and CBC are mandatory for diagnosis"
+    e: "It never presents with apnea"
+    k: c
+
+  - q: "Infants with RSV bronchiolitis are at increased risk for:"
+    a: "Interstitial lung disease"
+    b: "Recurrent wheezing and decreased pulmonary function"
+    c: "Recurrent pneumonia"
+    d: "Growth failure"
+    e: "Bronchopulmonary dysplasia"
+    k: e
+
+  - q: "A 6-month-old infant with respiratory distress and wheezing has a history of prematurity. Which prophylaxis is indicated to prevent severe RSV infection?"
+    a: "Ribavirin"
+    b: "Dexamethasone"
+    c: "Amoxicillin"
+    d: "Palivizumab"
+    e: "Oseltamivir"
+    k: d
+
+  - q: "Which is a risk factor for severe RSV bronchiolitis?"
+    a: "Term of birth"
+    b: "Age more than 5 years"
+    c: "Absence of wheezing"
+    d: "Congenital heart disease"
+    e: "Normal immune function"
+    k: d
+
+  - q: "Which of the following is the most accepted diagnostic criteria of asthma?"
+    a: "Cough or wheeze in a child who has tested positive for allergens on skin prick testing"
+    b: "Cough or wheeze in a child with a strong family history of asthma"
+    c: "Recurrent cough or wheeze that responds to bronchodilator therapy"
+    d: "Persistent cough or wheeze in a child exposed to passive smoking in the home"
+    e: "Onset of wheezes after 3 years of age"
+    k: c
