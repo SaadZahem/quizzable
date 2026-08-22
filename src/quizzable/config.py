@@ -3,14 +3,12 @@ import pathlib
 
 import dotenv
 
-if not dotenv.load_dotenv(".env"):
-    raise ValueError(".env file is missing")
+_values = dotenv.dotenv_values(".env")
 
-
-STORAGE_SECRET = os.getenv("STORAGE_SECRET")
+STORAGE_SECRET = os.getenv("STORAGE_SECRET") or _values.get("STORAGE_SECRET")
 "used to enable app.storage.user"
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY") or _values.get("SECRET_KEY")
 "used to secure JWT tokens"
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite://db.sqlite3")
