@@ -23,6 +23,7 @@ RUN uv sync --frozen --no-install-project --no-dev
 COPY main.py ./
 COPY src ./src
 COPY static ./static
+COPY bin ./bin
 
 # Make `import quizzable` resolve without installing the project.
 ENV PYTHONPATH=/app/src
