@@ -14,6 +14,10 @@ SECRET_KEY = os.getenv("SECRET_KEY") or _values.get("SECRET_KEY")
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite://db.sqlite3")
 "Tortoise connection string; defaults to local SQLite, overridden with Postgres in production"
 
+# Railway provides postgresql:// but Tortoise only recognizes postgres://
+if DATABASE_URL.startswith("postgresql://"):
+    DATABASE_URL = "postgres://" + DATABASE_URL[len("postgresql://") :]
+
 ALGORITHM = "HS256"
 "widely used algorithm to secure JWT tokens"
 
